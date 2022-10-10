@@ -1,6 +1,6 @@
 import java.sql.*;
 import java.util.Scanner;
-
+// Ruian Tian
 // sample input: localhost 5432 database_name username password
 public class MaintainDB {
 
