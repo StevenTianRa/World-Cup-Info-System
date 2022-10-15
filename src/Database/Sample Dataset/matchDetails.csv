@@ -1,0 +1,853 @@
+year,match_date,stage,stadium,home_name,home_final_score,away_final_score,away_name,win_condition,home_half_score,away_half_score,match_id
+2010,11 Jun 2010 - 16:00,Group A,Soccer City Stadium,South Africa,1,1,Mexico, ,0,0,300061454
+2010,11 Jun 2010 - 20:30,Group A,Cape Town Stadium,Uruguay,0,0,France, ,0,0,300061453
+2010,12 Jun 2010 - 13:30,Group B,Port Elizabeth Stadium,Korea Republic,2,0,Greece, ,1,0,300061459
+2010,12 Jun 2010 - 16:00,Group B,Ellis Park Stadium,Argentina,1,0,Nigeria, ,1,0,300061460
+2010,12 Jun 2010 - 20:30,Group C,Royal Bafokeng Sports Palace,England,1,1,USA, ,1,1,300061466
+2010,13 Jun 2010 - 13:30,Group C,Peter Mokaba Stadium,Algeria,0,1,Slovenia, ,0,0,300061465
+2010,13 Jun 2010 - 16:00,Group D,Loftus Versfeld Stadium,Serbia,0,1,Ghana, ,0,0,300061471
+2010,13 Jun 2010 - 20:30,Group D,Durban Stadium,Germany,4,0,Australia, ,2,0,300111116
+2010,14 Jun 2010 - 13:30,Group E,Soccer City Stadium,Netherlands,2,0,Denmark, ,0,0,300061478
+2010,14 Jun 2010 - 16:00,Group E,Free State Stadium,Japan,1,0,Cameroon, ,1,0,300061477
+2010,14 Jun 2010 - 20:30,Group F,Cape Town Stadium,Italy,1,1,Paraguay, ,0,1,300061484
+2010,15 Jun 2010 - 13:30,Group F,Royal Bafokeng Sports Palace,New Zealand,1,1,Slovakia, ,0,0,300061483
+2010,15 Jun 2010 - 16:00,Group G,Port Elizabeth Stadium,C�te d'Ivoire,0,0,Portugal, ,0,0,300061489
+2010,15 Jun 2010 - 20:30,Group G,Ellis Park Stadium,Brazil,2,1,Korea DPR, ,0,0,300061490
+2010,16 Jun 2010 - 13:30,Group H,Mbombela Stadium,Honduras,0,1,Chile, ,0,1,300061495
+2010,16 Jun 2010 - 16:00,Group H,Durban Stadium,Spain,0,1,Switzerland, ,0,0,300111112
+2010,16 Jun 2010 - 20:30,Group A,Loftus Versfeld Stadium,South Africa,0,3,Uruguay, ,0,1,300061452
+2010,17 Jun 2010 - 13:30,Group B,Soccer City Stadium,Argentina,4,1,Korea Republic, ,2,1,300061458
+2010,17 Jun 2010 - 16:00,Group B,Free State Stadium,Greece,2,1,Nigeria, ,1,1,300061457
+2010,17 Jun 2010 - 20:30,Group A,Peter Mokaba Stadium,France,0,2,Mexico, ,0,0,300061451
+2010,18 Jun 2010 - 13:30,Group D,Port Elizabeth Stadium,Germany,0,1,Serbia, ,0,1,300061470
+2010,18 Jun 2010 - 16:00,Group C,Ellis Park Stadium,Slovenia,2,2,USA, ,2,0,300061463
+2010,18 Jun 2010 - 20:30,Group C,Cape Town Stadium,England,0,0,Algeria, ,0,0,300061464
+2010,19 Jun 2010 - 13:30,Group E,Durban Stadium,Netherlands,1,0,Japan, ,0,0,300111117
+2010,19 Jun 2010 - 16:00,Group D,Royal Bafokeng Sports Palace,Ghana,1,1,Australia, ,1,1,300061469
+2010,19 Jun 2010 - 20:30,Group E,Loftus Versfeld Stadium,Cameroon,1,2,Denmark, ,1,1,300061475
+2010,20 Jun 2010 - 13:30,Group F,Free State Stadium,Slovakia,0,2,Paraguay, ,0,1,300061481
+2010,20 Jun 2010 - 16:00,Group F,Mbombela Stadium,Italy,1,1,New Zealand, ,1,1,300061482
+2010,20 Jun 2010 - 20:30,Group G,Soccer City Stadium,Brazil,3,1,C�te d'Ivoire, ,1,0,300061488
+2010,21 Jun 2010 - 13:30,Group G,Cape Town Stadium,Portugal,7,0,Korea DPR, ,1,0,300061487
+2010,21 Jun 2010 - 16:00,Group H,Port Elizabeth Stadium,Chile,1,0,Switzerland, ,0,0,300061493
+2010,21 Jun 2010 - 20:30,Group H,Ellis Park Stadium,Spain,2,0,Honduras, ,1,0,300061494
+2010,22 Jun 2010 - 16:00,Group A,Royal Bafokeng Sports Palace,Mexico,0,1,Uruguay, ,0,1,300061450
+2010,22 Jun 2010 - 16:00,Group A,Free State Stadium,France,1,2,South Africa, ,0,2,300061449
+2010,22 Jun 2010 - 20:30,Group B,Durban Stadium,Nigeria,2,2,Korea Republic, ,1,1,300111115
+2010,22 Jun 2010 - 20:30,Group B,Peter Mokaba Stadium,Greece,0,2,Argentina, ,0,0,300061455
+2010,23 Jun 2010 - 16:00,Group C,Port Elizabeth Stadium,Slovenia,0,1,England, ,0,1,300061462
+2010,23 Jun 2010 - 16:00,Group C,Loftus Versfeld Stadium,USA,1,0,Algeria, ,0,0,300061461
+2010,23 Jun 2010 - 20:30,Group D,Soccer City Stadium,Ghana,0,1,Germany, ,0,0,300061468
+2010,23 Jun 2010 - 20:30,Group D,Mbombela Stadium,Australia,2,1,Serbia, ,0,0,300061467
+2010,24 Jun 2010 - 16:00,Group F,Ellis Park Stadium,Slovakia,3,2,Italy, ,1,0,300061480
+2010,24 Jun 2010 - 16:00,Group F,Peter Mokaba Stadium,Paraguay,0,0,New Zealand, ,0,0,300061479
+2010,24 Jun 2010 - 20:30,Group E,Royal Bafokeng Sports Palace,Denmark,1,3,Japan, ,0,2,300061474
+2010,24 Jun 2010 - 20:30,Group E,Cape Town Stadium,Cameroon,1,2,Netherlands, ,0,1,300061473
+2010,25 Jun 2010 - 16:00,Group G,Durban Stadium,Portugal,0,0,Brazil, ,0,0,300111111
+2010,25 Jun 2010 - 16:00,Group G,Mbombela Stadium,Korea DPR,0,3,C�te d'Ivoire, ,0,2,300061486
+2010,25 Jun 2010 - 20:30,Group H,Loftus Versfeld Stadium,Chile,1,2,Spain, ,0,2,300061491
+2010,25 Jun 2010 - 20:30,Group H,Free State Stadium,Switzerland,0,0,Honduras, ,0,0,300061492
+2010,26 Jun 2010 - 16:00,Round of 16,Port Elizabeth Stadium,Uruguay,2,1,Korea Republic, ,1,0,300061504
+2010,26 Jun 2010 - 20:30,Round of 16,Royal Bafokeng Sports Palace,USA,1,2,Ghana,Ghana win after extra time ,0,0,300061503
+2010,27 Jun 2010 - 16:00,Round of 16,Free State Stadium,Germany,4,1,England, ,2,1,300061501
+2010,27 Jun 2010 - 20:30,Round of 16,Soccer City Stadium,Argentina,3,1,Mexico, ,2,0,300061502
+2010,28 Jun 2010 - 16:00,Round of 16,Durban Stadium,Netherlands,2,1,Slovakia, ,1,0,300111113
+2010,28 Jun 2010 - 20:30,Round of 16,Ellis Park Stadium,Brazil,3,0,Chile, ,2,0,300061500
+2010,29 Jun 2010 - 16:00,Round of 16,Loftus Versfeld Stadium,Paraguay,0,0,Japan,Paraguay win on penalties (5 - 3),0,0,300061497
+2010,29 Jun 2010 - 20:30,Round of 16,Cape Town Stadium,Spain,1,0,Portugal, ,0,0,300061498
+2010,02 Jul 2010 - 16:00,Quarter-finals,Port Elizabeth Stadium,Netherlands,2,1,Brazil, ,0,1,300061507
+2010,02 Jul 2010 - 20:30,Quarter-finals,Soccer City Stadium,Uruguay,1,1,Ghana,Uruguay win on penalties (4 - 2),0,0,300061508
+2010,03 Jul 2010 - 16:00,Quarter-finals,Cape Town Stadium,Argentina,0,4,Germany, ,0,1,300061505
+2010,03 Jul 2010 - 20:30,Quarter-finals,Ellis Park Stadium,Paraguay,0,1,Spain, ,0,0,300061506
+2010,06 Jul 2010 - 20:30,Semi-finals,Cape Town Stadium,Uruguay,2,3,Netherlands, ,1,1,300061512
+2010,07 Jul 2010 - 20:30,Semi-finals,Durban Stadium,Germany,0,1,Spain, ,0,0,300111114
+2010,10 Jul 2010 - 20:30,Match for third place,Port Elizabeth Stadium,Uruguay,2,3,Germany, ,1,1,300061510
+2010,11 Jul 2010 - 20:30,Final,Soccer City Stadium,Netherlands,0,1,Spain,Spain win after extra time ,0,0,300061509
+2014,12 Jun 2014 - 17:00,Group A,Arena de Sao Paulo,Brazil,3,1,Croatia, ,1,1,300186456
+2014,13 Jun 2014 - 13:00,Group A,Estadio das Dunas,Mexico,1,0,Cameroon, ,0,0,300186492
+2014,13 Jun 2014 - 16:00,Group B,Arena Fonte Nova,Spain,1,5,Netherlands, ,1,1,300186510
+2014,13 Jun 2014 - 18:00,Group B,Arena Pantanal,Chile,3,1,Australia, ,2,1,300186473
+2014,14 Jun 2014 - 13:00,Group C,Estadio Mineirao,Colombia,3,0,Greece, ,1,0,300186471
+2014,14 Jun 2014 - 16:00,Group D,Estadio Castelao,Uruguay,1,3,Costa Rica, ,1,0,300186489
+2014,14 Jun 2014 - 18:00,Group D,Arena Amazonia,England,1,2,Italy, ,1,1,300186513
+2014,14 Jun 2014 - 22:00,Group C,Arena Pernambuco,C�te d'Ivoire,2,1,Japan, ,0,1,300186507
+2014,15 Jun 2014 - 13:00,Group E,Estadio Nacional,Switzerland,2,1,Ecuador, ,0,1,300186494
+2014,15 Jun 2014 - 16:00,Group E,Estadio Beira-Rio,France,3,0,Honduras, ,1,0,300186496
+2014,15 Jun 2014 - 19:00,Group F,Estadio do Maracana,Argentina,2,1,"rn"">Bosnia and Herzegovina", ,1,0,300186477
+2014,16 Jun 2014 - 13:00,Group G,Arena Fonte Nova,Germany,4,0,Portugal, ,3,0,300186475
+2014,16 Jun 2014 - 16:00,Group F,Arena da Baixada,IR Iran,0,0,Nigeria, ,0,0,300186505
+2014,16 Jun 2014 - 19:00,Group G,Estadio das Dunas,Ghana,1,2,USA, ,0,1,300186512
+2014,17 Jun 2014 - 13:00,Group H,Estadio Mineirao,Belgium,2,1,Algeria, ,0,1,300186479
+2014,17 Jun 2014 - 16:00,Group A,Estadio Castelao,Brazil,0,0,Mexico, ,0,0,300186509
+2014,17 Jun 2014 - 18:00,Group H,Arena Pantanal,Russia,1,1,Korea Republic, ,0,0,300186499
+2014,18 Jun 2014 - 13:00,Group B,Estadio Beira-Rio,Australia,2,3,Netherlands, ,1,1,300186478
+2014,18 Jun 2014 - 16:00,Group B,Estadio do Maracana,Spain,0,2,Chile, ,0,2,300186498
+2014,18 Jun 2014 - 18:00,Group A,Arena Amazonia,Cameroon,0,4,Croatia, ,0,1,300186453
+2014,19 Jun 2014 - 13:00,Group C,Estadio Nacional,Colombia,2,1,C�te d'Ivoire, ,0,0,300186468
+2014,19 Jun 2014 - 16:00,Group D,Arena de Sao Paulo,Uruguay,2,1,England, ,1,0,300186486
+2014,19 Jun 2014 - 19:00,Group C,Estadio das Dunas,Japan,0,0,Greece, ,0,0,300186454
+2014,20 Jun 2014 - 13:00,Group D,Arena Pernambuco,Italy,0,1,Costa Rica, ,0,1,300186500
+2014,20 Jun 2014 - 16:00,Group E,Arena Fonte Nova,Switzerland,2,5,France, ,0,3,300186514
+2014,20 Jun 2014 - 19:00,Group E,Arena da Baixada,Honduras,1,2,Ecuador, ,1,1,300186463
+2014,21 Jun 2014 - 13:00,Group F,Estadio Mineirao,Argentina,1,0,IR Iran, ,0,0,300186466
+2014,21 Jun 2014 - 16:00,Group G,Estadio Castelao,Germany,2,2,Ghana, ,0,0,300186493
+2014,21 Jun 2014 - 18:00,Group F,Arena Pantanal,Nigeria,1,0,"rn"">Bosnia and Herzegovina", ,1,0,300186511
+2014,22 Jun 2014 - 13:00,Group H,Estadio do Maracana,Belgium,1,0,Russia, ,0,0,300186481
+2014,22 Jun 2014 - 16:00,Group H,Estadio Beira-Rio,Korea Republic,2,4,Algeria, ,0,3,300186495
+2014,22 Jun 2014 - 18:00,Group G,Arena Amazonia,USA,2,2,Portugal, ,0,1,300186483
+2014,23 Jun 2014 - 13:00,Group B,Arena da Baixada,Australia,0,3,Spain, ,0,1,300186467
+2014,23 Jun 2014 - 13:00,Group B,Arena de Sao Paulo,Netherlands,2,0,Chile, ,0,0,300186470
+2014,23 Jun 2014 - 17:00,Group A,Estadio Nacional,Cameroon,1,4,Brazil, ,1,2,300186472
+2014,23 Jun 2014 - 17:00,Group A,Arena Pernambuco,Croatia,1,3,Mexico, ,0,0,300186452
+2014,24 Jun 2014 - 13:00,Group D,Estadio das Dunas,Italy,0,1,Uruguay, ,0,0,300186465
+2014,24 Jun 2014 - 13:00,Group D,Estadio Mineirao,Costa Rica,0,0,England, ,0,0,300186484
+2014,24 Jun 2014 - 16:00,Group C,Arena Pantanal,Japan,1,4,Colombia, ,1,1,300186457
+2014,24 Jun 2014 - 17:00,Group C,Estadio Castelao,Greece,2,1,C�te d'Ivoire, ,1,0,300186455
+2014,25 Jun 2014 - 13:00,Group F,Estadio Beira-Rio,Nigeria,2,3,Argentina, ,1,2,300186458
+2014,25 Jun 2014 - 13:00,Group F,Arena Fonte Nova,"rn"">Bosnia and Herzegovina",3,1,IR Iran, ,1,0,300186464
+2014,25 Jun 2014 - 16:00,Group E,Arena Amazonia,Honduras,0,3,Switzerland, ,0,2,300186482
+2014,25 Jun 2014 - 17:00,Group E,Estadio do Maracana,Ecuador,0,0,France, ,0,0,300186515
+2014,26 Jun 2014 - 13:00,Group G,Arena Pernambuco,USA,0,1,Germany, ,0,0,300186469
+2014,26 Jun 2014 - 13:00,Group G,Estadio Nacional,Portugal,2,1,Ghana, ,1,0,300186476
+2014,26 Jun 2014 - 17:00,Group H,Arena de Sao Paulo,Korea Republic,0,1,Belgium, ,0,0,300186480
+2014,26 Jun 2014 - 17:00,Group H,Arena da Baixada,Algeria,1,1,Russia, ,0,1,300186506
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+year,match_date,stage,stadium,home_name,home_final_score,away_final_score,away_name,win_condition,home_half_score,away_half_score,match_id
+2010,11 Jun 2010 - 16:00,Group A,Soccer City Stadium,South Africa,1,1,Mexico, ,0,0,300061454
+2010,11 Jun 2010 - 20:30,Group A,Cape Town Stadium,Uruguay,0,0,France, ,0,0,300061453
+2010,12 Jun 2010 - 13:30,Group B,Port Elizabeth Stadium,Korea Republic,2,0,Greece, ,1,0,300061459
+2010,12 Jun 2010 - 16:00,Group B,Ellis Park Stadium,Argentina,1,0,Nigeria, ,1,0,300061460
+2010,12 Jun 2010 - 20:30,Group C,Royal Bafokeng Sports Palace,England,1,1,USA, ,1,1,300061466
+2010,13 Jun 2010 - 13:30,Group C,Peter Mokaba Stadium,Algeria,0,1,Slovenia, ,0,0,300061465
+2010,13 Jun 2010 - 16:00,Group D,Loftus Versfeld Stadium,Serbia,0,1,Ghana, ,0,0,300061471
+2010,13 Jun 2010 - 20:30,Group D,Durban Stadium,Germany,4,0,Australia, ,2,0,300111116
+2010,14 Jun 2010 - 13:30,Group E,Soccer City Stadium,Netherlands,2,0,Denmark, ,0,0,300061478
+2010,14 Jun 2010 - 16:00,Group E,Free State Stadium,Japan,1,0,Cameroon, ,1,0,300061477
+2010,14 Jun 2010 - 20:30,Group F,Cape Town Stadium,Italy,1,1,Paraguay, ,0,1,300061484
+2010,15 Jun 2010 - 13:30,Group F,Royal Bafokeng Sports Palace,New Zealand,1,1,Slovakia, ,0,0,300061483
+2010,15 Jun 2010 - 16:00,Group G,Port Elizabeth Stadium,C�te d'Ivoire,0,0,Portugal, ,0,0,300061489
+2010,15 Jun 2010 - 20:30,Group G,Ellis Park Stadium,Brazil,2,1,Korea DPR, ,0,0,300061490
+2010,16 Jun 2010 - 13:30,Group H,Mbombela Stadium,Honduras,0,1,Chile, ,0,1,300061495
+2010,16 Jun 2010 - 16:00,Group H,Durban Stadium,Spain,0,1,Switzerland, ,0,0,300111112
+2010,16 Jun 2010 - 20:30,Group A,Loftus Versfeld Stadium,South Africa,0,3,Uruguay, ,0,1,300061452
+2010,17 Jun 2010 - 13:30,Group B,Soccer City Stadium,Argentina,4,1,Korea Republic, ,2,1,300061458
+2010,17 Jun 2010 - 16:00,Group B,Free State Stadium,Greece,2,1,Nigeria, ,1,1,300061457
+2010,17 Jun 2010 - 20:30,Group A,Peter Mokaba Stadium,France,0,2,Mexico, ,0,0,300061451
+2010,18 Jun 2010 - 13:30,Group D,Port Elizabeth Stadium,Germany,0,1,Serbia, ,0,1,300061470
+2010,18 Jun 2010 - 16:00,Group C,Ellis Park Stadium,Slovenia,2,2,USA, ,2,0,300061463
+2010,18 Jun 2010 - 20:30,Group C,Cape Town Stadium,England,0,0,Algeria, ,0,0,300061464
+2010,19 Jun 2010 - 13:30,Group E,Durban Stadium,Netherlands,1,0,Japan, ,0,0,300111117
+2010,19 Jun 2010 - 16:00,Group D,Royal Bafokeng Sports Palace,Ghana,1,1,Australia, ,1,1,300061469
+2010,19 Jun 2010 - 20:30,Group E,Loftus Versfeld Stadium,Cameroon,1,2,Denmark, ,1,1,300061475
+2010,20 Jun 2010 - 13:30,Group F,Free State Stadium,Slovakia,0,2,Paraguay, ,0,1,300061481
+2010,20 Jun 2010 - 16:00,Group F,Mbombela Stadium,Italy,1,1,New Zealand, ,1,1,300061482
+2010,20 Jun 2010 - 20:30,Group G,Soccer City Stadium,Brazil,3,1,C�te d'Ivoire, ,1,0,300061488
+2010,21 Jun 2010 - 13:30,Group G,Cape Town Stadium,Portugal,7,0,Korea DPR, ,1,0,300061487
+2010,21 Jun 2010 - 16:00,Group H,Port Elizabeth Stadium,Chile,1,0,Switzerland, ,0,0,300061493
+2010,21 Jun 2010 - 20:30,Group H,Ellis Park Stadium,Spain,2,0,Honduras, ,1,0,300061494
+2010,22 Jun 2010 - 16:00,Group A,Royal Bafokeng Sports Palace,Mexico,0,1,Uruguay, ,0,1,300061450
+2010,22 Jun 2010 - 16:00,Group A,Free State Stadium,France,1,2,South Africa, ,0,2,300061449
+2010,22 Jun 2010 - 20:30,Group B,Durban Stadium,Nigeria,2,2,Korea Republic, ,1,1,300111115
+2010,22 Jun 2010 - 20:30,Group B,Peter Mokaba Stadium,Greece,0,2,Argentina, ,0,0,300061455
+2010,23 Jun 2010 - 16:00,Group C,Port Elizabeth Stadium,Slovenia,0,1,England, ,0,1,300061462
+2010,23 Jun 2010 - 16:00,Group C,Loftus Versfeld Stadium,USA,1,0,Algeria, ,0,0,300061461
+2010,23 Jun 2010 - 20:30,Group D,Soccer City Stadium,Ghana,0,1,Germany, ,0,0,300061468
+2010,23 Jun 2010 - 20:30,Group D,Mbombela Stadium,Australia,2,1,Serbia, ,0,0,300061467
+2010,24 Jun 2010 - 16:00,Group F,Ellis Park Stadium,Slovakia,3,2,Italy, ,1,0,300061480
+2010,24 Jun 2010 - 16:00,Group F,Peter Mokaba Stadium,Paraguay,0,0,New Zealand, ,0,0,300061479
+2010,24 Jun 2010 - 20:30,Group E,Royal Bafokeng Sports Palace,Denmark,1,3,Japan, ,0,2,300061474
+2010,24 Jun 2010 - 20:30,Group E,Cape Town Stadium,Cameroon,1,2,Netherlands, ,0,1,300061473
+2010,25 Jun 2010 - 16:00,Group G,Durban Stadium,Portugal,0,0,Brazil, ,0,0,300111111
+2010,25 Jun 2010 - 16:00,Group G,Mbombela Stadium,Korea DPR,0,3,C�te d'Ivoire, ,0,2,300061486
+2010,25 Jun 2010 - 20:30,Group H,Loftus Versfeld Stadium,Chile,1,2,Spain, ,0,2,300061491
+2010,25 Jun 2010 - 20:30,Group H,Free State Stadium,Switzerland,0,0,Honduras, ,0,0,300061492
+2010,26 Jun 2010 - 16:00,Round of 16,Port Elizabeth Stadium,Uruguay,2,1,Korea Republic, ,1,0,300061504
+2010,26 Jun 2010 - 20:30,Round of 16,Royal Bafokeng Sports Palace,USA,1,2,Ghana,Ghana win after extra time ,0,0,300061503
+2010,27 Jun 2010 - 16:00,Round of 16,Free State Stadium,Germany,4,1,England, ,2,1,300061501
+2010,27 Jun 2010 - 20:30,Round of 16,Soccer City Stadium,Argentina,3,1,Mexico, ,2,0,300061502
+2010,28 Jun 2010 - 16:00,Round of 16,Durban Stadium,Netherlands,2,1,Slovakia, ,1,0,300111113
+2010,28 Jun 2010 - 20:30,Round of 16,Ellis Park Stadium,Brazil,3,0,Chile, ,2,0,300061500
+2010,29 Jun 2010 - 16:00,Round of 16,Loftus Versfeld Stadium,Paraguay,0,0,Japan,Paraguay win on penalties (5 - 3),0,0,300061497
+2010,29 Jun 2010 - 20:30,Round of 16,Cape Town Stadium,Spain,1,0,Portugal, ,0,0,300061498
+2010,02 Jul 2010 - 16:00,Quarter-finals,Port Elizabeth Stadium,Netherlands,2,1,Brazil, ,0,1,300061507
+2010,02 Jul 2010 - 20:30,Quarter-finals,Soccer City Stadium,Uruguay,1,1,Ghana,Uruguay win on penalties (4 - 2),0,0,300061508
+2010,03 Jul 2010 - 16:00,Quarter-finals,Cape Town Stadium,Argentina,0,4,Germany, ,0,1,300061505
+2010,03 Jul 2010 - 20:30,Quarter-finals,Ellis Park Stadium,Paraguay,0,1,Spain, ,0,0,300061506
+2010,06 Jul 2010 - 20:30,Semi-finals,Cape Town Stadium,Uruguay,2,3,Netherlands, ,1,1,300061512
+2010,07 Jul 2010 - 20:30,Semi-finals,Durban Stadium,Germany,0,1,Spain, ,0,0,300111114
+2010,10 Jul 2010 - 20:30,Match for third place,Port Elizabeth Stadium,Uruguay,2,3,Germany, ,1,1,300061510
+2010,11 Jul 2010 - 20:30,Final,Soccer City Stadium,Netherlands,0,1,Spain,Spain win after extra time ,0,0,300061509
+2014,12 Jun 2014 - 17:00,Group A,Arena de Sao Paulo,Brazil,3,1,Croatia, ,1,1,300186456
+2014,13 Jun 2014 - 13:00,Group A,Estadio das Dunas,Mexico,1,0,Cameroon, ,0,0,300186492
+2014,13 Jun 2014 - 16:00,Group B,Arena Fonte Nova,Spain,1,5,Netherlands, ,1,1,300186510
+2014,13 Jun 2014 - 18:00,Group B,Arena Pantanal,Chile,3,1,Australia, ,2,1,300186473
+2014,14 Jun 2014 - 13:00,Group C,Estadio Mineirao,Colombia,3,0,Greece, ,1,0,300186471
+2014,14 Jun 2014 - 16:00,Group D,Estadio Castelao,Uruguay,1,3,Costa Rica, ,1,0,300186489
+2014,14 Jun 2014 - 18:00,Group D,Arena Amazonia,England,1,2,Italy, ,1,1,300186513
+2014,14 Jun 2014 - 22:00,Group C,Arena Pernambuco,C�te d'Ivoire,2,1,Japan, ,0,1,300186507
+2014,15 Jun 2014 - 13:00,Group E,Estadio Nacional,Switzerland,2,1,Ecuador, ,0,1,300186494
+2014,15 Jun 2014 - 16:00,Group E,Estadio Beira-Rio,France,3,0,Honduras, ,1,0,300186496
+2014,15 Jun 2014 - 19:00,Group F,Estadio do Maracana,Argentina,2,1,"rn"">Bosnia and Herzegovina", ,1,0,300186477
+2014,16 Jun 2014 - 13:00,Group G,Arena Fonte Nova,Germany,4,0,Portugal, ,3,0,300186475
+2014,16 Jun 2014 - 16:00,Group F,Arena da Baixada,IR Iran,0,0,Nigeria, ,0,0,300186505
+2014,16 Jun 2014 - 19:00,Group G,Estadio das Dunas,Ghana,1,2,USA, ,0,1,300186512
+2014,17 Jun 2014 - 13:00,Group H,Estadio Mineirao,Belgium,2,1,Algeria, ,0,1,300186479
+2014,17 Jun 2014 - 16:00,Group A,Estadio Castelao,Brazil,0,0,Mexico, ,0,0,300186509
+2014,17 Jun 2014 - 18:00,Group H,Arena Pantanal,Russia,1,1,Korea Republic, ,0,0,300186499
+2014,18 Jun 2014 - 13:00,Group B,Estadio Beira-Rio,Australia,2,3,Netherlands, ,1,1,300186478
+2014,18 Jun 2014 - 16:00,Group B,Estadio do Maracana,Spain,0,2,Chile, ,0,2,300186498
+2014,18 Jun 2014 - 18:00,Group A,Arena Amazonia,Cameroon,0,4,Croatia, ,0,1,300186453
+2014,19 Jun 2014 - 13:00,Group C,Estadio Nacional,Colombia,2,1,C�te d'Ivoire, ,0,0,300186468
+2014,19 Jun 2014 - 16:00,Group D,Arena de Sao Paulo,Uruguay,2,1,England, ,1,0,300186486
+2014,19 Jun 2014 - 19:00,Group C,Estadio das Dunas,Japan,0,0,Greece, ,0,0,300186454
+2014,20 Jun 2014 - 13:00,Group D,Arena Pernambuco,Italy,0,1,Costa Rica, ,0,1,300186500
+2014,20 Jun 2014 - 16:00,Group E,Arena Fonte Nova,Switzerland,2,5,France, ,0,3,300186514
+2014,20 Jun 2014 - 19:00,Group E,Arena da Baixada,Honduras,1,2,Ecuador, ,1,1,300186463
+2014,21 Jun 2014 - 13:00,Group F,Estadio Mineirao,Argentina,1,0,IR Iran, ,0,0,300186466
+2014,21 Jun 2014 - 16:00,Group G,Estadio Castelao,Germany,2,2,Ghana, ,0,0,300186493
+2014,21 Jun 2014 - 18:00,Group F,Arena Pantanal,Nigeria,1,0,"rn"">Bosnia and Herzegovina", ,1,0,300186511
+2014,22 Jun 2014 - 13:00,Group H,Estadio do Maracana,Belgium,1,0,Russia, ,0,0,300186481
+2014,22 Jun 2014 - 16:00,Group H,Estadio Beira-Rio,Korea Republic,2,4,Algeria, ,0,3,300186495
+2014,22 Jun 2014 - 18:00,Group G,Arena Amazonia,USA,2,2,Portugal, ,0,1,300186483
+2014,23 Jun 2014 - 13:00,Group B,Arena da Baixada,Australia,0,3,Spain, ,0,1,300186467
+2014,23 Jun 2014 - 13:00,Group B,Arena de Sao Paulo,Netherlands,2,0,Chile, ,0,0,300186470
+2014,23 Jun 2014 - 17:00,Group A,Estadio Nacional,Cameroon,1,4,Brazil, ,1,2,300186472
+2014,23 Jun 2014 - 17:00,Group A,Arena Pernambuco,Croatia,1,3,Mexico, ,0,0,300186452
+2014,24 Jun 2014 - 13:00,Group D,Estadio das Dunas,Italy,0,1,Uruguay, ,0,0,300186465
+2014,24 Jun 2014 - 13:00,Group D,Estadio Mineirao,Costa Rica,0,0,England, ,0,0,300186484
+2014,24 Jun 2014 - 16:00,Group C,Arena Pantanal,Japan,1,4,Colombia, ,1,1,300186457
+2014,24 Jun 2014 - 17:00,Group C,Estadio Castelao,Greece,2,1,C�te d'Ivoire, ,1,0,300186455
+2014,25 Jun 2014 - 13:00,Group F,Estadio Beira-Rio,Nigeria,2,3,Argentina, ,1,2,300186458
+2014,25 Jun 2014 - 13:00,Group F,Arena Fonte Nova,"rn"">Bosnia and Herzegovina",3,1,IR Iran, ,1,0,300186464
+2014,25 Jun 2014 - 16:00,Group E,Arena Amazonia,Honduras,0,3,Switzerland, ,0,2,300186482
+2014,25 Jun 2014 - 17:00,Group E,Estadio do Maracana,Ecuador,0,0,France, ,0,0,300186515
+2014,26 Jun 2014 - 13:00,Group G,Arena Pernambuco,USA,0,1,Germany, ,0,0,300186469
+2014,26 Jun 2014 - 13:00,Group G,Estadio Nacional,Portugal,2,1,Ghana, ,1,0,300186476
+2014,26 Jun 2014 - 17:00,Group H,Arena de Sao Paulo,Korea Republic,0,1,Belgium, ,0,0,300186480
+2014,26 Jun 2014 - 17:00,Group H,Arena da Baixada,Algeria,1,1,Russia, ,0,1,300186506
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+year,match_date,stage,stadium,home_name,home_final_score,away_final_score,away_name,win_condition,home_half_score,away_half_score,match_id
+2010,11 Jun 2010 - 16:00,Group A,Soccer City Stadium,South Africa,1,1,Mexico, ,0,0,300061454
+2010,11 Jun 2010 - 20:30,Group A,Cape Town Stadium,Uruguay,0,0,France, ,0,0,300061453
+2010,12 Jun 2010 - 13:30,Group B,Port Elizabeth Stadium,Korea Republic,2,0,Greece, ,1,0,300061459
+2010,12 Jun 2010 - 16:00,Group B,Ellis Park Stadium,Argentina,1,0,Nigeria, ,1,0,300061460
+2010,12 Jun 2010 - 20:30,Group C,Royal Bafokeng Sports Palace,England,1,1,USA, ,1,1,300061466
+2010,13 Jun 2010 - 13:30,Group C,Peter Mokaba Stadium,Algeria,0,1,Slovenia, ,0,0,300061465
+2010,13 Jun 2010 - 16:00,Group D,Loftus Versfeld Stadium,Serbia,0,1,Ghana, ,0,0,300061471
+2010,13 Jun 2010 - 20:30,Group D,Durban Stadium,Germany,4,0,Australia, ,2,0,300111116
+2010,14 Jun 2010 - 13:30,Group E,Soccer City Stadium,Netherlands,2,0,Denmark, ,0,0,300061478
+2010,14 Jun 2010 - 16:00,Group E,Free State Stadium,Japan,1,0,Cameroon, ,1,0,300061477
+2010,14 Jun 2010 - 20:30,Group F,Cape Town Stadium,Italy,1,1,Paraguay, ,0,1,300061484
+2010,15 Jun 2010 - 13:30,Group F,Royal Bafokeng Sports Palace,New Zealand,1,1,Slovakia, ,0,0,300061483
+2010,15 Jun 2010 - 16:00,Group G,Port Elizabeth Stadium,C�te d'Ivoire,0,0,Portugal, ,0,0,300061489
+2010,15 Jun 2010 - 20:30,Group G,Ellis Park Stadium,Brazil,2,1,Korea DPR, ,0,0,300061490
+2010,16 Jun 2010 - 13:30,Group H,Mbombela Stadium,Honduras,0,1,Chile, ,0,1,300061495
+2010,16 Jun 2010 - 16:00,Group H,Durban Stadium,Spain,0,1,Switzerland, ,0,0,300111112
+2010,16 Jun 2010 - 20:30,Group A,Loftus Versfeld Stadium,South Africa,0,3,Uruguay, ,0,1,300061452
+2010,17 Jun 2010 - 13:30,Group B,Soccer City Stadium,Argentina,4,1,Korea Republic, ,2,1,300061458
+2010,17 Jun 2010 - 16:00,Group B,Free State Stadium,Greece,2,1,Nigeria, ,1,1,300061457
+2010,17 Jun 2010 - 20:30,Group A,Peter Mokaba Stadium,France,0,2,Mexico, ,0,0,300061451
+2010,18 Jun 2010 - 13:30,Group D,Port Elizabeth Stadium,Germany,0,1,Serbia, ,0,1,300061470
+2010,18 Jun 2010 - 16:00,Group C,Ellis Park Stadium,Slovenia,2,2,USA, ,2,0,300061463
+2010,18 Jun 2010 - 20:30,Group C,Cape Town Stadium,England,0,0,Algeria, ,0,0,300061464
+2010,19 Jun 2010 - 13:30,Group E,Durban Stadium,Netherlands,1,0,Japan, ,0,0,300111117
+2010,19 Jun 2010 - 16:00,Group D,Royal Bafokeng Sports Palace,Ghana,1,1,Australia, ,1,1,300061469
+2010,19 Jun 2010 - 20:30,Group E,Loftus Versfeld Stadium,Cameroon,1,2,Denmark, ,1,1,300061475
+2010,20 Jun 2010 - 13:30,Group F,Free State Stadium,Slovakia,0,2,Paraguay, ,0,1,300061481
+2010,20 Jun 2010 - 16:00,Group F,Mbombela Stadium,Italy,1,1,New Zealand, ,1,1,300061482
+2010,20 Jun 2010 - 20:30,Group G,Soccer City Stadium,Brazil,3,1,C�te d'Ivoire, ,1,0,300061488
+2010,21 Jun 2010 - 13:30,Group G,Cape Town Stadium,Portugal,7,0,Korea DPR, ,1,0,300061487
+2010,21 Jun 2010 - 16:00,Group H,Port Elizabeth Stadium,Chile,1,0,Switzerland, ,0,0,300061493
+2010,21 Jun 2010 - 20:30,Group H,Ellis Park Stadium,Spain,2,0,Honduras, ,1,0,300061494
+2010,22 Jun 2010 - 16:00,Group A,Royal Bafokeng Sports Palace,Mexico,0,1,Uruguay, ,0,1,300061450
+2010,22 Jun 2010 - 16:00,Group A,Free State Stadium,France,1,2,South Africa, ,0,2,300061449
+2010,22 Jun 2010 - 20:30,Group B,Durban Stadium,Nigeria,2,2,Korea Republic, ,1,1,300111115
+2010,22 Jun 2010 - 20:30,Group B,Peter Mokaba Stadium,Greece,0,2,Argentina, ,0,0,300061455
+2010,23 Jun 2010 - 16:00,Group C,Port Elizabeth Stadium,Slovenia,0,1,England, ,0,1,300061462
+2010,23 Jun 2010 - 16:00,Group C,Loftus Versfeld Stadium,USA,1,0,Algeria, ,0,0,300061461
+2010,23 Jun 2010 - 20:30,Group D,Soccer City Stadium,Ghana,0,1,Germany, ,0,0,300061468
+2010,23 Jun 2010 - 20:30,Group D,Mbombela Stadium,Australia,2,1,Serbia, ,0,0,300061467
+2010,24 Jun 2010 - 16:00,Group F,Ellis Park Stadium,Slovakia,3,2,Italy, ,1,0,300061480
+2010,24 Jun 2010 - 16:00,Group F,Peter Mokaba Stadium,Paraguay,0,0,New Zealand, ,0,0,300061479
+2010,24 Jun 2010 - 20:30,Group E,Royal Bafokeng Sports Palace,Denmark,1,3,Japan, ,0,2,300061474
+2010,24 Jun 2010 - 20:30,Group E,Cape Town Stadium,Cameroon,1,2,Netherlands, ,0,1,300061473
+2010,25 Jun 2010 - 16:00,Group G,Durban Stadium,Portugal,0,0,Brazil, ,0,0,300111111
+2010,25 Jun 2010 - 16:00,Group G,Mbombela Stadium,Korea DPR,0,3,C�te d'Ivoire, ,0,2,300061486
+2010,25 Jun 2010 - 20:30,Group H,Loftus Versfeld Stadium,Chile,1,2,Spain, ,0,2,300061491
+2010,25 Jun 2010 - 20:30,Group H,Free State Stadium,Switzerland,0,0,Honduras, ,0,0,300061492
+2010,26 Jun 2010 - 16:00,Round of 16,Port Elizabeth Stadium,Uruguay,2,1,Korea Republic, ,1,0,300061504
+2010,26 Jun 2010 - 20:30,Round of 16,Royal Bafokeng Sports Palace,USA,1,2,Ghana,Ghana win after extra time ,0,0,300061503
+2010,27 Jun 2010 - 16:00,Round of 16,Free State Stadium,Germany,4,1,England, ,2,1,300061501
+2010,27 Jun 2010 - 20:30,Round of 16,Soccer City Stadium,Argentina,3,1,Mexico, ,2,0,300061502
+2010,28 Jun 2010 - 16:00,Round of 16,Durban Stadium,Netherlands,2,1,Slovakia, ,1,0,300111113
+2010,28 Jun 2010 - 20:30,Round of 16,Ellis Park Stadium,Brazil,3,0,Chile, ,2,0,300061500
+2010,29 Jun 2010 - 16:00,Round of 16,Loftus Versfeld Stadium,Paraguay,0,0,Japan,Paraguay win on penalties (5 - 3),0,0,300061497
+2010,29 Jun 2010 - 20:30,Round of 16,Cape Town Stadium,Spain,1,0,Portugal, ,0,0,300061498
+2010,02 Jul 2010 - 16:00,Quarter-finals,Port Elizabeth Stadium,Netherlands,2,1,Brazil, ,0,1,300061507
+2010,02 Jul 2010 - 20:30,Quarter-finals,Soccer City Stadium,Uruguay,1,1,Ghana,Uruguay win on penalties (4 - 2),0,0,300061508
+2010,03 Jul 2010 - 16:00,Quarter-finals,Cape Town Stadium,Argentina,0,4,Germany, ,0,1,300061505
+2010,03 Jul 2010 - 20:30,Quarter-finals,Ellis Park Stadium,Paraguay,0,1,Spain, ,0,0,300061506
+2010,06 Jul 2010 - 20:30,Semi-finals,Cape Town Stadium,Uruguay,2,3,Netherlands, ,1,1,300061512
+2010,07 Jul 2010 - 20:30,Semi-finals,Durban Stadium,Germany,0,1,Spain, ,0,0,300111114
+2010,10 Jul 2010 - 20:30,Match for third place,Port Elizabeth Stadium,Uruguay,2,3,Germany, ,1,1,300061510
+2010,11 Jul 2010 - 20:30,Final,Soccer City Stadium,Netherlands,0,1,Spain,Spain win after extra time ,0,0,300061509
+2014,12 Jun 2014 - 17:00,Group A,Arena de Sao Paulo,Brazil,3,1,Croatia, ,1,1,300186456
+2014,13 Jun 2014 - 13:00,Group A,Estadio das Dunas,Mexico,1,0,Cameroon, ,0,0,300186492
+2014,13 Jun 2014 - 16:00,Group B,Arena Fonte Nova,Spain,1,5,Netherlands, ,1,1,300186510
+2014,13 Jun 2014 - 18:00,Group B,Arena Pantanal,Chile,3,1,Australia, ,2,1,300186473
+2014,14 Jun 2014 - 13:00,Group C,Estadio Mineirao,Colombia,3,0,Greece, ,1,0,300186471
+2014,14 Jun 2014 - 16:00,Group D,Estadio Castelao,Uruguay,1,3,Costa Rica, ,1,0,300186489
+2014,14 Jun 2014 - 18:00,Group D,Arena Amazonia,England,1,2,Italy, ,1,1,300186513
+2014,14 Jun 2014 - 22:00,Group C,Arena Pernambuco,C�te d'Ivoire,2,1,Japan, ,0,1,300186507
+2014,15 Jun 2014 - 13:00,Group E,Estadio Nacional,Switzerland,2,1,Ecuador, ,0,1,300186494
+2014,15 Jun 2014 - 16:00,Group E,Estadio Beira-Rio,France,3,0,Honduras, ,1,0,300186496
+2014,15 Jun 2014 - 19:00,Group F,Estadio do Maracana,Argentina,2,1,"rn"">Bosnia and Herzegovina", ,1,0,300186477
+2014,16 Jun 2014 - 13:00,Group G,Arena Fonte Nova,Germany,4,0,Portugal, ,3,0,300186475
+2014,16 Jun 2014 - 16:00,Group F,Arena da Baixada,IR Iran,0,0,Nigeria, ,0,0,300186505
+2014,16 Jun 2014 - 19:00,Group G,Estadio das Dunas,Ghana,1,2,USA, ,0,1,300186512
+2014,17 Jun 2014 - 13:00,Group H,Estadio Mineirao,Belgium,2,1,Algeria, ,0,1,300186479
+2014,17 Jun 2014 - 16:00,Group A,Estadio Castelao,Brazil,0,0,Mexico, ,0,0,300186509
+2014,17 Jun 2014 - 18:00,Group H,Arena Pantanal,Russia,1,1,Korea Republic, ,0,0,300186499
+2014,18 Jun 2014 - 13:00,Group B,Estadio Beira-Rio,Australia,2,3,Netherlands, ,1,1,300186478
+2014,18 Jun 2014 - 16:00,Group B,Estadio do Maracana,Spain,0,2,Chile, ,0,2,300186498
+2014,18 Jun 2014 - 18:00,Group A,Arena Amazonia,Cameroon,0,4,Croatia, ,0,1,300186453
+2014,19 Jun 2014 - 13:00,Group C,Estadio Nacional,Colombia,2,1,C�te d'Ivoire, ,0,0,300186468
+2014,19 Jun 2014 - 16:00,Group D,Arena de Sao Paulo,Uruguay,2,1,England, ,1,0,300186486
+2014,19 Jun 2014 - 19:00,Group C,Estadio das Dunas,Japan,0,0,Greece, ,0,0,300186454
+2014,20 Jun 2014 - 13:00,Group D,Arena Pernambuco,Italy,0,1,Costa Rica, ,0,1,300186500
+2014,20 Jun 2014 - 16:00,Group E,Arena Fonte Nova,Switzerland,2,5,France, ,0,3,300186514
+2014,20 Jun 2014 - 19:00,Group E,Arena da Baixada,Honduras,1,2,Ecuador, ,1,1,300186463
+2014,21 Jun 2014 - 13:00,Group F,Estadio Mineirao,Argentina,1,0,IR Iran, ,0,0,300186466
+2014,21 Jun 2014 - 16:00,Group G,Estadio Castelao,Germany,2,2,Ghana, ,0,0,300186493
+2014,21 Jun 2014 - 18:00,Group F,Arena Pantanal,Nigeria,1,0,"rn"">Bosnia and Herzegovina", ,1,0,300186511
+2014,22 Jun 2014 - 13:00,Group H,Estadio do Maracana,Belgium,1,0,Russia, ,0,0,300186481
+2014,22 Jun 2014 - 16:00,Group H,Estadio Beira-Rio,Korea Republic,2,4,Algeria, ,0,3,300186495
+2014,22 Jun 2014 - 18:00,Group G,Arena Amazonia,USA,2,2,Portugal, ,0,1,300186483
+2014,23 Jun 2014 - 13:00,Group B,Arena da Baixada,Australia,0,3,Spain, ,0,1,300186467
+2014,23 Jun 2014 - 13:00,Group B,Arena de Sao Paulo,Netherlands,2,0,Chile, ,0,0,300186470
+2014,23 Jun 2014 - 17:00,Group A,Estadio Nacional,Cameroon,1,4,Brazil, ,1,2,300186472
+2014,23 Jun 2014 - 17:00,Group A,Arena Pernambuco,Croatia,1,3,Mexico, ,0,0,300186452
+2014,24 Jun 2014 - 13:00,Group D,Estadio das Dunas,Italy,0,1,Uruguay, ,0,0,300186465
+2014,24 Jun 2014 - 13:00,Group D,Estadio Mineirao,Costa Rica,0,0,England, ,0,0,300186484
+2014,24 Jun 2014 - 16:00,Group C,Arena Pantanal,Japan,1,4,Colombia, ,1,1,300186457
+2014,24 Jun 2014 - 17:00,Group C,Estadio Castelao,Greece,2,1,C�te d'Ivoire, ,1,0,300186455
+2014,25 Jun 2014 - 13:00,Group F,Estadio Beira-Rio,Nigeria,2,3,Argentina, ,1,2,300186458
+2014,25 Jun 2014 - 13:00,Group F,Arena Fonte Nova,"rn"">Bosnia and Herzegovina",3,1,IR Iran, ,1,0,300186464
+2014,25 Jun 2014 - 16:00,Group E,Arena Amazonia,Honduras,0,3,Switzerland, ,0,2,300186482
+2014,25 Jun 2014 - 17:00,Group E,Estadio do Maracana,Ecuador,0,0,France, ,0,0,300186515
+2014,26 Jun 2014 - 13:00,Group G,Arena Pernambuco,USA,0,1,Germany, ,0,0,300186469
+2014,26 Jun 2014 - 13:00,Group G,Estadio Nacional,Portugal,2,1,Ghana, ,1,0,300186476
+2014,26 Jun 2014 - 17:00,Group H,Arena de Sao Paulo,Korea Republic,0,1,Belgium, ,0,0,300186480
+2014,26 Jun 2014 - 17:00,Group H,Arena da Baixada,Algeria,1,1,Russia, ,0,1,300186506
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+year,match_date,stage,stadium,home_name,home_final_score,away_final_score,away_name,win_condition,home_half_score,away_half_score,match_id
+2010,11 Jun 2010 - 16:00,Group A,Soccer City Stadium,South Africa,1,1,Mexico, ,0,0,300061454
+2010,11 Jun 2010 - 20:30,Group A,Cape Town Stadium,Uruguay,0,0,France, ,0,0,300061453
+2010,12 Jun 2010 - 13:30,Group B,Port Elizabeth Stadium,Korea Republic,2,0,Greece, ,1,0,300061459
+2010,12 Jun 2010 - 16:00,Group B,Ellis Park Stadium,Argentina,1,0,Nigeria, ,1,0,300061460
+2010,12 Jun 2010 - 20:30,Group C,Royal Bafokeng Sports Palace,England,1,1,USA, ,1,1,300061466
+2010,13 Jun 2010 - 13:30,Group C,Peter Mokaba Stadium,Algeria,0,1,Slovenia, ,0,0,300061465
+2010,13 Jun 2010 - 16:00,Group D,Loftus Versfeld Stadium,Serbia,0,1,Ghana, ,0,0,300061471
+2010,13 Jun 2010 - 20:30,Group D,Durban Stadium,Germany,4,0,Australia, ,2,0,300111116
+2010,14 Jun 2010 - 13:30,Group E,Soccer City Stadium,Netherlands,2,0,Denmark, ,0,0,300061478
+2010,14 Jun 2010 - 16:00,Group E,Free State Stadium,Japan,1,0,Cameroon, ,1,0,300061477
+2010,14 Jun 2010 - 20:30,Group F,Cape Town Stadium,Italy,1,1,Paraguay, ,0,1,300061484
+2010,15 Jun 2010 - 13:30,Group F,Royal Bafokeng Sports Palace,New Zealand,1,1,Slovakia, ,0,0,300061483
+2010,15 Jun 2010 - 16:00,Group G,Port Elizabeth Stadium,C�te d'Ivoire,0,0,Portugal, ,0,0,300061489
+2010,15 Jun 2010 - 20:30,Group G,Ellis Park Stadium,Brazil,2,1,Korea DPR, ,0,0,300061490
+2010,16 Jun 2010 - 13:30,Group H,Mbombela Stadium,Honduras,0,1,Chile, ,0,1,300061495
+2010,16 Jun 2010 - 16:00,Group H,Durban Stadium,Spain,0,1,Switzerland, ,0,0,300111112
+2010,16 Jun 2010 - 20:30,Group A,Loftus Versfeld Stadium,South Africa,0,3,Uruguay, ,0,1,300061452
+2010,17 Jun 2010 - 13:30,Group B,Soccer City Stadium,Argentina,4,1,Korea Republic, ,2,1,300061458
+2010,17 Jun 2010 - 16:00,Group B,Free State Stadium,Greece,2,1,Nigeria, ,1,1,300061457
+2010,17 Jun 2010 - 20:30,Group A,Peter Mokaba Stadium,France,0,2,Mexico, ,0,0,300061451
+2010,18 Jun 2010 - 13:30,Group D,Port Elizabeth Stadium,Germany,0,1,Serbia, ,0,1,300061470
+2010,18 Jun 2010 - 16:00,Group C,Ellis Park Stadium,Slovenia,2,2,USA, ,2,0,300061463
+2010,18 Jun 2010 - 20:30,Group C,Cape Town Stadium,England,0,0,Algeria, ,0,0,300061464
+2010,19 Jun 2010 - 13:30,Group E,Durban Stadium,Netherlands,1,0,Japan, ,0,0,300111117
+2010,19 Jun 2010 - 16:00,Group D,Royal Bafokeng Sports Palace,Ghana,1,1,Australia, ,1,1,300061469
+2010,19 Jun 2010 - 20:30,Group E,Loftus Versfeld Stadium,Cameroon,1,2,Denmark, ,1,1,300061475
+2010,20 Jun 2010 - 13:30,Group F,Free State Stadium,Slovakia,0,2,Paraguay, ,0,1,300061481
+2010,20 Jun 2010 - 16:00,Group F,Mbombela Stadium,Italy,1,1,New Zealand, ,1,1,300061482
+2010,20 Jun 2010 - 20:30,Group G,Soccer City Stadium,Brazil,3,1,C�te d'Ivoire, ,1,0,300061488
+2010,21 Jun 2010 - 13:30,Group G,Cape Town Stadium,Portugal,7,0,Korea DPR, ,1,0,300061487
+2010,21 Jun 2010 - 16:00,Group H,Port Elizabeth Stadium,Chile,1,0,Switzerland, ,0,0,300061493
+2010,21 Jun 2010 - 20:30,Group H,Ellis Park Stadium,Spain,2,0,Honduras, ,1,0,300061494
+2010,22 Jun 2010 - 16:00,Group A,Royal Bafokeng Sports Palace,Mexico,0,1,Uruguay, ,0,1,300061450
+2010,22 Jun 2010 - 16:00,Group A,Free State Stadium,France,1,2,South Africa, ,0,2,300061449
+2010,22 Jun 2010 - 20:30,Group B,Durban Stadium,Nigeria,2,2,Korea Republic, ,1,1,300111115
+2010,22 Jun 2010 - 20:30,Group B,Peter Mokaba Stadium,Greece,0,2,Argentina, ,0,0,300061455
+2010,23 Jun 2010 - 16:00,Group C,Port Elizabeth Stadium,Slovenia,0,1,England, ,0,1,300061462
+2010,23 Jun 2010 - 16:00,Group C,Loftus Versfeld Stadium,USA,1,0,Algeria, ,0,0,300061461
+2010,23 Jun 2010 - 20:30,Group D,Soccer City Stadium,Ghana,0,1,Germany, ,0,0,300061468
+2010,23 Jun 2010 - 20:30,Group D,Mbombela Stadium,Australia,2,1,Serbia, ,0,0,300061467
+2010,24 Jun 2010 - 16:00,Group F,Ellis Park Stadium,Slovakia,3,2,Italy, ,1,0,300061480
+2010,24 Jun 2010 - 16:00,Group F,Peter Mokaba Stadium,Paraguay,0,0,New Zealand, ,0,0,300061479
+2010,24 Jun 2010 - 20:30,Group E,Royal Bafokeng Sports Palace,Denmark,1,3,Japan, ,0,2,300061474
+2010,24 Jun 2010 - 20:30,Group E,Cape Town Stadium,Cameroon,1,2,Netherlands, ,0,1,300061473
+2010,25 Jun 2010 - 16:00,Group G,Durban Stadium,Portugal,0,0,Brazil, ,0,0,300111111
+2010,25 Jun 2010 - 16:00,Group G,Mbombela Stadium,Korea DPR,0,3,C�te d'Ivoire, ,0,2,300061486
+2010,25 Jun 2010 - 20:30,Group H,Loftus Versfeld Stadium,Chile,1,2,Spain, ,0,2,300061491
+2010,25 Jun 2010 - 20:30,Group H,Free State Stadium,Switzerland,0,0,Honduras, ,0,0,300061492
+2010,26 Jun 2010 - 16:00,Round of 16,Port Elizabeth Stadium,Uruguay,2,1,Korea Republic, ,1,0,300061504
+2010,26 Jun 2010 - 20:30,Round of 16,Royal Bafokeng Sports Palace,USA,1,2,Ghana,Ghana win after extra time ,0,0,300061503
+2010,27 Jun 2010 - 16:00,Round of 16,Free State Stadium,Germany,4,1,England, ,2,1,300061501
+2010,27 Jun 2010 - 20:30,Round of 16,Soccer City Stadium,Argentina,3,1,Mexico, ,2,0,300061502
+2010,28 Jun 2010 - 16:00,Round of 16,Durban Stadium,Netherlands,2,1,Slovakia, ,1,0,300111113
+2010,28 Jun 2010 - 20:30,Round of 16,Ellis Park Stadium,Brazil,3,0,Chile, ,2,0,300061500
+2010,29 Jun 2010 - 16:00,Round of 16,Loftus Versfeld Stadium,Paraguay,0,0,Japan,Paraguay win on penalties (5 - 3),0,0,300061497
+2010,29 Jun 2010 - 20:30,Round of 16,Cape Town Stadium,Spain,1,0,Portugal, ,0,0,300061498
+2010,02 Jul 2010 - 16:00,Quarter-finals,Port Elizabeth Stadium,Netherlands,2,1,Brazil, ,0,1,300061507
+2010,02 Jul 2010 - 20:30,Quarter-finals,Soccer City Stadium,Uruguay,1,1,Ghana,Uruguay win on penalties (4 - 2),0,0,300061508
+2010,03 Jul 2010 - 16:00,Quarter-finals,Cape Town Stadium,Argentina,0,4,Germany, ,0,1,300061505
+2010,03 Jul 2010 - 20:30,Quarter-finals,Ellis Park Stadium,Paraguay,0,1,Spain, ,0,0,300061506
+2010,06 Jul 2010 - 20:30,Semi-finals,Cape Town Stadium,Uruguay,2,3,Netherlands, ,1,1,300061512
+2010,07 Jul 2010 - 20:30,Semi-finals,Durban Stadium,Germany,0,1,Spain, ,0,0,300111114
+2010,10 Jul 2010 - 20:30,Match for third place,Port Elizabeth Stadium,Uruguay,2,3,Germany, ,1,1,300061510
+2010,11 Jul 2010 - 20:30,Final,Soccer City Stadium,Netherlands,0,1,Spain,Spain win after extra time ,0,0,300061509
+2014,12 Jun 2014 - 17:00,Group A,Arena de Sao Paulo,Brazil,3,1,Croatia, ,1,1,300186456
+2014,13 Jun 2014 - 13:00,Group A,Estadio das Dunas,Mexico,1,0,Cameroon, ,0,0,300186492
+2014,13 Jun 2014 - 16:00,Group B,Arena Fonte Nova,Spain,1,5,Netherlands, ,1,1,300186510
+2014,13 Jun 2014 - 18:00,Group B,Arena Pantanal,Chile,3,1,Australia, ,2,1,300186473
+2014,14 Jun 2014 - 13:00,Group C,Estadio Mineirao,Colombia,3,0,Greece, ,1,0,300186471
+2014,14 Jun 2014 - 16:00,Group D,Estadio Castelao,Uruguay,1,3,Costa Rica, ,1,0,300186489
+2014,14 Jun 2014 - 18:00,Group D,Arena Amazonia,England,1,2,Italy, ,1,1,300186513
+2014,14 Jun 2014 - 22:00,Group C,Arena Pernambuco,C�te d'Ivoire,2,1,Japan, ,0,1,300186507
+2014,15 Jun 2014 - 13:00,Group E,Estadio Nacional,Switzerland,2,1,Ecuador, ,0,1,300186494
+2014,15 Jun 2014 - 16:00,Group E,Estadio Beira-Rio,France,3,0,Honduras, ,1,0,300186496
+2014,15 Jun 2014 - 19:00,Group F,Estadio do Maracana,Argentina,2,1,"rn"">Bosnia and Herzegovina", ,1,0,300186477
+2014,16 Jun 2014 - 13:00,Group G,Arena Fonte Nova,Germany,4,0,Portugal, ,3,0,300186475
+2014,16 Jun 2014 - 16:00,Group F,Arena da Baixada,IR Iran,0,0,Nigeria, ,0,0,300186505
+2014,16 Jun 2014 - 19:00,Group G,Estadio das Dunas,Ghana,1,2,USA, ,0,1,300186512
+2014,17 Jun 2014 - 13:00,Group H,Estadio Mineirao,Belgium,2,1,Algeria, ,0,1,300186479
+2014,17 Jun 2014 - 16:00,Group A,Estadio Castelao,Brazil,0,0,Mexico, ,0,0,300186509
+2014,17 Jun 2014 - 18:00,Group H,Arena Pantanal,Russia,1,1,Korea Republic, ,0,0,300186499
+2014,18 Jun 2014 - 13:00,Group B,Estadio Beira-Rio,Australia,2,3,Netherlands, ,1,1,300186478
+2014,18 Jun 2014 - 16:00,Group B,Estadio do Maracana,Spain,0,2,Chile, ,0,2,300186498
+2014,18 Jun 2014 - 18:00,Group A,Arena Amazonia,Cameroon,0,4,Croatia, ,0,1,300186453
+2014,19 Jun 2014 - 13:00,Group C,Estadio Nacional,Colombia,2,1,C�te d'Ivoire, ,0,0,300186468
+2014,19 Jun 2014 - 16:00,Group D,Arena de Sao Paulo,Uruguay,2,1,England, ,1,0,300186486
+2014,19 Jun 2014 - 19:00,Group C,Estadio das Dunas,Japan,0,0,Greece, ,0,0,300186454
+2014,20 Jun 2014 - 13:00,Group D,Arena Pernambuco,Italy,0,1,Costa Rica, ,0,1,300186500
+2014,20 Jun 2014 - 16:00,Group E,Arena Fonte Nova,Switzerland,2,5,France, ,0,3,300186514
+2014,20 Jun 2014 - 19:00,Group E,Arena da Baixada,Honduras,1,2,Ecuador, ,1,1,300186463
+2014,21 Jun 2014 - 13:00,Group F,Estadio Mineirao,Argentina,1,0,IR Iran, ,0,0,300186466
+2014,21 Jun 2014 - 16:00,Group G,Estadio Castelao,Germany,2,2,Ghana, ,0,0,300186493
+2014,21 Jun 2014 - 18:00,Group F,Arena Pantanal,Nigeria,1,0,"rn"">Bosnia and Herzegovina", ,1,0,300186511
+2014,22 Jun 2014 - 13:00,Group H,Estadio do Maracana,Belgium,1,0,Russia, ,0,0,300186481
+2014,22 Jun 2014 - 16:00,Group H,Estadio Beira-Rio,Korea Republic,2,4,Algeria, ,0,3,300186495
+2014,22 Jun 2014 - 18:00,Group G,Arena Amazonia,USA,2,2,Portugal, ,0,1,300186483
+2014,23 Jun 2014 - 13:00,Group B,Arena da Baixada,Australia,0,3,Spain, ,0,1,300186467
+2014,23 Jun 2014 - 13:00,Group B,Arena de Sao Paulo,Netherlands,2,0,Chile, ,0,0,300186470
+2014,23 Jun 2014 - 17:00,Group A,Estadio Nacional,Cameroon,1,4,Brazil, ,1,2,300186472
+2014,23 Jun 2014 - 17:00,Group A,Arena Pernambuco,Croatia,1,3,Mexico, ,0,0,300186452
+2014,24 Jun 2014 - 13:00,Group D,Estadio das Dunas,Italy,0,1,Uruguay, ,0,0,300186465
+2014,24 Jun 2014 - 13:00,Group D,Estadio Mineirao,Costa Rica,0,0,England, ,0,0,300186484
+2014,24 Jun 2014 - 16:00,Group C,Arena Pantanal,Japan,1,4,Colombia, ,1,1,300186457
+2014,24 Jun 2014 - 17:00,Group C,Estadio Castelao,Greece,2,1,C�te d'Ivoire, ,1,0,300186455
+2014,25 Jun 2014 - 13:00,Group F,Estadio Beira-Rio,Nigeria,2,3,Argentina, ,1,2,300186458
+2014,25 Jun 2014 - 13:00,Group F,Arena Fonte Nova,"rn"">Bosnia and Herzegovina",3,1,IR Iran, ,1,0,300186464
+2014,25 Jun 2014 - 16:00,Group E,Arena Amazonia,Honduras,0,3,Switzerland, ,0,2,300186482
+2014,25 Jun 2014 - 17:00,Group E,Estadio do Maracana,Ecuador,0,0,France, ,0,0,300186515
+2014,26 Jun 2014 - 13:00,Group G,Arena Pernambuco,USA,0,1,Germany, ,0,0,300186469
+2014,26 Jun 2014 - 13:00,Group G,Estadio Nacional,Portugal,2,1,Ghana, ,1,0,300186476
+2014,26 Jun 2014 - 17:00,Group H,Arena de Sao Paulo,Korea Republic,0,1,Belgium, ,0,0,300186480
+2014,26 Jun 2014 - 17:00,Group H,Arena da Baixada,Algeria,1,1,Russia, ,0,1,300186506
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+year,match_date,stage,stadium,home_name,home_final_score,away_final_score,away_name,win_condition,home_half_score,away_half_score,match_id
+2010,11 Jun 2010 - 16:00,Group A,Soccer City Stadium,South Africa,1,1,Mexico, ,0,0,300061454
+2010,11 Jun 2010 - 20:30,Group A,Cape Town Stadium,Uruguay,0,0,France, ,0,0,300061453
+2010,12 Jun 2010 - 13:30,Group B,Port Elizabeth Stadium,Korea Republic,2,0,Greece, ,1,0,300061459
+2010,12 Jun 2010 - 16:00,Group B,Ellis Park Stadium,Argentina,1,0,Nigeria, ,1,0,300061460
+2010,12 Jun 2010 - 20:30,Group C,Royal Bafokeng Sports Palace,England,1,1,USA, ,1,1,300061466
+2010,13 Jun 2010 - 13:30,Group C,Peter Mokaba Stadium,Algeria,0,1,Slovenia, ,0,0,300061465
+2010,13 Jun 2010 - 16:00,Group D,Loftus Versfeld Stadium,Serbia,0,1,Ghana, ,0,0,300061471
+2010,13 Jun 2010 - 20:30,Group D,Durban Stadium,Germany,4,0,Australia, ,2,0,300111116
+2010,14 Jun 2010 - 13:30,Group E,Soccer City Stadium,Netherlands,2,0,Denmark, ,0,0,300061478
+2010,14 Jun 2010 - 16:00,Group E,Free State Stadium,Japan,1,0,Cameroon, ,1,0,300061477
+2010,14 Jun 2010 - 20:30,Group F,Cape Town Stadium,Italy,1,1,Paraguay, ,0,1,300061484
+2010,15 Jun 2010 - 13:30,Group F,Royal Bafokeng Sports Palace,New Zealand,1,1,Slovakia, ,0,0,300061483
+2010,15 Jun 2010 - 16:00,Group G,Port Elizabeth Stadium,C�te d'Ivoire,0,0,Portugal, ,0,0,300061489
+2010,15 Jun 2010 - 20:30,Group G,Ellis Park Stadium,Brazil,2,1,Korea DPR, ,0,0,300061490
+2010,16 Jun 2010 - 13:30,Group H,Mbombela Stadium,Honduras,0,1,Chile, ,0,1,300061495
+2010,16 Jun 2010 - 16:00,Group H,Durban Stadium,Spain,0,1,Switzerland, ,0,0,300111112
+2010,16 Jun 2010 - 20:30,Group A,Loftus Versfeld Stadium,South Africa,0,3,Uruguay, ,0,1,300061452
+2010,17 Jun 2010 - 13:30,Group B,Soccer City Stadium,Argentina,4,1,Korea Republic, ,2,1,300061458
+2010,17 Jun 2010 - 16:00,Group B,Free State Stadium,Greece,2,1,Nigeria, ,1,1,300061457
+2010,17 Jun 2010 - 20:30,Group A,Peter Mokaba Stadium,France,0,2,Mexico, ,0,0,300061451
+2010,18 Jun 2010 - 13:30,Group D,Port Elizabeth Stadium,Germany,0,1,Serbia, ,0,1,300061470
+2010,18 Jun 2010 - 16:00,Group C,Ellis Park Stadium,Slovenia,2,2,USA, ,2,0,300061463
+2010,18 Jun 2010 - 20:30,Group C,Cape Town Stadium,England,0,0,Algeria, ,0,0,300061464
+2010,19 Jun 2010 - 13:30,Group E,Durban Stadium,Netherlands,1,0,Japan, ,0,0,300111117
+2010,19 Jun 2010 - 16:00,Group D,Royal Bafokeng Sports Palace,Ghana,1,1,Australia, ,1,1,300061469
+2010,19 Jun 2010 - 20:30,Group E,Loftus Versfeld Stadium,Cameroon,1,2,Denmark, ,1,1,300061475
+2010,20 Jun 2010 - 13:30,Group F,Free State Stadium,Slovakia,0,2,Paraguay, ,0,1,300061481
+2010,20 Jun 2010 - 16:00,Group F,Mbombela Stadium,Italy,1,1,New Zealand, ,1,1,300061482
+2010,20 Jun 2010 - 20:30,Group G,Soccer City Stadium,Brazil,3,1,C�te d'Ivoire, ,1,0,300061488
+2010,21 Jun 2010 - 13:30,Group G,Cape Town Stadium,Portugal,7,0,Korea DPR, ,1,0,300061487
+2010,21 Jun 2010 - 16:00,Group H,Port Elizabeth Stadium,Chile,1,0,Switzerland, ,0,0,300061493
+2010,21 Jun 2010 - 20:30,Group H,Ellis Park Stadium,Spain,2,0,Honduras, ,1,0,300061494
+2010,22 Jun 2010 - 16:00,Group A,Royal Bafokeng Sports Palace,Mexico,0,1,Uruguay, ,0,1,300061450
+2010,22 Jun 2010 - 16:00,Group A,Free State Stadium,France,1,2,South Africa, ,0,2,300061449
+2010,22 Jun 2010 - 20:30,Group B,Durban Stadium,Nigeria,2,2,Korea Republic, ,1,1,300111115
+2010,22 Jun 2010 - 20:30,Group B,Peter Mokaba Stadium,Greece,0,2,Argentina, ,0,0,300061455
+2010,23 Jun 2010 - 16:00,Group C,Port Elizabeth Stadium,Slovenia,0,1,England, ,0,1,300061462
+2010,23 Jun 2010 - 16:00,Group C,Loftus Versfeld Stadium,USA,1,0,Algeria, ,0,0,300061461
+2010,23 Jun 2010 - 20:30,Group D,Soccer City Stadium,Ghana,0,1,Germany, ,0,0,300061468
+2010,23 Jun 2010 - 20:30,Group D,Mbombela Stadium,Australia,2,1,Serbia, ,0,0,300061467
+2010,24 Jun 2010 - 16:00,Group F,Ellis Park Stadium,Slovakia,3,2,Italy, ,1,0,300061480
+2010,24 Jun 2010 - 16:00,Group F,Peter Mokaba Stadium,Paraguay,0,0,New Zealand, ,0,0,300061479
+2010,24 Jun 2010 - 20:30,Group E,Royal Bafokeng Sports Palace,Denmark,1,3,Japan, ,0,2,300061474
+2010,24 Jun 2010 - 20:30,Group E,Cape Town Stadium,Cameroon,1,2,Netherlands, ,0,1,300061473
+2010,25 Jun 2010 - 16:00,Group G,Durban Stadium,Portugal,0,0,Brazil, ,0,0,300111111
+2010,25 Jun 2010 - 16:00,Group G,Mbombela Stadium,Korea DPR,0,3,C�te d'Ivoire, ,0,2,300061486
+2010,25 Jun 2010 - 20:30,Group H,Loftus Versfeld Stadium,Chile,1,2,Spain, ,0,2,300061491
+2010,25 Jun 2010 - 20:30,Group H,Free State Stadium,Switzerland,0,0,Honduras, ,0,0,300061492
+2010,26 Jun 2010 - 16:00,Round of 16,Port Elizabeth Stadium,Uruguay,2,1,Korea Republic, ,1,0,300061504
+2010,26 Jun 2010 - 20:30,Round of 16,Royal Bafokeng Sports Palace,USA,1,2,Ghana,Ghana win after extra time ,0,0,300061503
+2010,27 Jun 2010 - 16:00,Round of 16,Free State Stadium,Germany,4,1,England, ,2,1,300061501
+2010,27 Jun 2010 - 20:30,Round of 16,Soccer City Stadium,Argentina,3,1,Mexico, ,2,0,300061502
+2010,28 Jun 2010 - 16:00,Round of 16,Durban Stadium,Netherlands,2,1,Slovakia, ,1,0,300111113
+2010,28 Jun 2010 - 20:30,Round of 16,Ellis Park Stadium,Brazil,3,0,Chile, ,2,0,300061500
+2010,29 Jun 2010 - 16:00,Round of 16,Loftus Versfeld Stadium,Paraguay,0,0,Japan,Paraguay win on penalties (5 - 3),0,0,300061497
+2010,29 Jun 2010 - 20:30,Round of 16,Cape Town Stadium,Spain,1,0,Portugal, ,0,0,300061498
+2010,02 Jul 2010 - 16:00,Quarter-finals,Port Elizabeth Stadium,Netherlands,2,1,Brazil, ,0,1,300061507
+2010,02 Jul 2010 - 20:30,Quarter-finals,Soccer City Stadium,Uruguay,1,1,Ghana,Uruguay win on penalties (4 - 2),0,0,300061508
+2010,03 Jul 2010 - 16:00,Quarter-finals,Cape Town Stadium,Argentina,0,4,Germany, ,0,1,300061505
+2010,03 Jul 2010 - 20:30,Quarter-finals,Ellis Park Stadium,Paraguay,0,1,Spain, ,0,0,300061506
+2010,06 Jul 2010 - 20:30,Semi-finals,Cape Town Stadium,Uruguay,2,3,Netherlands, ,1,1,300061512
+2010,07 Jul 2010 - 20:30,Semi-finals,Durban Stadium,Germany,0,1,Spain, ,0,0,300111114
+2010,10 Jul 2010 - 20:30,Match for third place,Port Elizabeth Stadium,Uruguay,2,3,Germany, ,1,1,300061510
+2010,11 Jul 2010 - 20:30,Final,Soccer City Stadium,Netherlands,0,1,Spain,Spain win after extra time ,0,0,300061509
+2014,12 Jun 2014 - 17:00,Group A,Arena de Sao Paulo,Brazil,3,1,Croatia, ,1,1,300186456
+2014,13 Jun 2014 - 13:00,Group A,Estadio das Dunas,Mexico,1,0,Cameroon, ,0,0,300186492
+2014,13 Jun 2014 - 16:00,Group B,Arena Fonte Nova,Spain,1,5,Netherlands, ,1,1,300186510
+2014,13 Jun 2014 - 18:00,Group B,Arena Pantanal,Chile,3,1,Australia, ,2,1,300186473
+2014,14 Jun 2014 - 13:00,Group C,Estadio Mineirao,Colombia,3,0,Greece, ,1,0,300186471
+2014,14 Jun 2014 - 16:00,Group D,Estadio Castelao,Uruguay,1,3,Costa Rica, ,1,0,300186489
+2014,14 Jun 2014 - 18:00,Group D,Arena Amazonia,England,1,2,Italy, ,1,1,300186513
+2014,14 Jun 2014 - 22:00,Group C,Arena Pernambuco,C�te d'Ivoire,2,1,Japan, ,0,1,300186507
+2014,15 Jun 2014 - 13:00,Group E,Estadio Nacional,Switzerland,2,1,Ecuador, ,0,1,300186494
+2014,15 Jun 2014 - 16:00,Group E,Estadio Beira-Rio,France,3,0,Honduras, ,1,0,300186496
+2014,15 Jun 2014 - 19:00,Group F,Estadio do Maracana,Argentina,2,1,"rn"">Bosnia and Herzegovina", ,1,0,300186477
+2014,16 Jun 2014 - 13:00,Group G,Arena Fonte Nova,Germany,4,0,Portugal, ,3,0,300186475
+2014,16 Jun 2014 - 16:00,Group F,Arena da Baixada,IR Iran,0,0,Nigeria, ,0,0,300186505
+2014,16 Jun 2014 - 19:00,Group G,Estadio das Dunas,Ghana,1,2,USA, ,0,1,300186512
+2014,17 Jun 2014 - 13:00,Group H,Estadio Mineirao,Belgium,2,1,Algeria, ,0,1,300186479
+2014,17 Jun 2014 - 16:00,Group A,Estadio Castelao,Brazil,0,0,Mexico, ,0,0,300186509
+2014,17 Jun 2014 - 18:00,Group H,Arena Pantanal,Russia,1,1,Korea Republic, ,0,0,300186499
+2014,18 Jun 2014 - 13:00,Group B,Estadio Beira-Rio,Australia,2,3,Netherlands, ,1,1,300186478
+2014,18 Jun 2014 - 16:00,Group B,Estadio do Maracana,Spain,0,2,Chile, ,0,2,300186498
+2014,18 Jun 2014 - 18:00,Group A,Arena Amazonia,Cameroon,0,4,Croatia, ,0,1,300186453
+2014,19 Jun 2014 - 13:00,Group C,Estadio Nacional,Colombia,2,1,C�te d'Ivoire, ,0,0,300186468
+2014,19 Jun 2014 - 16:00,Group D,Arena de Sao Paulo,Uruguay,2,1,England, ,1,0,300186486
+2014,19 Jun 2014 - 19:00,Group C,Estadio das Dunas,Japan,0,0,Greece, ,0,0,300186454
+2014,20 Jun 2014 - 13:00,Group D,Arena Pernambuco,Italy,0,1,Costa Rica, ,0,1,300186500
+2014,20 Jun 2014 - 16:00,Group E,Arena Fonte Nova,Switzerland,2,5,France, ,0,3,300186514
+2014,20 Jun 2014 - 19:00,Group E,Arena da Baixada,Honduras,1,2,Ecuador, ,1,1,300186463
+2014,21 Jun 2014 - 13:00,Group F,Estadio Mineirao,Argentina,1,0,IR Iran, ,0,0,300186466
+2014,21 Jun 2014 - 16:00,Group G,Estadio Castelao,Germany,2,2,Ghana, ,0,0,300186493
+2014,21 Jun 2014 - 18:00,Group F,Arena Pantanal,Nigeria,1,0,"rn"">Bosnia and Herzegovina", ,1,0,300186511
+2014,22 Jun 2014 - 13:00,Group H,Estadio do Maracana,Belgium,1,0,Russia, ,0,0,300186481
+2014,22 Jun 2014 - 16:00,Group H,Estadio Beira-Rio,Korea Republic,2,4,Algeria, ,0,3,300186495
+2014,22 Jun 2014 - 18:00,Group G,Arena Amazonia,USA,2,2,Portugal, ,0,1,300186483
+2014,23 Jun 2014 - 13:00,Group B,Arena da Baixada,Australia,0,3,Spain, ,0,1,300186467
+2014,23 Jun 2014 - 13:00,Group B,Arena de Sao Paulo,Netherlands,2,0,Chile, ,0,0,300186470
+2014,23 Jun 2014 - 17:00,Group A,Estadio Nacional,Cameroon,1,4,Brazil, ,1,2,300186472
+2014,23 Jun 2014 - 17:00,Group A,Arena Pernambuco,Croatia,1,3,Mexico, ,0,0,300186452
+2014,24 Jun 2014 - 13:00,Group D,Estadio das Dunas,Italy,0,1,Uruguay, ,0,0,300186465
+2014,24 Jun 2014 - 13:00,Group D,Estadio Mineirao,Costa Rica,0,0,England, ,0,0,300186484
+2014,24 Jun 2014 - 16:00,Group C,Arena Pantanal,Japan,1,4,Colombia, ,1,1,300186457
+2014,24 Jun 2014 - 17:00,Group C,Estadio Castelao,Greece,2,1,C�te d'Ivoire, ,1,0,300186455
+2014,25 Jun 2014 - 13:00,Group F,Estadio Beira-Rio,Nigeria,2,3,Argentina, ,1,2,300186458
+2014,25 Jun 2014 - 13:00,Group F,Arena Fonte Nova,"rn"">Bosnia and Herzegovina",3,1,IR Iran, ,1,0,300186464
+2014,25 Jun 2014 - 16:00,Group E,Arena Amazonia,Honduras,0,3,Switzerland, ,0,2,300186482
+2014,25 Jun 2014 - 17:00,Group E,Estadio do Maracana,Ecuador,0,0,France, ,0,0,300186515
+2014,26 Jun 2014 - 13:00,Group G,Arena Pernambuco,USA,0,1,Germany, ,0,0,300186469
+2014,26 Jun 2014 - 13:00,Group G,Estadio Nacional,Portugal,2,1,Ghana, ,1,0,300186476
+2014,26 Jun 2014 - 17:00,Group H,Arena de Sao Paulo,Korea Republic,0,1,Belgium, ,0,0,300186480
+2014,26 Jun 2014 - 17:00,Group H,Arena da Baixada,Algeria,1,1,Russia, ,0,1,300186506
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
+2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+year,match_date,stage,stadium,home_name,home_final_score,away_final_score,away_name,win_condition,home_half_score,away_half_score,match_id
+2010,11 Jun 2010 - 16:00,Group A,Soccer City Stadium,South Africa,1,1,Mexico, ,0,0,300061454
+2010,11 Jun 2010 - 20:30,Group A,Cape Town Stadium,Uruguay,0,0,France, ,0,0,300061453
+2010,12 Jun 2010 - 13:30,Group B,Port Elizabeth Stadium,Korea Republic,2,0,Greece, ,1,0,300061459
+2010,12 Jun 2010 - 16:00,Group B,Ellis Park Stadium,Argentina,1,0,Nigeria, ,1,0,300061460
+2010,12 Jun 2010 - 20:30,Group C,Royal Bafokeng Sports Palace,England,1,1,USA, ,1,1,300061466
+2010,13 Jun 2010 - 13:30,Group C,Peter Mokaba Stadium,Algeria,0,1,Slovenia, ,0,0,300061465
+2010,13 Jun 2010 - 16:00,Group D,Loftus Versfeld Stadium,Serbia,0,1,Ghana, ,0,0,300061471
+2010,13 Jun 2010 - 20:30,Group D,Durban Stadium,Germany,4,0,Australia, ,2,0,300111116
+2010,14 Jun 2010 - 13:30,Group E,Soccer City Stadium,Netherlands,2,0,Denmark, ,0,0,300061478
+2010,14 Jun 2010 - 16:00,Group E,Free State Stadium,Japan,1,0,Cameroon, ,1,0,300061477
+2010,14 Jun 2010 - 20:30,Group F,Cape Town Stadium,Italy,1,1,Paraguay, ,0,1,300061484
+2010,15 Jun 2010 - 13:30,Group F,Royal Bafokeng Sports Palace,New Zealand,1,1,Slovakia, ,0,0,300061483
+2010,15 Jun 2010 - 16:00,Group G,Port Elizabeth Stadium,C�te d'Ivoire,0,0,Portugal, ,0,0,300061489
+2010,15 Jun 2010 - 20:30,Group G,Ellis Park Stadium,Brazil,2,1,Korea DPR, ,0,0,300061490
+2010,16 Jun 2010 - 13:30,Group H,Mbombela Stadium,Honduras,0,1,Chile, ,0,1,300061495
+2010,16 Jun 2010 - 16:00,Group H,Durban Stadium,Spain,0,1,Switzerland, ,0,0,300111112
+2010,16 Jun 2010 - 20:30,Group A,Loftus Versfeld Stadium,South Africa,0,3,Uruguay, ,0,1,300061452
+2010,17 Jun 2010 - 13:30,Group B,Soccer City Stadium,Argentina,4,1,Korea Republic, ,2,1,300061458
+2010,17 Jun 2010 - 16:00,Group B,Free State Stadium,Greece,2,1,Nigeria, ,1,1,300061457
+2010,17 Jun 2010 - 20:30,Group A,Peter Mokaba Stadium,France,0,2,Mexico, ,0,0,300061451
+2010,18 Jun 2010 - 13:30,Group D,Port Elizabeth Stadium,Germany,0,1,Serbia, ,0,1,300061470
+2010,18 Jun 2010 - 16:00,Group C,Ellis Park Stadium,Slovenia,2,2,USA, ,2,0,300061463
+2010,18 Jun 2010 - 20:30,Group C,Cape Town Stadium,England,0,0,Algeria, ,0,0,300061464
+2010,19 Jun 2010 - 13:30,Group E,Durban Stadium,Netherlands,1,0,Japan, ,0,0,300111117
+2010,19 Jun 2010 - 16:00,Group D,Royal Bafokeng Sports Palace,Ghana,1,1,Australia, ,1,1,300061469
+2010,19 Jun 2010 - 20:30,Group E,Loftus Versfeld Stadium,Cameroon,1,2,Denmark, ,1,1,300061475
+2010,20 Jun 2010 - 13:30,Group F,Free State Stadium,Slovakia,0,2,Paraguay, ,0,1,300061481
+2010,20 Jun 2010 - 16:00,Group F,Mbombela Stadium,Italy,1,1,New Zealand, ,1,1,300061482
+2010,20 Jun 2010 - 20:30,Group G,Soccer City Stadium,Brazil,3,1,C�te d'Ivoire, ,1,0,300061488
+2010,21 Jun 2010 - 13:30,Group G,Cape Town Stadium,Portugal,7,0,Korea DPR, ,1,0,300061487
+2010,21 Jun 2010 - 16:00,Group H,Port Elizabeth Stadium,Chile,1,0,Switzerland, ,0,0,300061493
+2010,21 Jun 2010 - 20:30,Group H,Ellis Park Stadium,Spain,2,0,Honduras, ,1,0,300061494
+2010,22 Jun 2010 - 16:00,Group A,Royal Bafokeng Sports Palace,Mexico,0,1,Uruguay, ,0,1,300061450
+2010,22 Jun 2010 - 16:00,Group A,Free State Stadium,France,1,2,South Africa, ,0,2,300061449
+2010,22 Jun 2010 - 20:30,Group B,Durban Stadium,Nigeria,2,2,Korea Republic, ,1,1,300111115
+2010,22 Jun 2010 - 20:30,Group B,Peter Mokaba Stadium,Greece,0,2,Argentina, ,0,0,300061455
+2010,23 Jun 2010 - 16:00,Group C,Port Elizabeth Stadium,Slovenia,0,1,England, ,0,1,300061462
+2010,23 Jun 2010 - 16:00,Group C,Loftus Versfeld Stadium,USA,1,0,Algeria, ,0,0,300061461
+2010,23 Jun 2010 - 20:30,Group D,Soccer City Stadium,Ghana,0,1,Germany, ,0,0,300061468
+2010,23 Jun 2010 - 20:30,Group D,Mbombela Stadium,Australia,2,1,Serbia, ,0,0,300061467
+2010,24 Jun 2010 - 16:00,Group F,Ellis Park Stadium,Slovakia,3,2,Italy, ,1,0,300061480
+2010,24 Jun 2010 - 16:00,Group F,Peter Mokaba Stadium,Paraguay,0,0,New Zealand, ,0,0,300061479
+2010,24 Jun 2010 - 20:30,Group E,Royal Bafokeng Sports Palace,Denmark,1,3,Japan, ,0,2,300061474
+2010,24 Jun 2010 - 20:30,Group E,Cape Town Stadium,Cameroon,1,2,Netherlands, ,0,1,300061473
+2010,25 Jun 2010 - 16:00,Group G,Durban Stadium,Portugal,0,0,Brazil, ,0,0,300111111
+2010,25 Jun 2010 - 16:00,Group G,Mbombela Stadium,Korea DPR,0,3,C�te d'Ivoire, ,0,2,300061486
+2010,25 Jun 2010 - 20:30,Group H,Loftus Versfeld Stadium,Chile,1,2,Spain, ,0,2,300061491
+2010,25 Jun 2010 - 20:30,Group H,Free State Stadium,Switzerland,0,0,Honduras, ,0,0,300061492
+2010,26 Jun 2010 - 16:00,Round of 16,Port Elizabeth Stadium,Uruguay,2,1,Korea Republic, ,1,0,300061504
+2010,26 Jun 2010 - 20:30,Round of 16,Royal Bafokeng Sports Palace,USA,1,2,Ghana,Ghana win after extra time ,0,0,300061503
+2010,27 Jun 2010 - 16:00,Round of 16,Free State Stadium,Germany,4,1,England, ,2,1,300061501
+2010,27 Jun 2010 - 20:30,Round of 16,Soccer City Stadium,Argentina,3,1,Mexico, ,2,0,300061502
+2010,28 Jun 2010 - 16:00,Round of 16,Durban Stadium,Netherlands,2,1,Slovakia, ,1,0,300111113
+2010,28 Jun 2010 - 20:30,Round of 16,Ellis Park Stadium,Brazil,3,0,Chile, ,2,0,300061500
+2010,29 Jun 2010 - 16:00,Round of 16,Loftus Versfeld Stadium,Paraguay,0,0,Japan,Paraguay win on penalties (5 - 3),0,0,300061497
+2010,29 Jun 2010 - 20:30,Round of 16,Cape Town Stadium,Spain,1,0,Portugal, ,0,0,300061498
+2010,02 Jul 2010 - 16:00,Quarter-finals,Port Elizabeth Stadium,Netherlands,2,1,Brazil, ,0,1,300061507
+2010,02 Jul 2010 - 20:30,Quarter-finals,Soccer City Stadium,Uruguay,1,1,Ghana,Uruguay win on penalties (4 - 2),0,0,300061508
+2010,03 Jul 2010 - 16:00,Quarter-finals,Cape Town Stadium,Argentina,0,4,Germany, ,0,1,300061505
+2010,03 Jul 2010 - 20:30,Quarter-finals,Ellis Park Stadium,Paraguay,0,1,Spain, ,0,0,300061506
+2010,06 Jul 2010 - 20:30,Semi-finals,Cape Town Stadium,Uruguay,2,3,Netherlands, ,1,1,300061512
+2010,07 Jul 2010 - 20:30,Semi-finals,Durban Stadium,Germany,0,1,Spain, ,0,0,300111114
+2010,10 Jul 2010 - 20:30,Match for third place,Port Elizabeth Stadium,Uruguay,2,3,Germany, ,1,1,300061510
+2010,11 Jul 2010 - 20:30,Final,Soccer City Stadium,Netherlands,0,1,Spain,Spain win after extra time ,0,0,300061509
+2014,12 Jun 2014 - 17:00,Group A,Arena de Sao Paulo,Brazil,3,1,Croatia, ,1,1,300186456
+2014,13 Jun 2014 - 13:00,Group A,Estadio das Dunas,Mexico,1,0,Cameroon, ,0,0,300186492
+2014,13 Jun 2014 - 16:00,Group B,Arena Fonte Nova,Spain,1,5,Netherlands, ,1,1,300186510
+2014,13 Jun 2014 - 18:00,Group B,Arena Pantanal,Chile,3,1,Australia, ,2,1,300186473
+2014,14 Jun 2014 - 13:00,Group C,Estadio Mineirao,Colombia,3,0,Greece, ,1,0,300186471
+2014,14 Jun 2014 - 16:00,Group D,Estadio Castelao,Uruguay,1,3,Costa Rica, ,1,0,300186489
+2014,14 Jun 2014 - 18:00,Group D,Arena Amazonia,England,1,2,Italy, ,1,1,300186513
+2014,14 Jun 2014 - 22:00,Group C,Arena Pernambuco,C�te d'Ivoire,2,1,Japan, ,0,1,300186507
+2014,15 Jun 2014 - 13:00,Group E,Estadio Nacional,Switzerland,2,1,Ecuador, ,0,1,300186494
+2014,15 Jun 2014 - 16:00,Group E,Estadio Beira-Rio,France,3,0,Honduras, ,1,0,300186496
+2014,15 Jun 2014 - 19:00,Group F,Estadio do Maracana,Argentina,2,1,"rn"">Bosnia and Herzegovina", ,1,0,300186477
+2014,16 Jun 2014 - 13:00,Group G,Arena Fonte Nova,Germany,4,0,Portugal, ,3,0,300186475
+2014,16 Jun 2014 - 16:00,Group F,Arena da Baixada,IR Iran,0,0,Nigeria, ,0,0,300186505
+2014,16 Jun 2014 - 19:00,Group G,Estadio das Dunas,Ghana,1,2,USA, ,0,1,300186512
+2014,17 Jun 2014 - 13:00,Group H,Estadio Mineirao,Belgium,2,1,Algeria, ,0,1,300186479
+2014,17 Jun 2014 - 16:00,Group A,Estadio Castelao,Brazil,0,0,Mexico, ,0,0,300186509
+2014,17 Jun 2014 - 18:00,Group H,Arena Pantanal,Russia,1,1,Korea Republic, ,0,0,300186499
+2014,18 Jun 2014 - 13:00,Group B,Estadio Beira-Rio,Australia,2,3,Netherlands, ,1,1,300186478
+2014,18 Jun 2014 - 16:00,Group B,Estadio do Maracana,Spain,0,2,Chile, ,0,2,300186498
+2014,18 Jun 2014 - 18:00,Group A,Arena Amazonia,Cameroon,0,4,Croatia, ,0,1,300186453
+2014,19 Jun 2014 - 13:00,Group C,Estadio Nacional,Colombia,2,1,C�te d'Ivoire, ,0,0,300186468
+2014,19 Jun 2014 - 16:00,Group D,Arena de Sao Paulo,Uruguay,2,1,England, ,1,0,300186486
+2014,19 Jun 2014 - 19:00,Group C,Estadio das Dunas,Japan,0,0,Greece, ,0,0,300186454
+2014,20 Jun 2014 - 13:00,Group D,Arena Pernambuco,Italy,0,1,Costa Rica, ,0,1,300186500
+2014,20 Jun 2014 - 16:00,Group E,Arena Fonte Nova,Switzerland,2,5,France, ,0,3,300186514
+2014,20 Jun 2014 - 19:00,Group E,Arena da Baixada,Honduras,1,2,Ecuador, ,1,1,300186463
+2014,21 Jun 2014 - 13:00,Group F,Estadio Mineirao,Argentina,1,0,IR Iran, ,0,0,300186466
+2014,21 Jun 2014 - 16:00,Group G,Estadio Castelao,Germany,2,2,Ghana, ,0,0,300186493
+2014,21 Jun 2014 - 18:00,Group F,Arena Pantanal,Nigeria,1,0,"rn"">Bosnia and Herzegovina", ,1,0,300186511
+2014,22 Jun 2014 - 13:00,Group H,Estadio do Maracana,Belgium,1,0,Russia, ,0,0,300186481
+2014,22 Jun 2014 - 16:00,Group H,Estadio Beira-Rio,Korea Republic,2,4,Algeria, ,0,3,300186495
+2014,22 Jun 2014 - 18:00,Group G,Arena Amazonia,USA,2,2,Portugal, ,0,1,300186483
+2014,23 Jun 2014 - 13:00,Group B,Arena da Baixada,Australia,0,3,Spain, ,0,1,300186467
+2014,23 Jun 2014 - 13:00,Group B,Arena de Sao Paulo,Netherlands,2,0,Chile, ,0,0,300186470
+2014,23 Jun 2014 - 17:00,Group A,Estadio Nacional,Cameroon,1,4,Brazil, ,1,2,300186472
+2014,23 Jun 2014 - 17:00,Group A,Arena Pernambuco,Croatia,1,3,Mexico, ,0,0,300186452
+2014,24 Jun 2014 - 13:00,Group D,Estadio das Dunas,Italy,0,1,Uruguay, ,0,0,300186465
+2014,24 Jun 2014 - 13:00,Group D,Estadio Mineirao,Costa Rica,0,0,England, ,0,0,300186484
+2014,24 Jun 2014 - 16:00,Group C,Arena Pantanal,Japan,1,4,Colombia, ,1,1,300186457
+2014,24 Jun 2014 - 17:00,Group C,Estadio Castelao,Greece,2,1,C�te d'Ivoire, ,1,0,300186455
+2014,25 Jun 2014 - 13:00,Group F,Estadio Beira-Rio,Nigeria,2,3,Argentina, ,1,2,300186458
+2014,25 Jun 2014 - 13:00,Group F,Arena Fonte Nova,"rn"">Bosnia and Herzegovina",3,1,IR Iran, ,1,0,300186464
+2014,25 Jun 2014 - 16:00,Group E,Arena Amazonia,Honduras,0,3,Switzerland, ,0,2,300186482
+2014,25 Jun 2014 - 17:00,Group E,Estadio do Maracana,Ecuador,0,0,France, ,0,0,300186515
+2014,26 Jun 2014 - 13:00,Group G,Arena Pernambuco,USA,0,1,Germany, ,0,0,300186469
+2014,26 Jun 2014 - 13:00,Group G,Estadio Nacional,Portugal,2,1,Ghana, ,1,0,300186476
+2014,26 Jun 2014 - 17:00,Group H,Arena de Sao Paulo,Korea Republic,0,1,Belgium, ,0,0,300186480
+2014,26 Jun 2014 - 17:00,Group H,Arena da Baixada,Algeria,1,1,Russia, ,0,1,300186506
+2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487
+2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491
+2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462
+2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460
+2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461
+2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485
+2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474
+2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502
+2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501
+2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490
+2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488
+2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504
+2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508
+2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459
+2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503
