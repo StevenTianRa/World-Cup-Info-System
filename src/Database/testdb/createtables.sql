@@ -5,7 +5,8 @@ CREATE TABLE worldCup
       champion         VARCHAR(30) NOT NULL, 
       runner_up        VARCHAR(30) NOT NULL, 
       third_place      VARCHAR(30) NOT NULL, 
-      fourth_place     VARCHAR(30) 
+      fourth_place     VARCHAR(30) NOT NULL,
+      attendance       DECIMAL(10,0) NOT NULL
    ); 
 
 CREATE TABLE matchDetails
