@@ -832,21 +832,5 @@
 2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504,ARG,BEL
 2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508,NED,MEX
 2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459,CRC,GRE
-2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503,ARG,SUI
 2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497,BEL,USA
-2014,28 Jun 2014 - 13:00,Round of 16,Estadio Mineirao,Brazil,1,1,Chile,Brazil win on penalties (3 - 2),0,0,300186487,BRA,CHI
-2014,28 Jun 2014 - 17:00,Round of 16,Estadio do Maracana,Colombia,2,0,Uruguay, ,1,0,300186491,COL,URU
-2014,29 Jun 2014 - 13:00,Round of 16,Estadio Castelao,Netherlands,2,1,Mexico, ,0,0,300186508,NED,MEX
-2014,29 Jun 2014 - 17:00,Round of 16,Arena Pernambuco,Costa Rica,1,1,Greece,Costa Rica win on penalties (5 - 3),0,0,300186459,CRC,GRE
-2014,30 Jun 2014 - 13:00,Round of 16,Estadio Nacional,France,2,0,Nigeria, ,0,0,300186462,FRA,NGA
-2014,30 Jun 2014 - 17:00,Round of 16,Estadio Beira-Rio,Germany,2,1,Algeria,Germany win after extra time ,0,0,300186460,GER,ALG
 2014,01 Jul 2014 - 13:00,Round of 16,Arena de Sao Paulo,Argentina,1,0,Switzerland,Argentina win after extra time ,0,0,300186503,ARG,SUI
-2014,01 Jul 2014 - 17:00,Round of 16,Arena Fonte Nova,Belgium,2,1,USA,Belgium win after extra time ,0,0,300186497,BEL,USA
-2014,04 Jul 2014 - 13:00,Quarter-finals,Estadio do Maracana,France,0,1,Germany, ,0,1,300186485,FRA,GER
-2014,04 Jul 2014 - 17:00,Quarter-finals,Estadio Castelao,Brazil,2,1,Colombia, ,1,0,300186461,BRA,COL
-2014,05 Jul 2014 - 13:00,Quarter-finals,Estadio Nacional,Argentina,1,0,Belgium, ,1,0,300186504,ARG,BEL
-2014,05 Jul 2014 - 17:00,Quarter-finals,Arena Fonte Nova,Netherlands,0,0,Costa Rica,Netherlands win on penalties (4 - 3),0,0,300186488,NED,CRC
-2014,08 Jul 2014 - 17:00,Semi-finals,Estadio Mineirao,Brazil,1,7,Germany, ,0,5,300186474,BRA,GER
-2014,09 Jul 2014 - 17:00,Semi-finals,Arena de Sao Paulo,Netherlands,0,0,Argentina,Argentina win on penalties (2 - 4),0,0,300186490,NED,ARG
-2014,12 Jul 2014 - 17:00,Play-off for third place,Estadio Nacional,Brazil,0,3,Netherlands, ,0,2,300186502,BRA,NED
-2014,13 Jul 2014 - 16:00,Final,Estadio do Maracana,Germany,1,0,Argentina,Germany win after extra time ,0,0,300186501,GER,ARG

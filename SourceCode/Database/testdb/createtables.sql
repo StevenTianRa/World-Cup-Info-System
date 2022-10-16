@@ -14,7 +14,7 @@ CREATE TABLE matchDetails
       year                DECIMAL(4, 0),
       match_date          VARCHAR(30) NOT NULL,
       stage               VARCHAR(30) NOT NULL,
-      stadium             VARCHAR(30) NOT NULL,
+      stadium             VARCHAR(100) NOT NULL,
       home_name           VARCHAR(30) NOT NULL,
       home_final_score    DECIMAL(2, 0) NOT NULL,
       away_final_score    DECIMAL(2, 0) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE matchDetails
 CREATE TABLE player 
    (
       player_nationality  VARCHAR(20) NOT NULL,
-      player_name         VARCHAR(15) NOT NULL,
+      player_name         VARCHAR(40) NOT NULL,
       PRIMARY KEY (player_nationality, player_name) 
    );
 
@@ -40,9 +40,6 @@ CREATE TABLE enrolled
       match_id            DECIMAL(12, 0) NOT NULL,
       player_nationality  VARCHAR(20) NOT NULL,
       coach_name          VARCHAR(50) NOT NULL,
-      player_name         VARCHAR(15) NOT NULL,
-      
-      PRIMARY KEY (player_name, player_nationality, match_id),
-      FOREIGN KEY (player_name, player_nationality) REFERENCES player(player_name, player_nationality),
-      FOREIGN KEY (match_id) REFERENCES matchDetails
+      player_name         VARCHAR(40) NOT NULL,
+      PRIMARY KEY (player_name, player_nationality, match_id)
    );
