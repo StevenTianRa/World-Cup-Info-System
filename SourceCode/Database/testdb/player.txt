@@ -1,4 +1,3 @@
-Team Initials,Player Name
 SRB,?URI?I?
 MEX,A BAUTISTA
 ENG,A COLE
