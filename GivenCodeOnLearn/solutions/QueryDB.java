@@ -21,7 +21,6 @@ public class QueryDB {
             e.printStackTrace();
         }
 
-
         try {
             // connecting to the a database
             connection = DriverManager
@@ -55,101 +54,103 @@ public class QueryDB {
 
     public void mainMenu() throws SQLException {
 
-        mainMenu:
-        while (true) {
+        mainMenu: while (true) {
 
-            System.out.println("\n-- Actions --");
+            System.out.println("\n--- Menu ---");
             System.out.println(
-                    "Select an option: \n" +
-                            "  1) Get your classes\n" +
-                            "  2) Search your classmates\n" +
-                            "  3) Major statistics of your class\n" +
-                            "  0) Exit\n "
-            );
+                    "Please select an option: \n" +
+                            "  1) Look up past World Cup info \n" +
+                            "  2) Look up past World Cup results \n");
             int selection = input.nextInt();
             input.nextLine();
 
             switch (selection) {
                 case 1:
-		    System.out.println("Please provide the user ID: ");
-		    String userID = input.nextLine().trim();
-                    this.getClassByUserID(userID);
+                    System.out.println("Please provide the year of the World Cup: ");
+                    String year = input.nextLine().trim();
+                    System.out.println(
+                            "Please select the information you want to look up: \n" +
+                                    "  1) Host country \n" +
+                                    "  2) Attendance \n");
+                    int option = input.nextInt();
+                    input.nextLine();
+                    this.getWorldCupInfo(year, option);
                     break;
-	        case 2:
-		    System.out.println("Please provide the user ID: ");
-		    String id = input.nextLine().trim();
-		    System.out.println("Please provide the list of class names: ");
-		    String classes = input.nextLine();		    
-                    this.searchCommonClassmate(id, classes);
-                    break;
-                case 3:
-		    System.out.print("Please provide the class name: ");
-		    String myclass = input.nextLine();
-                    this.getClassStatis(myclass);
+                case 2:
+                    System.out.println("Please provide the year of the World Cup: ");
+                    year = input.nextLine().trim();
+                    System.out.println(
+                            "Please select the result you want to look up: \n" +
+                                    "  1) Champion \n" +
+                                    "  2) Runner-up \n" +
+                                    "  3) Third place \n" +
+                                    "  4) Fourth place \n" +
+                                    "  5) All results\n");
+                    option = input.nextInt();
+                    input.nextLine();
+                    this.getWorldCupResult(year, option);
                     break;
                 case 0:
                     System.out.println("Returning...\n");
                     break mainMenu;
                 default:
-                    System.out.println("Invalid action.");
+                    System.out.println("Invalid selection. \n");
                     break;
             }
         }
     }
 
-    // Q1.(1) 
-    private void getClassByUserID(String userID) throws SQLException {
-	//TODO: update the code below
-
-	System.out.println(userID);
-       
-	String getSClass = "SELECT cname FROM enrolled WHERE snum = ?";	
-	PreparedStatement getSClassStmt = connection.prepareStatement(getSClass);
-	getSClassStmt.setString(1,userID);
-	
-	ResultSet sClassRs = getSClassStmt.executeQuery();
-
-
-	//IMPORTANT: Try to print your final output betwwen these two lines ("**Start of Answer**" and ""End of Answer")
-	//for example
-	System.out.println("**Start of Answer**"); 
-	while(sClassRs.next()){
-	    System.out.println(sCqlassRs.getString(1));
-	}
-       	System.out.println("**End of Answer**"); 
-	
-	connection.commit();
-	getSClassStmt.close();
-	
+    private void getWorldCupInfo(String year, int option) throws SQLException {
+        String getHostAndAttendance = "SELECT host_country,attendance FROM worldCup WHERE year = ?";
+        PreparedStatement getHostAndAttendanceStatement = connection.prepareStatement(getHostAndAttendance);
+        getHostAndAttendanceStatement.setString(1, year);
+        ResultSet hostAndAttendanceRS = getHostAndAttendanceStatement.executeQuery();
+        hostAndAttendanceRS.next();
+        switch (option) {
+            case 1:
+                System.out.println("The host country of " + year +
+                        " World Cup was " + hostAndAttendanceRS.getString(1));
+                break;
+            case 2:
+                System.out.println("The " + year + " World Cup had an attendance of " +
+                        hostAndAttendanceRS.getString(2));
+                break;
+            default:
+                break;
+        }
+        connection.commit();
+        getHostAndAttendanceStatement.close();
     }
 
-    //Q1.(2)
-    private void searchCommonClassmate(String userID, String classes) throws SQLException{
-	//TODO: update the code
-
-	String[] classnames = classes.split(",");
-	System.out.println(userID);
-	for(int i=0;i<classnames.length;i++){
-	    System.out.println(classnames[i].trim());
-	}
-
-	//IMPORTANT: Try to print your final output betwwen these two lines ("**Start of Answer**" and ""End of Answer")
-	System.out.println("**Start of Answer**"); 
-	//your answers here 
-       	System.out.println("**End of Answer**"); 
-
+    private void getWorldCupResult(String year, int option) throws SQLException {
+        String getResults = "SELECT champion, runner_up, third_place, fourth_place FROM worldCup WHERE year = ?";
+        PreparedStatement getResultsStatement = connection.prepareStatement(getResults);
+        getResultsStatement.setString(1, year);
+        ResultSet resultsRS = getResultsStatement.executeQuery();
+        resultsRS.next();
+        switch (option) {
+            case 1:
+                System.out.println("The " + year + " World Cup's champion was " + resultsRS.getString(1));
+                break;
+            case 2:
+                System.out.println("The " + year + " World Cup's runner-up was " + resultsRS.getString(2));
+                break;
+            case 3:
+                System.out.println("The " + year + " World Cup's third place was " + resultsRS.getString(3));
+                break;
+            case 4:
+                System.out.println("The " + year + " World Cup's third place was " + resultsRS.getString(4));
+            case 5:
+                System.out.println("The " + year + " World Cup's results were: \n" +
+                        "  Winner: " + resultsRS.getString(1) + "\n" +
+                        "  Runner-up: " + resultsRS.getString(2) + "\n" +
+                        "  Third place: " + resultsRS.getString(3) + "\n" +
+                        "  Fourth place: " + resultsRS.getString(4));
+            default:
+                break;
+        }
+        connection.commit();
+        getResultsStatement.close();
     }
 
-    //Q1.(3)
-    private void getClassStatis(String myclass) throws SQLException{
-	//TODO: update the code
-
-	System.out.println(myclass);
-
-	//IMPORTANT: Try to print your final output betwwen these two lines ("**Start of Answer**" and ""End of Answer")
-	System.out.println("**Start of Answer**"); 
-	//your answers here 
-       	System.out.println("**End of Answer**"); 		
-    }
-    
 }

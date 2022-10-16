@@ -51,6 +51,20 @@ java QueryDB
 # Database Systems
 # 0
 # INPUT
+## Run functions in QueryDB.class
+QTEST1="java QueryDB"
+$QTEST1 << INPUT
+1
+2014
+1
+1
+2014
+2
+2
+2010
+5
+0
+INPUT
 
 
 
