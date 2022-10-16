@@ -1,4 +1,3 @@
-match_id,player_nationality,coach_name,player_name
 1096,FRA,CAUDRON Raoul (FRA),Alex THEPOT
 1096,MEX,LUQUE Juan (MEX),Oscar BONFIGLIO
 1096,FRA,CAUDRON Raoul (FRA),Marcel LANGILLER
