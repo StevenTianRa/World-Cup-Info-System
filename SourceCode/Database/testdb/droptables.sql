@@ -1,1 +1,2 @@
- DROP TABLE intro;
+ DROP TABLE worldCup;
+ DROP TABLE matchDetails;

@@ -11,18 +11,18 @@ CREATE TABLE worldCup
 
 CREATE TABLE matchDetails
    (  
-      match_id            DECIMAL(12, 0) NOT NULL PRIMARY KEY,
-      stage               VARCHAR(30) NOT NULL,
-      home_name           VARCHAR(30) NOT NULL,
-      away_name           VARCHAR(30) NOT NULL,
-      home_half_score     DECIMAL(2, 0) NOT NULL,
-      away_half_score     DECIMAL(2, 0) NOT NULL,
-      stadium             VARCHAR(30) NOT NULL,
+      year                DECIMAL(4, 0),
       match_date          VARCHAR(30) NOT NULL,
+      stage               VARCHAR(30) NOT NULL,
+      stadium             VARCHAR(30) NOT NULL,
+      home_name           VARCHAR(30) NOT NULL,
       home_final_score    DECIMAL(2, 0) NOT NULL,
       away_final_score    DECIMAL(2, 0) NOT NULL,
+      away_name           VARCHAR(30) NOT NULL,
       win_condition       VARCHAR(100),
-      year                DECIMAL(4, 0),
+      home_half_score     DECIMAL(2, 0) NOT NULL,
+      away_half_score     DECIMAL(2, 0) NOT NULL,
+      match_id            DECIMAL(12, 0) NOT NULL PRIMARY KEY,
       FOREIGN KEY (year) REFERENCES worldCup 
    );
 
@@ -35,10 +35,11 @@ CREATE TABLE player
 
 CREATE TABLE enrolled
    (
-      coach_name          VARCHAR(20) NOT NULL,
-      player_nationality  VARCHAR(20) NOT NULL,
-      player_name         VARCHAR(15) NOT NULL,
       match_id            DECIMAL(12, 0) NOT NULL,
+      player_nationality  VARCHAR(20) NOT NULL,
+      coach_name          VARCHAR(50) NOT NULL,
+      player_name         VARCHAR(15) NOT NULL,
+      
       PRIMARY KEY (player_name, player_nationality, match_id),
       FOREIGN KEY (player_name) REFERENCES player,
       FOREIGN KEY (player_nationality) REFERENCES player,
