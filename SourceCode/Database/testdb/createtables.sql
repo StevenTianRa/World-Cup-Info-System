@@ -23,6 +23,8 @@ CREATE TABLE matchDetails
       home_half_score     DECIMAL(2, 0) NOT NULL,
       away_half_score     DECIMAL(2, 0) NOT NULL,
       match_id            DECIMAL(12, 0) NOT NULL PRIMARY KEY,
+      home_initial        VARCHAR(6) NOT NULL,
+      away_initial        VARCHAR(6) NOT NULL,
       FOREIGN KEY (year) REFERENCES worldCup 
    );
 
