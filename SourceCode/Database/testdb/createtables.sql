@@ -41,5 +41,8 @@ CREATE TABLE enrolled
       player_nationality  VARCHAR(20) NOT NULL,
       coach_name          VARCHAR(50) NOT NULL,
       player_name         VARCHAR(40) NOT NULL,
-      PRIMARY KEY (player_name, player_nationality, match_id)
+      PRIMARY KEY (player_name, player_nationality, match_id),
+      FOREIGN KEY (player_nationality, player_name) REFERENCES player(player_nationality, player_name),
+      FOREIGN KEY (match_id) REFERENCES matchDetails
+      
    );
