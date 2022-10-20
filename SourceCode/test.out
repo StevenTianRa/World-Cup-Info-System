@@ -1,0 +1,158 @@
+connect to CS348
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 11.5.5.0
+ SQL authorization ID   = A259ZHAN
+ Local database alias   = CS348
+
+
+DROP TABLE worldCup
+DB20000I  The SQL command completed successfully.
+
+DROP TABLE matchDetails
+DB20000I  The SQL command completed successfully.
+
+DROP TABLE player
+DB20000I  The SQL command completed successfully.
+
+DROP TABLE enrolled
+DB20000I  The SQL command completed successfully.
+
+CREATE TABLE worldCup ( year             DECIMAL(4, 0) NOT NULL PRIMARY KEY, host_country     VARCHAR(30) NOT NULL, champion         VARCHAR(30) NOT NULL, runner_up        VARCHAR(30) NOT NULL, third_place      VARCHAR(30) NOT NULL, fourth_place     VARCHAR(30) NOT NULL, attendance       DECIMAL(10,0) NOT NULL )
+DB20000I  The SQL command completed successfully.
+
+CREATE TABLE matchDetails ( year                DECIMAL(4, 0), match_date          VARCHAR(30) NOT NULL, stage               VARCHAR(30) NOT NULL, stadium             VARCHAR(100) NOT NULL, home_name           VARCHAR(30) NOT NULL, home_final_score    DECIMAL(2, 0) NOT NULL, away_final_score    DECIMAL(2, 0) NOT NULL, away_name           VARCHAR(30) NOT NULL, win_condition       VARCHAR(100), home_half_score     DECIMAL(2, 0) NOT NULL, away_half_score     DECIMAL(2, 0) NOT NULL, match_id            DECIMAL(12, 0) NOT NULL PRIMARY KEY, home_initial        VARCHAR(6) NOT NULL, away_initial        VARCHAR(6) NOT NULL, FOREIGN KEY (year) REFERENCES worldCup )
+DB20000I  The SQL command completed successfully.
+
+CREATE TABLE player ( player_nationality  VARCHAR(20) NOT NULL, player_name         VARCHAR(40) NOT NULL, PRIMARY KEY (player_nationality, player_name) )
+DB20000I  The SQL command completed successfully.
+
+CREATE TABLE enrolled ( match_id            DECIMAL(12, 0) NOT NULL, player_nationality  VARCHAR(20) NOT NULL, coach_name          VARCHAR(50) NOT NULL, player_name         VARCHAR(40) NOT NULL, PRIMARY KEY (player_name, player_nationality, match_id), FOREIGN KEY (player_nationality, player_name) REFERENCES player(player_nationality, player_name), FOREIGN KEY (match_id) REFERENCES matchDetails )
+DB20000I  The SQL command completed successfully.
+
+import from worldCup.txt of del insert into worldCup
+SQL3109N  The utility is beginning to load data from file "worldCup.txt".
+
+SQL3110N  The utility has completed processing.  "1" rows were read from the 
+input file.
+
+SQL3221W  ...Begin COMMIT WORK. Input Record Count = "1".
+
+SQL3222W  ...COMMIT of any database changes was successful.
+
+SQL3149N  "1" rows were processed from the input file.  "1" rows were 
+successfully inserted into the table.  "0" rows were rejected.
+
+
+Number of rows read         = 1
+Number of rows skipped      = 0
+Number of rows inserted     = 1
+Number of rows updated      = 0
+Number of rows rejected     = 0
+Number of rows committed    = 1
+
+
+import from matchDetails.txt of del insert into matchDetails
+SQL3109N  The utility is beginning to load data from file "matchDetails.txt".
+
+SQL3110N  The utility has completed processing.  "64" rows were read from the 
+input file.
+
+SQL3221W  ...Begin COMMIT WORK. Input Record Count = "64".
+
+SQL3222W  ...COMMIT of any database changes was successful.
+
+SQL3149N  "64" rows were processed from the input file.  "64" rows were 
+successfully inserted into the table.  "0" rows were rejected.
+
+
+Number of rows read         = 64
+Number of rows skipped      = 0
+Number of rows inserted     = 64
+Number of rows updated      = 0
+Number of rows rejected     = 0
+Number of rows committed    = 64
+
+
+import from player.txt of del insert into player
+SQL3109N  The utility is beginning to load data from file "player.txt".
+
+SQL3110N  The utility has completed processing.  "736" rows were read from the 
+input file.
+
+SQL3221W  ...Begin COMMIT WORK. Input Record Count = "736".
+
+SQL3222W  ...COMMIT of any database changes was successful.
+
+SQL3149N  "736" rows were processed from the input file.  "736" rows were 
+successfully inserted into the table.  "0" rows were rejected.
+
+
+Number of rows read         = 736
+Number of rows skipped      = 0
+Number of rows inserted     = 736
+Number of rows updated      = 0
+Number of rows rejected     = 0
+Number of rows committed    = 736
+
+
+import from enrolled.txt of del insert into enrolled
+SQL3109N  The utility is beginning to load data from file "enrolled.txt".
+
+SQL3110N  The utility has completed processing.  "2944" rows were read from 
+the input file.
+
+SQL3221W  ...Begin COMMIT WORK. Input Record Count = "2944".
+
+SQL3222W  ...COMMIT of any database changes was successful.
+
+SQL3149N  "2944" rows were processed from the input file.  "2944" rows were 
+successfully inserted into the table.  "0" rows were rejected.
+
+
+Number of rows read         = 2944
+Number of rows skipped      = 0
+Number of rows inserted     = 2944
+Number of rows updated      = 0
+Number of rows rejected     = 0
+Number of rows committed    = 2944
+
+
+Database connection open.
+
+
+--- Menu ---
+Please select an option: 
+  1) Look up past World Cup info 
+  2) Look up past World Cup results 
+  3) Show players that have played at least n matches
+Please provide the year of the World Cup: 
+Please select the information you want to look up: 
+  1) Host country 
+  2) Attendance
+The host country of 2014 World Cup was Brazil
+
+--- Menu ---
+Please select an option: 
+  1) Look up past World Cup info 
+  2) Look up past World Cup results 
+  3) Show players that have played at least n matches
+Please provide the year of the World Cup: 
+Please select the information you want to look up: 
+  1) Host country 
+  2) Attendance
+The 2014 World Cup had an attendance of 3386810
+
+--- Menu ---
+Please select an option: 
+  1) Look up past World Cup info 
+  2) Look up past World Cup results 
+  3) Show players that have played at least n matches
+Please provide the year of the World Cup: 
+Please select the result you want to look up: 
+  1) Champion 
+  2) Runner-up 
+  3) Third place 
+  4) Fourth place 
+  5) All results
