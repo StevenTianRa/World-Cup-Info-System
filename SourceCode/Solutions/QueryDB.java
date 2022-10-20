@@ -60,7 +60,10 @@ public class QueryDB {
             System.out.println(
                     "Please select an option: \n" +
                             "  1) Look up past World Cup info \n" +
-                            "  2) Look up past World Cup results \n");
+                            "  2) Look up past World Cup results \n" + 
+                            "  3) Look up number of obtained champions \n" +
+                            "  4) Show champion rank \n" +
+                            "  0) Quit \n");
             int selection = input.nextInt();
             input.nextLine();
 
@@ -68,6 +71,11 @@ public class QueryDB {
                 case 1:
                     System.out.println("Please provide the year of the World Cup: ");
                     String year = input.nextLine().trim();
+                    int yearNum = Integer.parseInt(year);
+                    if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
+                    	System.out.println("There was no World Cup in " + year + " .\n");
+                    	break;
+                    }
                     System.out.println(
                             "Please select the information you want to look up: \n" +
                                     "  1) Host country \n" +
@@ -79,6 +87,11 @@ public class QueryDB {
                 case 2:
                     System.out.println("Please provide the year of the World Cup: ");
                     year = input.nextLine().trim();
+                    yearNum = Integer.parseInt(year);
+                    if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
+                    	System.out.println("There was no World Cup in " + year + ". \n");
+                    	break;
+                    }
                     System.out.println(
                             "Please select the result you want to look up: \n" +
                                     "  1) Champion \n" +
@@ -90,6 +103,14 @@ public class QueryDB {
                     input.nextLine();
                     this.getWorldCupResult(year, option);
                     break;
+                case 3:
+                    System.out.println("Please enter the name of the country: ");
+                    String countryName = input.nextLine().trim();
+                    this.countChampion(countryName);
+                    break;
+                case 4:
+                    this.championRank();
+                    break;
                 case 0:
                     System.out.println("Returning...\n");
                     break mainMenu;
@@ -98,6 +119,34 @@ public class QueryDB {
                     break;
             }
         }
+    }
+
+    private void championRank() throws SQLException {
+        String cmd = "SELECT champion, count(*) FROM worldCup GROUP BY champion ORDER BY 2 DESC";
+        PreparedStatement championRankStatement = connection.prepareStatement(cmd);
+        ResultSet championRankRS = championRankStatement.executeQuery();
+        System.out.println("**Start of Answer**"); 
+	        while(championRankRS.next()){
+	        System.out.println(championRankRS.getString(1) + " : " + championRankRS.getString(2));
+	    }
+       	System.out.println("**End of Answer**"); 
+	    connection.commit();
+	    championRankStatement.close();
+    }
+
+    private void countChampion(String countryName) throws SQLException {
+        String cmd = "SELECT count(*) FROM worldCup WHERE champion = '" + countryName + "'";
+        PreparedStatement countChampionStatement = connection.prepareStatement(cmd);
+        ResultSet countChampionRS = countChampionStatement.executeQuery();
+        countChampionRS.next();
+        int championTime = Integer.parseInt(countChampionRS.getString(1));
+        if (championTime != 1) {
+            System.out.println(countryName + " won champion " + championTime + " times. \n");
+        } else {
+            System.out.println(countryName + " won champion " + championTime + " time. \n");
+        }
+        connection.commit();
+        countChampionStatement.close();
     }
 
     private void getWorldCupInfo(String year, int option) throws SQLException {

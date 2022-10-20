@@ -114,7 +114,7 @@ public class QueryDB {
 	//for example
 	System.out.println("**Start of Answer**"); 
 	while(sClassRs.next()){
-	    System.out.println(sClassRs.getString(1));
+	    System.out.println(sCqlassRs.getString(1));
 	}
        	System.out.println("**End of Answer**"); 
 	
