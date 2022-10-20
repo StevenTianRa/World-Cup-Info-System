@@ -1,6 +1,0 @@
-CREATE TABLE worldCup ( year             DECIMAL(4, 0) NOT NULL PRIMARY KEY, host_country     VARCHAR(30) NOT NULL, champion         VARCHAR(30) NOT NULL, runner_up        VARCHAR(30) NOT NULL, third_place      VARCHAR(30) NOT NULL, fourth_place     VARCHAR(30) NOT NULL, attendance       DECIMAL(10,0) NOT NULL )
-DB21034E  The command was processed as an SQL statement because it was not a 
-valid Command Line Processor command.  During SQL processing it returned:
-SQL0601N  The name of the object to be created is identical to the existing 
-name "GRXU.WORLDCUP" of type "TABLE".  SQLSTATE=42710
-
