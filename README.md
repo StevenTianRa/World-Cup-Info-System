@@ -1,3 +1,5 @@
+# CS348Group18
+
 Firstly, set up environment by running:
 source ~cs348/public/db2profile
 source ~db2inst2/sqllib/db2profile
@@ -10,7 +12,10 @@ Similarly, droptables.sql, createtables.sql and populatetables.sql which are loc
 Application driver QueryDB.java is located at /SourceCode/Solutions. Input commands "java QueryDB.java -d ." to compile.
 Then input "java QueryDB" to run application.
 
-For your convenience, you can run scripts test-sample.sh or test-production.sh to create and load sample/production database, and run respective database-driven application.
+For your convenience, you can run scripts /SourceCode/test-sample.sh or /SourceCode/test-production.sh to create and load sample/production database, and run respective database-driven application.
+
+For required test-sample.sql, test-sample.out,  test-production.sql, test-production.out, we provide a copy 
+for each in the git repo.
 
 Current features:
 1. Allows users to look up some information about a past World Cup given the year, including the country in which it is hosted, its attendance
