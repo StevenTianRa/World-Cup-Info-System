@@ -1,5 +1,19 @@
 # CS348Group18
 
+Firstly, set up environment by running:
+source ~cs348/public/db2profile
+source ~db2inst2/sqllib/db2profile
+
+We can use droptables.sql, createtables.sql and populatetables.sql to create and load sample database. These files are located in 
+/SourceCode/Database/SampleDataset.
+
+Similarly, droptables.sql, createtables.sql and populatetables.sql which are located in /SourceCode/Database/ProductionDataset can be used to create and load production database.
+
+Application driver QueryDB.java is located at /Solutions. Input commands "java QueryDB.java -d ." to compile.
+Then input "java QueryDB" to run application.
+
+For your convenience, you can run scripts test-sample.sh or test-production.sh to create and load sample/production database, and run respective database-driven application.
+
 
 
 ## Getting started
