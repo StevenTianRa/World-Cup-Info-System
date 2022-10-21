@@ -1,0 +1,539 @@
+SELECT host_country, attendance, champion, runner_up, third_place, fourth_place FROM worldCup WHERE year = 2014
+
+HOST_COUNTRY                   ATTENDANCE   CHAMPION                       RUNNER_UP                      THIRD_PLACE                    FOURTH_PLACE                  
+------------------------------ ------------ ------------------------------ ------------------------------ ------------------------------ ------------------------------
+Brazil                             3386810. Germany                        Argentina                      Netherlands                    Brazil                        
+
+  1 record(s) selected.
+
+
+SELECT COUNT(*) FROM worldCup WHERE champion = 'Germany'
+
+1          
+-----------
+          1
+
+  1 record(s) selected.
+
+
+SELECT COUNT(*) FROM worldCup WHERE champion = 'Brazil'
+
+1          
+-----------
+          0
+
+  1 record(s) selected.
+
+
+SELECT champion, count(*) AS times FROM worldCup GROUP BY champion ORDER BY times DESC
+
+CHAMPION                       TIMES      
+------------------------------ -----------
+Germany                                  1
+
+  1 record(s) selected.
+
+
+SELECT p.player_name, p.player_nationality FROM player AS p, enrolled AS e WHERE p.player_nationality = e.player_nationality AND p.player_name = e.player_name GROUP by p.player_name, p.player_nationality HAVING COUNT(*) >= 4
+
+PLAYER_NAME                              PLAYER_NATIONALITY  
+---------------------------------------- --------------------
+A. BALANTA                               COL                 
+A. FERNANDEZ                             ARG                 
+A. GONZALEZ                              URU                 
+A. GUARDADO                              MEX                 
+A. HERNANDEZ                             URU                 
+A. MEJIA                                 COL                 
+A. PEREIRA                               URU                 
+A. PULIDO                                MEX                 
+A. TALAVERA                              MEX                 
+ACOSTA J.                                CRC                 
+AGBIM                                    NGA                 
+AGUERO                                   ARG                 
+AGUILAR T.                               COL                 
+ALBORNOZ                                 CHI                 
+ALDERWEIRELD                             BEL                 
+ALEXIS                                   CHI                 
+ALTIDORE                                 USA                 
+ALVAREZ                                  ARG                 
+AMBROSE                                  NGA                 
+AMEOBI                                   NGA                 
+ANDUJAR                                  ARG                 
+ARIAS                                    COL                 
+AZEEZ                                    NGA                 
+BABATUNDE                                NGA                 
+BACCA                                    COL                 
+BARNETTA                                 SUI                 
+BARRANTES M.                             CRC                 
+BASANTA                                  ARG                 
+BEASLEY                                  USA                 
+BEAUSEJOUR                               CHI                 
+BECKERMAN                                USA                 
+BEDOYA                                   USA                 
+BEHRAMI                                  SUI                 
+BELKALEM                                 ALG                 
+BENAGLIO                                 SUI                 
+BENTALEB                                 ALG                 
+BENZEMA                                  FRA                 
+BERNARD                                  BRA                 
+BESLER                                   USA                 
+BIGLIA                                   ARG                 
+BLIND                                    NED                 
+BOATENG                                  GER                 
+BOLA�OS C.                               CRC                 
+BORGES C.                                CRC                 
+BOSSUT                                   BEL                 
+BOUGUERRA                                ALG                 
+BRADLEY                                  USA                 
+BRAHIMI                                  ALG                 
+BRENES R.                                CRC                 
+BROOKS                                   USA                 
+B�RKI                                    SUI                 
+C. BRAVO                                 CHI                 
+C. CARBONERO                             COL                 
+C. PE�A                                  MEX                 
+C. RODRIGUEZ                             URU                 
+C. SALCIDO                               MEX                 
+C. SANCHEZ                               COL                 
+C. STUANI                                URU                 
+C. ZAPATA                                COL                 
+C. ZU�IGA                                COL                 
+CABAYE                                   FRA                 
+CABELLA                                  FRA                 
+CADAMURO                                 ALG                 
+CALVO D.                                 CRC                 
+CAMBRONERO D.                            CRC                 
+CAMERON                                  USA                 
+CAMPAGNARO                               ARG                 
+CAMPBELL J.                              CRC                 
+CARMONA                                  CHI                 
+CH. AR�NGUIZ                             CHI                 
+CHADLI                                   BEL                 
+CHANDLER                                 USA                 
+CHOLEVAS                                 GRE                 
+CILLESSEN                                NED                 
+CIMAN                                    BEL                 
+CLASIE                                   NED                 
+COURTOIS                                 BEL                 
+CUADRADO                                 COL                 
+CUBERO J.                                CRC                 
+D. FORLAN                                URU                 
+D. GODIN                                 URU                 
+D. LUGANO                                URU                 
+D. PEREZ                                 URU                 
+D. REYES                                 MEX                 
+DANI ALVES                               BRA                 
+DANTE                                    BRA                 
+DAVID LUIZ                               BRA                 
+DAVIS                                    USA                 
+DE BRUYNE                                BEL                 
+DE GUZMAN                                NED                 
+DE JONG                                  NED                 
+DE VRIJ                                  NED                 
+DEBUCHY                                  FRA                 
+DEFOUR                                   BEL                 
+DEMBELE                                  BEL                 
+DEMICHELIS                               ARG                 
+DEMPSEY                                  USA                 
+DI MARIA                                 ARG                 
+DIAZ                                     CHI                 
+DIAZ J.                                  CRC                 
+DIGNE                                    FRA                 
+DISKERUD                                 USA                 
+DJABOU                                   ALG                 
+DJOUROU                                  SUI                 
+DRAXLER                                  GER                 
+DRMIC                                    SUI                 
+DUARTE O.                                CRC                 
+DURM                                     GER                 
+DZEMAILI                                 SUI                 
+E. AREVALO RIOS                          URU                 
+E. CAVANI                                URU                 
+E.HAZARD                                 BEL                 
+EGWUEKWE                                 NGA                 
+EJIDE                                    NGA                 
+EMENIKE                                  NGA                 
+ENYEAMA                                  NGA                 
+EVRA                                     FRA                 
+F. FERNANDEZ                             ARG                 
+F. MUSLERA                               URU                 
+F. RODRIGUEZ                             MEX                 
+FEGHOULI                                 ALG                 
+FELLAINI                                 BEL                 
+FER                                      NED                 
+FERNANDES                                SUI                 
+FERNANDINHO                              BRA                 
+FETFATZIDIS                              GRE                 
+FRANCIS W.                               CRC                 
+FRED                                     BRA                 
+FUENZALIDA                               CHI                 
+G. DOS SANTOS                            MEX                 
+G. OCHOA                                 MEX                 
+G. RAMIREZ                               URU                 
+GABRIEL                                  NGA                 
+GAGO                                     ARG                 
+GAMBOA C.                                CRC                 
+GARAY                                    ARG                 
+GAVRANOVIC                               SUI                 
+GEKAS                                    GRE                 
+GHILAS                                   ALG                 
+GHOULAM                                  ALG                 
+GINTER                                   GER                 
+GIROUD                                   FRA                 
+GLYKOS                                   GRE                 
+GONZALEZ                                 USA                 
+GONZALEZ G.                              CRC                 
+GRANADOS O.                              CRC                 
+GREEN                                    USA                 
+GRIEZMANN                                FRA                 
+GRO�KREUTZ                               GER                 
+GUARIN                                   COL                 
+GUTI�RREZ                                CHI                 
+GUZAN                                    USA                 
+G�TZE                                    GER                 
+H. HERRERA                               MEX                 
+H. MORENO                                MEX                 
+HALLICHE                                 ALG                 
+HENRIQUE                                 BRA                 
+HERNANES                                 BRA                 
+HERRERA                                  CHI                 
+HIGUAIN                                  ARG                 
+HOWARD                                   USA                 
+HULK                                     BRA                 
+HUMMELS                                  GER                 
+HUNTELAAR                                NED                 
+H�WEDES                                  GER                 
+I. BRIZUELA                              MEX                 
+IBARBO                                   COL                 
+INLER                                    SUI                 
+ISLA                                     CHI                 
+J. AQUINO                                MEX                 
+J. CORONA                                MEX                 
+J. FUCILE                                URU                 
+J. HERNANDEZ                             MEX                 
+J. VAZQUEZ                               MEX                 
+J.M. GIMENEZ                             URU                 
+JACKSON M.                               COL                 
+JAMES                                    COL                 
+JANMAAT                                  NED                 
+JANUZAJ                                  BEL                 
+JARA                                     CHI                 
+JEFFERSON                                BRA                 
+JOHANNSSON                               USA                 
+JOHNSON                                  USA                 
+JONES                                    USA                 
+JULIO CESAR                              BRA                 
+J�                                       BRA                 
+KAPINO                                   GRE                 
+KARAGOUNIS                               GRE                 
+KARNEZIS                                 GRE                 
+KATSOURANIS                              GRE                 
+KHEDIRA                                  GER                 
+KLOSE                                    GER                 
+KOMPANY                                  BEL                 
+KONE                                     GRE                 
+KONGOLO                                  NED                 
+KOSCIELNY                                FRA                 
+KRAMER                                   GER                 
+KROOS                                    GER                 
+KRUL                                     NED                 
+KUYT                                     NED                 
+L GUSTAVO                                BRA                 
+L. SUAREZ                                URU                 
+LACEN                                    ALG                 
+LAHM                                     GER                 
+LANDREAU                                 FRA                 
+LANG                                     SUI                 
+LAVEZZI                                  ARG                 
+LAZAROS                                  GRE                 
+LENS                                     NED                 
+LICHTSTEINER                             SUI                 
+LLORIS                                   FRA                 
+LOMBAERTS                                BEL                 
+LUKAKU                                   BEL                 
+M. CACERES                               URU                 
+M. FABIAN                                MEX                 
+M. LAYUN                                 MEX                 
+M. PEREIRA                               URU                 
+M. PONCE                                 MEX                 
+M. RODRIGUEZ                             ARG                 
+M. SILVA                                 URU                 
+MAHREZ                                   ALG                 
+MAICON                                   BRA                 
+MANDI                                    ALG                 
+MANGALA                                  FRA                 
+MANIATIS                                 GRE                 
+MANOLAS                                  GRE                 
+MARCELO                                  BRA                 
+MARTINS INDI                             NED                 
+MASCHERANO                               ARG                 
+MATUIDI                                  FRA                 
+MAVUBA                                   FRA                 
+MAXWELL                                  BRA                 
+MEDEL                                    CHI                 
+MEDJANI                                  ALG                 
+MEHMEDI                                  SUI                 
+MEMPHIS                                  NED                 
+MENA                                     CHI                 
+MERTENS                                  BEL                 
+MERTESACKER                              GER                 
+MESBAH                                   ALG                 
+MESSI                                    ARG                 
+MIGNOLET                                 BEL                 
+MIKEL                                    NGA                 
+MILLER R.                                CRC                 
+MIRALLAS                                 BEL                 
+MITROGLOU                                GRE                 
+MONDRAGON                                COL                 
+MORAS                                    GRE                 
+MOSES                                    NGA                 
+MOSTEFA                                  ALG                 
+MUSA                                     NGA                 
+MUSTAFI                                  GER                 
+MYRIE D.                                 CRC                 
+M�LLER                                   GER                 
+N. LODEIRO                               URU                 
+NAVAS K.                                 CRC                 
+NEUER                                    GER                 
+NEYMAR JR                                BRA                 
+NWOFOR                                   NGA                 
+O. PERALTA                               MEX                 
+OBOABONA                                 NGA                 
+ODEMWINGIE                               NGA                 
+ODUNLAMI                                 NGA                 
+OMERUO                                   NGA                 
+ONAZI                                    NGA                 
+ORELLANA                                 CHI                 
+ORIGI                                    BEL                 
+ORION                                    ARG                 
+OSCAR                                    BRA                 
+OSHANIWA                                 NGA                 
+OSPINA                                   COL                 
+P. AGUILAR                               MEX                 
+P. ARMERO                                COL                 
+PALACIO                                  ARG                 
+PAREDES                                  CHI                 
+PAULINHO                                 BRA                 
+PEMBERTON P.                             CRC                 
+PEREZ                                    ARG                 
+PINILLA                                  CHI                 
+PODOLSKI                                 GER                 
+POGBA                                    FRA                 
+QUINTERO                                 COL                 
+R. JIMENEZ                               MEX                 
+R. MARQUEZ                               MEX                 
+R. MU�OZ                                 URU                 
+RAIS                                     ALG                 
+RAMIRES                                  BRA                 
+RAMOS                                    COL                 
+REMY                                     FRA                 
+RIMANDO                                  USA                 
+ROBBEN                                   NED                 
+RODRIGUEZ                                SUI                 
+ROJAS                                    CHI                 
+ROJO                                     ARG                 
+ROMERO                                   ARG                 
+RUFFIER                                  FRA                 
+RUIZ B.                                  CRC                 
+S. COATES                                URU                 
+SAGNA                                    FRA                 
+SAKHO                                    FRA                 
+SALPINGIDIS                              GRE                 
+SAMARAS                                  GRE                 
+SAMARIS                                  GRE                 
+SCHNEIDERLIN                             FRA                 
+SCHWEINSTEIGER                           GER                 
+SCH�R                                    SUI                 
+SCH�RRLE                                 GER                 
+SEFEROVIC                                SUI                 
+SENDEROS                                 SUI                 
+SHAQIRI                                  SUI                 
+SI MOHAMMED                              ALG                 
+SILVA                                    CHI                 
+SISSOKO                                  FRA                 
+SLIMANI                                  ALG                 
+SNEIJDER                                 NED                 
+SOKRATIS                                 GRE                 
+SOMMER                                   SUI                 
+SOUDANI                                  ALG                 
+STOCKER                                  SUI                 
+T SILVA                                  BRA                 
+TACHTSIDIS                               GRE                 
+TAIDER                                   ALG                 
+TEJEDA Y.                                CRC                 
+TEO                                      COL                 
+TOROSIDIS                                GRE                 
+TOSELLI                                  CHI                 
+TZAVELLAS                                GRE                 
+TZIOLIS                                  GRE                 
+UCHEBO                                   NGA                 
+UMA�A M.                                 CRC                 
+URE�A M.                                 CRC                 
+UZOENYI                                  NGA                 
+V. PERSIE                                NED                 
+VALBUENA                                 FRA                 
+VALDES                                   COL                 
+VALDIVIA                                 CHI                 
+VAN BUYTEN                               BEL                 
+VANDEN BORRE                             BEL                 
+VARANE                                   FRA                 
+VARGAS                                   CHI                 
+VARGAS                                   COL                 
+VELTMAN                                  NED                 
+VERHAEGH                                 NED                 
+VERMAELEN                                BEL                 
+VERTONGHEN                               BEL                 
+VICTOR                                   BRA                 
+VIDAL                                    CHI                 
+VLAAR                                    NED                 
+VON BERGEN                               SUI                 
+VORM                                     NED                 
+VYNTRA                                   GRE                 
+W. GARGANO                               URU                 
+WEIDENFELLER                             GER                 
+WIJNALDUM                                NED                 
+WILLIAN                                  BRA                 
+WITSEL                                   BEL                 
+WONDOLOWSKI                              USA                 
+XHAKA                                    SUI                 
+YEBDA                                    ALG                 
+YEDLIN                                   USA                 
+YEPES                                    COL                 
+YOBO                                     NGA                 
+ZABALETA                                 ARG                 
+ZEMMAMOUCHE                              ALG                 
+ZIEGLER                                  SUI                 
+ZIELER                                   GER                 
+ZUSI                                     USA                 
+�ZIL                                     GER                 
+
+  368 record(s) selected.
+
+
+SELECT p.player_name, p.player_nationality FROM player AS p, enrolled AS e WHERE p.player_nationality = e.player_nationality AND p.player_name = e.player_name GROUP by p.player_name, p.player_nationality HAVING COUNT(*) >= 7
+
+PLAYER_NAME                              PLAYER_NATIONALITY  
+---------------------------------------- --------------------
+A. FERNANDEZ                             ARG                 
+AGUERO                                   ARG                 
+ALVAREZ                                  ARG                 
+ANDUJAR                                  ARG                 
+BASANTA                                  ARG                 
+BERNARD                                  BRA                 
+BIGLIA                                   ARG                 
+BLIND                                    NED                 
+BOATENG                                  GER                 
+CAMPAGNARO                               ARG                 
+CILLESSEN                                NED                 
+CLASIE                                   NED                 
+DANI ALVES                               BRA                 
+DANTE                                    BRA                 
+DAVID LUIZ                               BRA                 
+DE GUZMAN                                NED                 
+DE JONG                                  NED                 
+DE VRIJ                                  NED                 
+DEMICHELIS                               ARG                 
+DI MARIA                                 ARG                 
+DRAXLER                                  GER                 
+DURM                                     GER                 
+F. FERNANDEZ                             ARG                 
+FER                                      NED                 
+FERNANDINHO                              BRA                 
+FRED                                     BRA                 
+GAGO                                     ARG                 
+GARAY                                    ARG                 
+GINTER                                   GER                 
+GRO�KREUTZ                               GER                 
+G�TZE                                    GER                 
+HENRIQUE                                 BRA                 
+HERNANES                                 BRA                 
+HIGUAIN                                  ARG                 
+HULK                                     BRA                 
+HUMMELS                                  GER                 
+HUNTELAAR                                NED                 
+H�WEDES                                  GER                 
+JANMAAT                                  NED                 
+JEFFERSON                                BRA                 
+JULIO CESAR                              BRA                 
+J�                                       BRA                 
+KHEDIRA                                  GER                 
+KLOSE                                    GER                 
+KONGOLO                                  NED                 
+KRAMER                                   GER                 
+KROOS                                    GER                 
+KRUL                                     NED                 
+KUYT                                     NED                 
+L GUSTAVO                                BRA                 
+LAHM                                     GER                 
+LAVEZZI                                  ARG                 
+LENS                                     NED                 
+M. RODRIGUEZ                             ARG                 
+MAICON                                   BRA                 
+MARCELO                                  BRA                 
+MARTINS INDI                             NED                 
+MASCHERANO                               ARG                 
+MAXWELL                                  BRA                 
+MEMPHIS                                  NED                 
+MERTESACKER                              GER                 
+MESSI                                    ARG                 
+MUSTAFI                                  GER                 
+M�LLER                                   GER                 
+NEUER                                    GER                 
+NEYMAR JR                                BRA                 
+ORION                                    ARG                 
+OSCAR                                    BRA                 
+PALACIO                                  ARG                 
+PAULINHO                                 BRA                 
+PEREZ                                    ARG                 
+PODOLSKI                                 GER                 
+RAMIRES                                  BRA                 
+ROBBEN                                   NED                 
+ROJO                                     ARG                 
+ROMERO                                   ARG                 
+SCHWEINSTEIGER                           GER                 
+SCH�RRLE                                 GER                 
+SNEIJDER                                 NED                 
+T SILVA                                  BRA                 
+V. PERSIE                                NED                 
+VELTMAN                                  NED                 
+VERHAEGH                                 NED                 
+VICTOR                                   BRA                 
+VLAAR                                    NED                 
+VORM                                     NED                 
+WEIDENFELLER                             GER                 
+WIJNALDUM                                NED                 
+WILLIAN                                  BRA                 
+ZABALETA                                 ARG                 
+ZIELER                                   GER                 
+�ZIL                                     GER                 
+
+  92 record(s) selected.
+
+
+SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Germany' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Germany' AND m2.home_final_score < m2.away_final_score))
+
+1          
+-----------
+          6
+
+  1 record(s) selected.
+
+
+SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Brazil' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Brazil' AND m2.home_final_score < m2.away_final_score))
+
+1          
+-----------
+          3
+
+  1 record(s) selected.
+
+
+SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Argentina' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Argentina' AND m2.home_final_score < m2.away_final_score))
+
+1          
+-----------
+          5
+
+  1 record(s) selected.
+
+
