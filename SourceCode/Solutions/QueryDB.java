@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.sql.*;
 import java.math.BigDecimal;
 
-// sample input: localhost 50000 database_name username password
+
 public class QueryDB {
 
     private Scanner input = new Scanner(System.in);
@@ -64,6 +64,7 @@ public class QueryDB {
                             "  3) Look up number of obtained champions \n" +
                             "  4) Show champion rank \n" +
                             "  5) Show players that have played at least n matches \n" +
+                            "  6) Show number of matches of a country won in history \n" +
                             "  0) Quit \n");
             int selection = input.nextInt();
             input.nextLine();
@@ -117,6 +118,11 @@ public class QueryDB {
                     String num = input.nextLine().trim();
                     this.filterPlayerByNumMatches(num);
                     break;
+                case 6:
+                    System.out.println("Please provide a country name");
+                    countryName = input.nextLine().trim();
+                    this.countWin(countryName);
+                    break;
                 case 0:
                     System.out.println("Returning...\n");
                     break mainMenu;
@@ -126,6 +132,21 @@ public class QueryDB {
             }
         }
     }
+
+    private void countWin(String countryName) throws SQLException  {
+        String cmd = "SELECT count(*) FROM" + 
+        "((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = '" + countryName + 
+        "' AND m1.home_final_score > m1.away_final_score)" +
+        "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = '" + countryName + 
+        "' AND m2.home_final_score < m2.away_final_score))";
+        PreparedStatement countWinStatement = connection.prepareStatement(cmd);
+        ResultSet countWinRS = countWinStatement.executeQuery();
+        countWinRS.next();
+        int times = Integer.parseInt(countWinRS.getString(1));
+        System.out.println(countryName + " has won " + times + " matches in hostory.");
+        connection.commit();
+        countWinStatement.close();
+    } 
 
     private void championRank() throws SQLException {
         String cmd = "SELECT champion, count(*) FROM worldCup GROUP BY champion ORDER BY 2 DESC";
