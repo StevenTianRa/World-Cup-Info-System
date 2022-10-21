@@ -1,8 +1,7 @@
 # CS348Group18
 
 Firstly, set up environment by running:
-source ~cs348/public/db2profile
-source ~db2inst2/sqllib/db2profile
+source ~cs348/public/db2profile and source ~db2inst2/sqllib/db2profile
 
 We can use droptables.sql, createtables.sql and populatetables.sql to create and load sample database. These files are located in 
 /SourceCode/Database/SampleDataset.
