@@ -1,0 +1,82 @@
+Algeria, ALG         
+Angola, ANG         
+Argentina, ARG         
+Australia, AUS         
+Austria, AUT         
+Belgium, BEL         
+Bosnia and Herzegovina, BIH         
+Bolivia, BOL         
+Brazil, BRA         
+Bulgaria, BUL         
+Canada, CAN         
+Chile, CHI         
+China PR, CHN         
+C�te d'Ivoire, CIV         
+Cameroon, CMR         
+Colombia, COL         
+Costa Rica, CRC         
+Croatia, CRO         
+Cuba, CUB         
+Czech Republic, CZE         
+Denmark, DEN         
+Ecuador, ECU         
+Egypt, EGY         
+England, ENG         
+Spain, ESP         
+France, FRA         
+Germany FR, FRG         
+German DR, GDR         
+Germany, GER         
+Ghana, GHA         
+Greece, GRE         
+Haiti, HAI         
+Honduras, HON         
+Hungary, HUN         
+Dutch East Indies, INH         
+Republic of Ireland, IRL         
+Iran, IRN         
+Iraq, IRQ         
+Israel, ISR         
+Italy, ITA         
+Jamaica, JAM         
+Japan, JPN         
+Korea Republic, KOR         
+Saudi Arabia, KSA         
+Kuwait, KUW         
+Morocco, MAR         
+Mexico, MEX         
+Netherlands, NED         
+Nigeria, NGA         
+Northern Ireland, NIR         
+Norway, NOR         
+New Zealand, NZL         
+Paraguay, PAR         
+Peru, PER         
+Poland, POL         
+Portugal, POR         
+Korea DPR, PRK         
+Romania, ROU         
+South Africa, RSA         
+Russia, RUS         
+Serbia and Montenegro, SCG         
+Scotland, SCO         
+Senegal, SEN         
+El Salvador, SLV         
+Serbia, SRB         
+Switzerland, SUI         
+Slovakia, SVK         
+Slovenia, SVN         
+Sweden, SWE         
+Czechoslovakia, TCH         
+Togo, TOG         
+Trinidad and Tobago, TRI         
+Tunisia, TUN         
+Turkey, TUR         
+United Arab Emirates, UAE         
+Ukraine, UKR         
+Soviet Union, URS         
+Uruguay, URU         
+USA, USA         
+Wales, WAL         
+Yugoslavia, YUG         
+Zaire, ZAI         
