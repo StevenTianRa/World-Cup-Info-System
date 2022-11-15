@@ -69,41 +69,51 @@ public class QueryDB {
             int selection = input.nextInt();
             input.nextLine();
 
+            String year;
+            int yearNum;
             switch (selection) {
                 case 1:
                     System.out.println("Please provide the year of the World Cup: ");
-                    String year = input.nextLine().trim();
-                    int yearNum = Integer.parseInt(year);
-                    if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
-                        System.out.println("There was no World Cup in " + year + " .\n");
-                        break;
+                    try {
+                        year = input.nextLine().trim();
+                        yearNum = Integer.parseInt(year);
+                        if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
+                            System.out.println("There was no World Cup in " + year + " .\n");
+                            break;
+                        }
+                        System.out.println(
+                                "Please select the information you want to look up: \n" +
+                                        "  1) Host country \n" +
+                                        "  2) Attendance");
+                        int option = input.nextInt();
+                        input.nextLine();
+                        this.getWorldCupInfo(year, option);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Wrong input! Expect a year!");
                     }
-                    System.out.println(
-                            "Please select the information you want to look up: \n" +
-                                    "  1) Host country \n" +
-                                    "  2) Attendance");
-                    int option = input.nextInt();
-                    input.nextLine();
-                    this.getWorldCupInfo(year, option);
                     break;
                 case 2:
                     System.out.println("Please provide the year of the World Cup: ");
-                    year = input.nextLine().trim();
-                    yearNum = Integer.parseInt(year);
-                    if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
-                        System.out.println("There was no World Cup in " + year + ". \n");
-                        break;
+                    try {
+                        year = input.nextLine().trim();
+                        yearNum = Integer.parseInt(year);
+                        if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
+                            System.out.println("There was no World Cup in " + year + ". \n");
+                            break;
+                        }
+                        System.out.println(
+                                "Please select the result you want to look up: \n" +
+                                        "  1) Champion \n" +
+                                        "  2) Runner-up \n" +
+                                        "  3) Third place \n" +
+                                        "  4) Fourth place \n" +
+                                        "  5) All results");
+                        int option = input.nextInt();
+                        input.nextLine();
+                        this.getWorldCupResult(year, option);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Wrong input! Expect a year!");
                     }
-                    System.out.println(
-                            "Please select the result you want to look up: \n" +
-                                    "  1) Champion \n" +
-                                    "  2) Runner-up \n" +
-                                    "  3) Third place \n" +
-                                    "  4) Fourth place \n" +
-                                    "  5) All results");
-                    option = input.nextInt();
-                    input.nextLine();
-                    this.getWorldCupResult(year, option);
                     break;
                 case 3:
                     System.out.println("Please enter the name of the country: ");
@@ -133,6 +143,7 @@ public class QueryDB {
         }
     }
 
+    // find corresponding country initial of country name
     private String findInitial(String countryName) throws SQLException {
         String cmd = "SELECT country_initial FROM country WHERE country_name = '" + countryName + "'";
         PreparedStatement findInitialStatement = connection.prepareStatement(cmd);
@@ -149,6 +160,7 @@ public class QueryDB {
         }
     }
 
+    // find corresponding country name of country initial
     private String findName(String countryInitial) throws SQLException {
         String cmd = "SELECT country_name FROM country WHERE country_initial = '" + countryInitial + "'";
         PreparedStatement findNameStatement = connection.prepareStatement(cmd);
@@ -191,7 +203,9 @@ public class QueryDB {
         ResultSet championRankRS = championRankStatement.executeQuery();
         System.out.println("**Start of Answer**");
         while (championRankRS.next()) {
-            System.out.println(championRankRS.getString(1) + " : " + championRankRS.getString(2));
+            String countryInitial = championRankRS.getString(1);
+            String countryName = findName(countryInitial);
+            System.out.println(countryName + " : " + championRankRS.getString(2));
         }
         System.out.println("**End of Answer**");
         connection.commit();
@@ -246,61 +260,70 @@ public class QueryDB {
         String getResults = "SELECT champion, runner_up, third_place, fourth_place FROM worldCup WHERE year = ?";
         PreparedStatement getResultsStatement = connection.prepareStatement(getResults);
         getResultsStatement.setString(1, year);
-        ResultSet resultsRS = getResultsStatement.executeQuery();
-        resultsRS.next();
-        String championInitial = resultsRS.getString(1);
-        String championName = findName(championInitial);
-        String runnerUpInitial = resultsRS.getString(2);
-        String runnerUpName = findName(runnerUpInitial);
-        String thirdInitial = resultsRS.getString(3);
-        String thirdName = findName(thirdInitial);
-        String fourthInitial = resultsRS.getString(4);
-        String fourthName = findName(fourthInitial);
-        switch (option) {
-            case 1:
-                System.out.println("The " + year + " World Cup's champion was " + championName);
-                break;
-            case 2:
-                System.out.println("The " + year + " World Cup's runner-up was " + runnerUpName);
-                break;
-            case 3:
-                System.out.println("The " + year + " World Cup's third place was " + thirdName);
-                break;
-            case 4:
-                System.out.println("The " + year + " World Cup's third place was " + fourthName);
-            case 5:
-                System.out.println("The " + year + " World Cup's results were: \n" +
-                        "  Winner: " + championName + "\n" +
-                        "  Runner-up: " + runnerUpName + "\n" +
-                        "  Third place: " + thirdName + "\n" +
-                        "  Fourth place: " + fourthName);
-            default:
-                break;
+        try {
+            ResultSet resultsRS = getResultsStatement.executeQuery();
+            resultsRS.next();
+            String championInitial = resultsRS.getString(1);
+            String championName = findName(championInitial);
+            String runnerUpInitial = resultsRS.getString(2);
+            String runnerUpName = findName(runnerUpInitial);
+            String thirdInitial = resultsRS.getString(3);
+            String thirdName = findName(thirdInitial);
+            String fourthInitial = resultsRS.getString(4);
+            String fourthName = findName(fourthInitial);
+            switch (option) {
+                case 1:
+                    System.out.println("The " + year + " World Cup's champion was " + championName);
+                    break;
+                case 2:
+                    System.out.println("The " + year + " World Cup's runner-up was " + runnerUpName);
+                    break;
+                case 3:
+                    System.out.println("The " + year + " World Cup's third place was " + thirdName);
+                    break;
+                case 4:
+                    System.out.println("The " + year + " World Cup's third place was " + fourthName);
+                    break;
+                case 5:
+                    System.out.println("The " + year + " World Cup's results were: \n" +
+                            "  Winner: " + championName + "\n" +
+                            "  Runner-up: " + runnerUpName + "\n" +
+                            "  Third place: " + thirdName + "\n" +
+                            "  Fourth place: " + fourthName);
+                default:
+                    break;
+            }
+            connection.commit();
+            getResultsStatement.close();
+        }  catch (NumberFormatException e) {
+            System.out.println("Wrong input! Expect a year!");
         }
-        connection.commit();
-        getResultsStatement.close();
     }
 
     private void filterPlayerByNumMatches(String num) throws SQLException {
         String getResults = "SELECT p.player_name, p.player_nationality FROM player AS p, enrolled AS e WHERE p.player_nationality = e.player_nationality AND p.player_name = e.player_name GROUP by p.player_name, p.player_nationality HAVING COUNT(*) >= ?";
         PreparedStatement getResultsStatement = connection.prepareStatement(getResults);
         getResultsStatement.setString(1, num);
-        ResultSet resultsRS = getResultsStatement.executeQuery();
-        int count = 0;
-        System.out.println("**Start of Answer**");
-        while (resultsRS.next()) {
-            if (count == 20) {
-                System.out.println("Showing maximum of 20 results");
-                break;
+        try {
+            ResultSet resultsRS = getResultsStatement.executeQuery();
+            int count = 0;
+            System.out.println("**Start of Answer**");
+            while (resultsRS.next()) {
+                if (count == 20) {
+                    System.out.println("Showing maximum of 20 results");
+                    break;
+                }
+                String countryInitial = resultsRS.getString(2);
+                String countryName = findName(countryInitial);
+                System.out.println(resultsRS.getString(1) + " " + countryName);
+                count++;
             }
-            String countryInitial = resultsRS.getString(2);
-            String countryName = findName(countryInitial);
-            System.out.println(resultsRS.getString(1) + " " + countryName);
-            count++;
+            System.out.println("**End of Answer**");
+            connection.commit();
+            getResultsStatement.close();
+        } catch (SQLException e) {
+            System.out.println("Wrong input! Expect a number!");
         }
-        System.out.println("**End of Answer**");
-        connection.commit();
-        getResultsStatement.close();
 
     }
 
