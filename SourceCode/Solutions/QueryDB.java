@@ -133,11 +133,48 @@ public class QueryDB {
         }
     }
 
+    private String findInitial(String countryName) throws SQLException {
+        String cmd = "SELECT country_initial FROM country WHERE country_name = '" + countryName + "'";
+        PreparedStatement findInitialStatement = connection.prepareStatement(cmd);
+        ResultSet findInitialRS = findInitialStatement.executeQuery();
+        if (findInitialRS.next()) {
+            String country_initial = findInitialRS.getString(1);
+            connection.commit();
+            findInitialStatement.close();
+            return country_initial;
+        } else {
+            connection.commit();
+            findInitialStatement.close();
+            return "";
+        }
+    }
+
+    private String findName(String countryInitial) throws SQLException {
+        String cmd = "SELECT country_name FROM country WHERE country_initial = '" + countryInitial + "'";
+        PreparedStatement findNameStatement = connection.prepareStatement(cmd);
+        ResultSet findNameRS = findNameStatement.executeQuery();
+        if (findNameRS.next()) {
+            String country_name = findNameRS.getString(1);
+            connection.commit();
+            findNameStatement.close();
+            return country_name;
+        } else {
+            connection.commit();
+            findNameStatement.close();
+            return "";
+        }
+    }
+
     private void countWin(String countryName) throws SQLException  {
+        String countryInitial = findInitial(countryName);
+        if (countryInitial == "") {
+            System.out.println("Country does not exist or never participated World Cup");
+            return;
+        }
         String cmd = "SELECT count(*) FROM" + 
-        "((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = '" + countryName + 
+        "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = '" + countryInitial + 
         "' AND m1.home_final_score > m1.away_final_score)" +
-        "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = '" + countryName + 
+        "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = '" + countryInitial + 
         "' AND m2.home_final_score < m2.away_final_score))";
         PreparedStatement countWinStatement = connection.prepareStatement(cmd);
         ResultSet countWinRS = countWinStatement.executeQuery();
@@ -162,7 +199,12 @@ public class QueryDB {
     }
 
     private void countChampion(String countryName) throws SQLException {
-        String cmd = "SELECT count(*) FROM worldCup WHERE champion = '" + countryName + "'";
+        String countryInitial = findInitial(countryName);
+        if (countryInitial == "") {
+            System.out.println("Country does not exist or never participated World Cup");
+            return;
+        }
+        String cmd = "SELECT count(*) FROM worldCup WHERE champion = '" + countryInitial + "'";
         PreparedStatement countChampionStatement = connection.prepareStatement(cmd);
         ResultSet countChampionRS = countChampionStatement.executeQuery();
         countChampionRS.next();
@@ -182,10 +224,12 @@ public class QueryDB {
         getHostAndAttendanceStatement.setString(1, year);
         ResultSet hostAndAttendanceRS = getHostAndAttendanceStatement.executeQuery();
         hostAndAttendanceRS.next();
+        String countryInitial = hostAndAttendanceRS.getString(1);
+        String countryName = findName(countryInitial);
         switch (option) {
             case 1:
                 System.out.println("The host country of " + year +
-                        " World Cup was " + hostAndAttendanceRS.getString(1));
+                        " World Cup was " + countryName);
                 break;
             case 2:
                 System.out.println("The " + year + " World Cup had an attendance of " +
@@ -204,24 +248,32 @@ public class QueryDB {
         getResultsStatement.setString(1, year);
         ResultSet resultsRS = getResultsStatement.executeQuery();
         resultsRS.next();
+        String championInitial = resultsRS.getString(1);
+        String championName = findName(championInitial);
+        String runnerUpInitial = resultsRS.getString(2);
+        String runnerUpName = findName(runnerUpInitial);
+        String thirdInitial = resultsRS.getString(3);
+        String thirdName = findName(thirdInitial);
+        String fourthInitial = resultsRS.getString(4);
+        String fourthName = findName(fourthInitial);
         switch (option) {
             case 1:
-                System.out.println("The " + year + " World Cup's champion was " + resultsRS.getString(1));
+                System.out.println("The " + year + " World Cup's champion was " + championName);
                 break;
             case 2:
-                System.out.println("The " + year + " World Cup's runner-up was " + resultsRS.getString(2));
+                System.out.println("The " + year + " World Cup's runner-up was " + runnerUpName);
                 break;
             case 3:
-                System.out.println("The " + year + " World Cup's third place was " + resultsRS.getString(3));
+                System.out.println("The " + year + " World Cup's third place was " + thirdName);
                 break;
             case 4:
-                System.out.println("The " + year + " World Cup's third place was " + resultsRS.getString(4));
+                System.out.println("The " + year + " World Cup's third place was " + fourthName);
             case 5:
                 System.out.println("The " + year + " World Cup's results were: \n" +
-                        "  Winner: " + resultsRS.getString(1) + "\n" +
-                        "  Runner-up: " + resultsRS.getString(2) + "\n" +
-                        "  Third place: " + resultsRS.getString(3) + "\n" +
-                        "  Fourth place: " + resultsRS.getString(4));
+                        "  Winner: " + championName + "\n" +
+                        "  Runner-up: " + runnerUpName + "\n" +
+                        "  Third place: " + thirdName + "\n" +
+                        "  Fourth place: " + fourthName);
             default:
                 break;
         }
@@ -241,7 +293,9 @@ public class QueryDB {
                 System.out.println("Showing maximum of 20 results");
                 break;
             }
-            System.out.println(resultsRS.getString(1) + " " + resultsRS.getString(2));
+            String countryInitial = resultsRS.getString(2);
+            String countryName = findName(countryInitial);
+            System.out.println(resultsRS.getString(1) + " " + countryName);
             count++;
         }
         System.out.println("**End of Answer**");
