@@ -97,15 +97,20 @@ public class MaintainDB {
     private void addWorldCup(String worldCupInfo) throws SQLException {
         List<String> worldCupInfoFields = Arrays.asList(worldCupInfo.split(" "));
         System.out.println(worldCupInfoFields.get(0));
-        String cmd = "INSERT INTO worldCup VALUES (?, ?, ?, ?, ?, ?, ?)";
-        PreparedStatement statement = connection.prepareStatement(cmd);
+        System.out.println(worldCupInfoFields.get(6));
+        String cmd = "INSERT INTO worldCup VALUES (";
         for (int i = 0; i < 7; ++i) {
             String field = worldCupInfoFields.get(i);
-            if (i != 0 && i != 6) {
-                field = "'" + field + "'";
+            if (i == 0) {
+                cmd += field + ",";
+            } else if (i == 6) {
+                cmd += field + ")";
+            } else {
+                cmd += "'" + field + "'" + ",";
             }
-            statement.setString(i + 1, field);
         }
+        System.out.println(cmd);
+        PreparedStatement statement = connection.prepareStatement(cmd);
         int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
