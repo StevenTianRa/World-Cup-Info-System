@@ -123,10 +123,9 @@ public class MaintainDB {
 
     private void deletePlayer(String country, String name) throws SQLException {
         System.out.println("Deleting player " + name + " from " + country);
-        String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE country_name = ?) AND player_name = ?";
+        String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE country_name = '"
+                + country + "') AND player_name = '" + name + "'";
         PreparedStatement statement = connection.prepareStatement(cmd);
-        statement.setString(1, "'" + country + "'");
-        statement.setString(2, "'" + name + "'");
         int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
