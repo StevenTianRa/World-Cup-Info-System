@@ -56,8 +56,8 @@ public class MaintainDB {
             System.out.println("\n-- Actions --");
             System.out.println(
                     "Select an option: \n" +
-                            " 1) Add a world cup \n" +
-                            " 2) Update a player's name \n" +
+                            " 1) Add a World Cup \n" +
+                            " 2) Update a country's name \n" +
                             " 3) Delete a player\n" +
                             " 0) Exit\n");
             int selection = input.nextInt();
@@ -66,24 +66,22 @@ public class MaintainDB {
             switch (selection) {
                 case 1:
                     System.out.println(
-                            "Please provide world cup info (year, host_country, champion, runner_up, third_place, fourth_place, attendance) as a comma-separted string:");
-                    String worldCupInfo = input.nextLine();
+                            "Please provide World Cup info (year, host_country, champion, runner_up, third_place, fourth_place, attendance), separated by a space");
+                    String worldCupInfo = input.nextLine().trim();
                     this.addWorldCup(worldCupInfo);
                     break;
                 case 2:
-                    System.out.println("Please provide the nationality of the player you want to update");
-                    String country = input.nextLine();
-                    System.out.println("Please provide the old name of the player you want to update");
-                    String oldName = input.nextLine();
-                    System.out.println("Please provide the new name of the player you want to update");
-                    String newName = input.nextLine();
-                    this.updatePlayerName(country, oldName, newName);
+                    System.out.println("Please provide the initial of the country you want to update");
+                    String initial = input.nextLine().trim();
+                    System.out.println("Please provide the name of the country you want to set");
+                    String name = input.nextLine().trim();
+                    this.updateCountryName(initial, name);
                     break;
                 case 3:
                     System.out.println("Please provide the nationality of the player you want to delete:");
-                    country = input.nextLine();
+                    String country = input.nextLine().trim();
                     System.out.println("Please provide the name of the player you want to delete:");
-                    String name = input.nextLine();
+                    name = input.nextLine().trim();
                     this.deletePlayer(country, name);
                     break;
                 case 0:
@@ -99,16 +97,8 @@ public class MaintainDB {
     private void addWorldCup(String worldCupInfo) throws SQLException {
         List<String> worldCupInfoFields = Arrays.asList(worldCupInfo.split(" "));
         System.out.println(worldCupInfoFields.get(0));
-        String cmd = "SELECT * FROM worldCup WHERE year = ?";
+        String cmd = "INSERT INTO worldCup VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(cmd);
-        statement.setString(1, worldCupInfoFields.get(0));
-        ResultSet RS = statement.executeQuery();
-        if (RS.next()) {
-            System.out.println("The " + worldCupInfoFields.get(0) + " World Cup is already in the dataset");
-            return;
-        }
-        cmd = "INSERT INTO worldCup VALUES (?, ?, ?, ?, ?, ?, ?)";
-        statement = connection.prepareStatement(cmd);
         for (int i = 0; i < 7; ++i) {
             String field = worldCupInfoFields.get(i);
             if (i != 0 && i != 6) {
@@ -116,37 +106,31 @@ public class MaintainDB {
             }
             statement.setString(i + 1, field);
         }
-        statement.executeUpdate();
+        int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
-        System.out.println("Added world cup with info " + worldCupInfo);
+        System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
     }
 
-    // TODO: Convert the player_country from name to initials
-    private void updatePlayerName(String country, String oldName, String newName) throws SQLException {
-        System.out.println("Updating the name of player " + oldName + " from " + country + " to " + newName);
-        String cmd = "UPDATE player SET player_name = ? WHERE player_nationality = ? AND player_name = ?";
+    private void updateCountryName(String initial, String name) throws SQLException {
+        String cmd = "UPDATE country SET country_name = '" + name + "' WHERE country_initial = '" + initial + "'";
         PreparedStatement statement = connection.prepareStatement(cmd);
-        statement.setString(1, "'" + newName + "'");
-        statement.setString(2, "'" + country + "'");
-        statement.setString(3, "'" + oldName + "'");
-        statement.executeUpdate();
+        int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
-        System.out.println("Updated the name of player " + oldName + " from " + country + " to " + newName);
+        System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
     }
 
-    // TODO: Convert the player_country from name to initials
     private void deletePlayer(String country, String name) throws SQLException {
         System.out.println("Deleting player " + name + " from " + country);
-        String cmd = "DELETE FROM player WHERE player_nationality = ? AND player_name = ?";
+        String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE country_name = ?) AND player_name = ?";
         PreparedStatement statement = connection.prepareStatement(cmd);
         statement.setString(1, "'" + country + "'");
         statement.setString(2, "'" + name + "'");
-        statement.executeUpdate();
+        int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
-        System.out.println("Deleted player " + name + " from " + country);
+        System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
     }
 
 }
