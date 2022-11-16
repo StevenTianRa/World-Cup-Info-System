@@ -96,8 +96,6 @@ public class MaintainDB {
 
     private void addWorldCup(String worldCupInfo) throws SQLException {
         List<String> worldCupInfoFields = Arrays.asList(worldCupInfo.split(" "));
-        System.out.println(worldCupInfoFields.get(0));
-        System.out.println(worldCupInfoFields.get(6));
         String cmd = "INSERT INTO worldCup VALUES (";
         for (int i = 0; i < 7; ++i) {
             String field = worldCupInfoFields.get(i);
@@ -111,10 +109,14 @@ public class MaintainDB {
         }
         System.out.println(cmd);
         PreparedStatement statement = connection.prepareStatement(cmd);
-        int numRowsAffected = statement.executeUpdate();
-        connection.commit();
-        statement.close();
-        System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
+        try {
+            int numRowsAffected = statement.executeUpdate();
+            connection.commit();
+            statement.close();
+            System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
+        } catch (SQLException e) {
+            System.out.println("Failed to add a new World Cup: invalid input.");
+        }
     }
 
     private void updateCountryName(String initial, String name) throws SQLException {
@@ -123,7 +125,11 @@ public class MaintainDB {
         int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
-        System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
+        if (numRowsAffected != 0) {
+            System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
+        } else {
+            System.out.println("Failed to update country name: no country with initial " + initial + " found.");
+        }
     }
 
     private void deletePlayer(String country, String name) throws SQLException {
@@ -134,7 +140,13 @@ public class MaintainDB {
         int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
-        System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
+        if (numRowsAffected != 0) {
+            System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
+        } else {
+            System.out.println(
+                    "Failed to delete player: No country with name " + country + " or player with name " + name
+                            + " found in this country");
+        }
     }
 
 }
