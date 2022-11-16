@@ -54,7 +54,7 @@ CREATE TABLE enrolled
       coach_name          VARCHAR(50) NOT NULL,
       player_name         VARCHAR(40) NOT NULL,
       PRIMARY KEY (player_name, player_nationality, match_id),
-      FOREIGN KEY (player_nationality, player_name) REFERENCES player(player_nationality, player_name),
+      FOREIGN KEY (player_nationality, player_name) REFERENCES player(player_nationality, player_name) ON DELETE CASCADE,
       FOREIGN KEY (match_id) REFERENCES matchDetails
       
    );
