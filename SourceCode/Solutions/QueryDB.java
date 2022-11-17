@@ -3,7 +3,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Scanner;
 import java.sql.*;
-import java.math.BigDecimal;
 
 
 public class QueryDB {
