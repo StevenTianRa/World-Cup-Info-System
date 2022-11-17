@@ -80,10 +80,9 @@ public class QueryDB {
                     input.nextLine();
                     try {
                         this.getWorldCupInfo(year, option);
-                    } catch (NumberFormatException e) {
-                        System.out.println("Wrong input! Expect a year!");
                     } catch (SQLException e) {
-                        System.out.println("There was no World Cup in " + year);
+                        System.out.println(
+                                "Invalid input. Please provide a year number.");
                     }
                     break;
                 case 2:
@@ -100,14 +99,13 @@ public class QueryDB {
                     input.nextLine();
                     try {
                         this.getWorldCupResult(year, option);
-                    } catch (NumberFormatException e) {
-                        System.out.println("Wrong input! Expect a year!");
                     } catch (SQLException e) {
-                        System.out.println("There was no World Cup in " + year);
+                        System.out.println(
+                                "Invalid input. Please provide a year number.");
                     }
                     break;
                 case 3:
-                    System.out.println("Please enter the name of the country: ");
+                    System.out.println("Please enter the name of the country:");
                     String countryName = input.nextLine().trim();
                     this.countChampion(countryName);
                     break;
@@ -115,9 +113,13 @@ public class QueryDB {
                     this.championRank();
                     break;
                 case 5:
-                    System.out.println("Please provide n");
+                    System.out.println("Please provide n:");
                     String num = input.nextLine().trim();
-                    this.filterPlayerByNumMatches(num);
+                    try {
+                        this.filterPlayerByNumMatches(num);
+                    } catch (SQLException e) {
+                        System.out.println("Invalid input. Please provide a number. ");
+                    }
                     break;
                 case 6:
                     System.out.println("Please provide a country name");
@@ -330,7 +332,9 @@ public class QueryDB {
             connection.commit();
             getResultsStatement.close();
         } catch (SQLException e) {
-            System.out.println("Wrong input! Expect a number!");
+            connection.commit();
+            getResultsStatement.close();
+            throw e;
         }
 
     }
