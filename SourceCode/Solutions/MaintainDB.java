@@ -114,6 +114,8 @@ public class MaintainDB {
             statement.close();
             System.out.println("Success. Number of rows affected: " + Integer.toString(numRowsAffected));
         } catch (SQLException e) {
+            connection.commit();
+            statement.close();
             System.out.println("Failed to add a new World Cup: invalid input.");
         }
     }

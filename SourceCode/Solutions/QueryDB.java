@@ -247,8 +247,12 @@ public class QueryDB {
             connection.commit();
             getHostAndAttendanceStatement.close();
         } catch (NumberFormatException e) {
+            connection.commit();
+            getHostAndAttendanceStatement.close();
             throw e;
         } catch (SQLException e) {
+            connection.commit();
+            getHostAndAttendanceStatement.close();
             throw e;
         }
 
@@ -294,8 +298,12 @@ public class QueryDB {
             connection.commit();
             getResultsStatement.close();
         } catch (NumberFormatException e) {
+            connection.commit();
+            getResultsStatement.close();
             throw e;
         } catch (SQLException e) {
+            connection.commit();
+            getResultsStatement.close();
             throw e;
         }
     }
