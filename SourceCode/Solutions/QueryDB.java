@@ -4,7 +4,6 @@ import java.sql.SQLException;
 import java.util.Scanner;
 import java.sql.*;
 
-
 public class QueryDB {
 
     private Scanner input = new Scanner(System.in);
@@ -69,49 +68,42 @@ public class QueryDB {
             input.nextLine();
 
             String year;
-            int yearNum;
             switch (selection) {
                 case 1:
                     System.out.println("Please provide the year of the World Cup: ");
+                    year = input.nextLine().trim();
+                    System.out.println(
+                            "Please select the information you want to look up: \n" +
+                                    "  1) Host country \n" +
+                                    "  2) Attendance");
+                    int option = input.nextInt();
+                    input.nextLine();
                     try {
-                        year = input.nextLine().trim();
-                        yearNum = Integer.parseInt(year);
-                        if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
-                            System.out.println("There was no World Cup in " + year + " .\n");
-                            break;
-                        }
-                        System.out.println(
-                                "Please select the information you want to look up: \n" +
-                                        "  1) Host country \n" +
-                                        "  2) Attendance");
-                        int option = input.nextInt();
-                        input.nextLine();
                         this.getWorldCupInfo(year, option);
                     } catch (NumberFormatException e) {
                         System.out.println("Wrong input! Expect a year!");
+                    } catch (SQLException e) {
+                        System.out.println("There was no World Cup in " + year);
                     }
                     break;
                 case 2:
                     System.out.println("Please provide the year of the World Cup: ");
+                    year = input.nextLine().trim();
+                    System.out.println(
+                            "Please select the result you want to look up: \n" +
+                                    "  1) Champion \n" +
+                                    "  2) Runner-up \n" +
+                                    "  3) Third place \n" +
+                                    "  4) Fourth place \n" +
+                                    "  5) All results");
+                    option = input.nextInt();
+                    input.nextLine();
                     try {
-                        year = input.nextLine().trim();
-                        yearNum = Integer.parseInt(year);
-                        if (yearNum < 1930 || yearNum > 2014 || yearNum % 4 != 2) {
-                            System.out.println("There was no World Cup in " + year + ". \n");
-                            break;
-                        }
-                        System.out.println(
-                                "Please select the result you want to look up: \n" +
-                                        "  1) Champion \n" +
-                                        "  2) Runner-up \n" +
-                                        "  3) Third place \n" +
-                                        "  4) Fourth place \n" +
-                                        "  5) All results");
-                        int option = input.nextInt();
-                        input.nextLine();
                         this.getWorldCupResult(year, option);
                     } catch (NumberFormatException e) {
                         System.out.println("Wrong input! Expect a year!");
+                    } catch (SQLException e) {
+                        System.out.println("There was no World Cup in " + year);
                     }
                     break;
                 case 3:
@@ -176,17 +168,17 @@ public class QueryDB {
         }
     }
 
-    private void countWin(String countryName) throws SQLException  {
+    private void countWin(String countryName) throws SQLException {
         String countryInitial = findInitial(countryName);
         if (countryInitial == "") {
             System.out.println("Country does not exist or never participated World Cup");
             return;
         }
-        String cmd = "SELECT count(*) FROM" + 
-        "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = '" + countryInitial + 
-        "' AND m1.home_final_score > m1.away_final_score)" +
-        "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = '" + countryInitial + 
-        "' AND m2.home_final_score < m2.away_final_score))";
+        String cmd = "SELECT count(*) FROM" +
+                "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = '" + countryInitial +
+                "' AND m1.home_final_score > m1.away_final_score)" +
+                "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = '" + countryInitial +
+                "' AND m2.home_final_score < m2.away_final_score))";
         PreparedStatement countWinStatement = connection.prepareStatement(cmd);
         ResultSet countWinRS = countWinStatement.executeQuery();
         countWinRS.next();
@@ -194,7 +186,7 @@ public class QueryDB {
         System.out.println(countryName + " has won " + times + " matches in hostory.");
         connection.commit();
         countWinStatement.close();
-    } 
+    }
 
     private void championRank() throws SQLException {
         String cmd = "SELECT champion, count(*) FROM worldCup GROUP BY champion ORDER BY 2 DESC";
@@ -235,24 +227,31 @@ public class QueryDB {
         String getHostAndAttendance = "SELECT host_country,attendance FROM worldCup WHERE year = ?";
         PreparedStatement getHostAndAttendanceStatement = connection.prepareStatement(getHostAndAttendance);
         getHostAndAttendanceStatement.setString(1, year);
-        ResultSet hostAndAttendanceRS = getHostAndAttendanceStatement.executeQuery();
-        hostAndAttendanceRS.next();
-        String countryInitial = hostAndAttendanceRS.getString(1);
-        String countryName = findName(countryInitial);
-        switch (option) {
-            case 1:
-                System.out.println("The host country of " + year +
-                        " World Cup was " + countryName);
-                break;
-            case 2:
-                System.out.println("The " + year + " World Cup had an attendance of " +
-                        hostAndAttendanceRS.getString(2));
-                break;
-            default:
-                break;
+        try {
+            ResultSet hostAndAttendanceRS = getHostAndAttendanceStatement.executeQuery();
+            hostAndAttendanceRS.next();
+            String countryInitial = hostAndAttendanceRS.getString(1);
+            String countryName = findName(countryInitial);
+            switch (option) {
+                case 1:
+                    System.out.println("The host country of " + year +
+                            " World Cup was " + countryName);
+                    break;
+                case 2:
+                    System.out.println("The " + year + " World Cup had an attendance of " +
+                            hostAndAttendanceRS.getString(2));
+                    break;
+                default:
+                    break;
+            }
+            connection.commit();
+            getHostAndAttendanceStatement.close();
+        } catch (NumberFormatException e) {
+            throw e;
+        } catch (SQLException e) {
+            throw e;
         }
-        connection.commit();
-        getHostAndAttendanceStatement.close();
+
     }
 
     private void getWorldCupResult(String year, int option) throws SQLException {
@@ -294,8 +293,10 @@ public class QueryDB {
             }
             connection.commit();
             getResultsStatement.close();
-        }  catch (NumberFormatException e) {
-            System.out.println("Wrong input! Expect a year!");
+        } catch (NumberFormatException e) {
+            throw e;
+        } catch (SQLException e) {
+            throw e;
         }
     }
 

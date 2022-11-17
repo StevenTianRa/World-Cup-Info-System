@@ -107,7 +107,6 @@ public class MaintainDB {
                 cmd += "'" + field + "'" + ",";
             }
         }
-        System.out.println(cmd);
         PreparedStatement statement = connection.prepareStatement(cmd);
         try {
             int numRowsAffected = statement.executeUpdate();
