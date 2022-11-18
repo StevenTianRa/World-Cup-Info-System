@@ -49,6 +49,40 @@ public class MaintainDB {
         }
     }
 
+    private String findInitial(String countryName) throws SQLException {
+        String cmd = "SELECT country_initial FROM country WHERE LOWER(country_name) = '" + countryName.toLowerCase()
+                + "'";
+        PreparedStatement findInitialStatement = connection.prepareStatement(cmd);
+        ResultSet findInitialRS = findInitialStatement.executeQuery();
+        if (findInitialRS.next()) {
+            String country_initial = findInitialRS.getString(1);
+            connection.commit();
+            findInitialStatement.close();
+            return country_initial;
+        } else {
+            connection.commit();
+            findInitialStatement.close();
+            return "";
+        }
+    }
+
+    // find corresponding country name of country initial
+    private String findName(String countryInitial) throws SQLException {
+        String cmd = "SELECT country_name FROM country WHERE country_initial = '" + countryInitial + "'";
+        PreparedStatement findNameStatement = connection.prepareStatement(cmd);
+        ResultSet findNameRS = findNameStatement.executeQuery();
+        if (findNameRS.next()) {
+            String country_name = findNameRS.getString(1);
+            connection.commit();
+            findNameStatement.close();
+            return country_name;
+        } else {
+            connection.commit();
+            findNameStatement.close();
+            return "";
+        }
+    }
+
     public void mainMenu(String[] args) throws SQLException {
 
         mainMenu: while (true) {
@@ -135,8 +169,8 @@ public class MaintainDB {
 
     private void deletePlayer(String country, String name) throws SQLException {
         System.out.println("Deleting player " + name + " from " + country);
-        String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE country_name = '"
-                + country + "') AND player_name = '" + name + "'";
+        String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE LOWER(country_name) = '"
+                + country.toLowerCase() + "') AND LOWER(player_name) = '" + name.toLowerCase() + "'";
         PreparedStatement statement = connection.prepareStatement(cmd);
         int numRowsAffected = statement.executeUpdate();
         connection.commit();
