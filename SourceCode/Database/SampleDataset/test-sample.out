@@ -1,13 +1,13 @@
 SELECT host_country, attendance, champion, runner_up, third_place, fourth_place FROM worldCup WHERE year = 2014
 
-HOST_COUNTRY                   ATTENDANCE   CHAMPION                       RUNNER_UP                      THIRD_PLACE                    FOURTH_PLACE                  
------------------------------- ------------ ------------------------------ ------------------------------ ------------------------------ ------------------------------
-Brazil                             3386810. Germany                        Argentina                      Netherlands                    Brazil                        
+HOST_COUNTRY                   ATTENDANCE  CHAMPION                       RUNNER_UP                      THIRD_PLACE                    FOURTH_PLACE                  
+------------------------------ ----------- ------------------------------ ------------------------------ ------------------------------ ------------------------------
+BRA                                3386810 GER                            ARG                            NED                            BRA                           
 
   1 record(s) selected.
 
 
-SELECT COUNT(*) FROM worldCup WHERE champion = 'Germany'
+SELECT COUNT(*) FROM worldCup WHERE champion = 'GER'
 
 1          
 -----------
@@ -16,7 +16,7 @@ SELECT COUNT(*) FROM worldCup WHERE champion = 'Germany'
   1 record(s) selected.
 
 
-SELECT COUNT(*) FROM worldCup WHERE champion = 'Brazil'
+SELECT COUNT(*) FROM worldCup WHERE champion = 'BRA'
 
 1          
 -----------
@@ -29,7 +29,7 @@ SELECT champion, count(*) AS times FROM worldCup GROUP BY champion ORDER BY time
 
 CHAMPION                       TIMES      
 ------------------------------ -----------
-Germany                                  1
+GER                                      1
 
   1 record(s) selected.
 
@@ -510,7 +510,7 @@ ZIELER                                   GER
   92 record(s) selected.
 
 
-SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Germany' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Germany' AND m2.home_final_score < m2.away_final_score))
+SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = 'GER' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = 'GER' AND m2.home_final_score < m2.away_final_score))
 
 1          
 -----------
@@ -519,7 +519,7 @@ SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Ge
   1 record(s) selected.
 
 
-SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Brazil' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Brazil' AND m2.home_final_score < m2.away_final_score))
+SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = 'BRA' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = 'BRA' AND m2.home_final_score < m2.away_final_score))
 
 1          
 -----------
@@ -528,7 +528,7 @@ SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Br
   1 record(s) selected.
 
 
-SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Argentina' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Argentina' AND m2.home_final_score < m2.away_final_score))
+SELECT count(*) FROM ((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = 'ARG' AND m1.home_final_score > m1.away_final_score) UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = 'ARG' AND m2.home_final_score < m2.away_final_score))
 
 1          
 -----------

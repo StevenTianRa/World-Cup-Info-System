@@ -2,8 +2,8 @@
 SELECT host_country, attendance, champion, runner_up, third_place, fourth_place FROM worldCup WHERE year = 2014;
 
 -- Tests for feature 3
-SELECT COUNT(*) FROM worldCup WHERE champion = 'Germany';
-SELECT COUNT(*) FROM worldCup WHERE champion = 'Brazil';
+SELECT COUNT(*) FROM worldCup WHERE champion = 'GER';
+SELECT COUNT(*) FROM worldCup WHERE champion = 'BRA';
 
 -- Tests for feature 4
 SELECT champion, count(*) AS times FROM worldCup GROUP BY champion ORDER BY times DESC;
@@ -21,21 +21,22 @@ HAVING COUNT(*) >= 7;
 
 -- Tests for feature 6
 SELECT count(*) FROM 
-    ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Germany'
+    ((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = 'GER'
          AND m1.home_final_score > m1.away_final_score) 
-    UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Germany' 
+    UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = 'GER' 
         AND m2.home_final_score < m2.away_final_score));
 
 SELECT count(*) FROM 
-    ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Brazil'
+    ((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = 'BRA'
          AND m1.home_final_score > m1.away_final_score) 
-    UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Brazil' 
+    UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = 'BRA' 
         AND m2.home_final_score < m2.away_final_score));
 
 
 SELECT count(*) FROM 
-    ((SELECT * FROM matchDetails AS m1 WHERE m1.home_name = 'Argentina'
+    ((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = 'ARG'
          AND m1.home_final_score > m1.away_final_score) 
-    UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_name = 'Argentina' 
+    UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = 'ARG' 
         AND m2.home_final_score < m2.away_final_score));
+
 
