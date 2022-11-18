@@ -59,10 +59,10 @@ public class QueryDB {
                     "Please select an option: \n" +
                             "  1) Look up past World Cup info \n" +
                             "  2) Look up past World Cup results \n" +
-                            "  3) Look up number of obtained champions \n" +
+                            "  3) Look up the number of obtained champions \n" +
                             "  4) Show champion rank \n" +
                             "  5) Show players that have played at least n matches \n" +
-                            "  6) Show number of matches of a country won in history \n" +
+                            "  6) Show the number of matches of a country won in history \n" +
                             "  0) Quit \n");
             int selection = input.nextInt();
             input.nextLine();
@@ -105,7 +105,7 @@ public class QueryDB {
                     }
                     break;
                 case 3:
-                    System.out.println("Please enter the name of the country:");
+                    System.out.println("Please enter the name of a country:");
                     String countryName = input.nextLine().trim();
                     this.countChampion(countryName);
                     break;
@@ -122,7 +122,7 @@ public class QueryDB {
                     }
                     break;
                 case 6:
-                    System.out.println("Please provide a country name");
+                    System.out.println("Please enter the name of a country:");
                     countryName = input.nextLine().trim();
                     this.countWin(countryName);
                     break;
@@ -138,7 +138,8 @@ public class QueryDB {
 
     // find corresponding country initial of country name
     private String findInitial(String countryName) throws SQLException {
-        String cmd = "SELECT country_initial FROM country WHERE country_name = '" + countryName + "'";
+        String cmd = "SELECT country_initial FROM country WHERE LOWER(country_name) = '" + countryName.toLowerCase()
+                + "'";
         PreparedStatement findInitialStatement = connection.prepareStatement(cmd);
         ResultSet findInitialRS = findInitialStatement.executeQuery();
         if (findInitialRS.next()) {
@@ -185,7 +186,8 @@ public class QueryDB {
         ResultSet countWinRS = countWinStatement.executeQuery();
         countWinRS.next();
         int times = Integer.parseInt(countWinRS.getString(1));
-        System.out.println(countryName + " has won " + times + " matches in hostory.");
+        String actualCountryName = findName(countryInitial);
+        System.out.println(actualCountryName + " has won " + times + " matches in history.");
         connection.commit();
         countWinStatement.close();
     }
@@ -216,10 +218,11 @@ public class QueryDB {
         ResultSet countChampionRS = countChampionStatement.executeQuery();
         countChampionRS.next();
         int championTime = Integer.parseInt(countChampionRS.getString(1));
+        String actualCountryName = findName(countryInitial);
         if (championTime != 1) {
-            System.out.println(countryName + " won champion " + championTime + " times. \n");
+            System.out.println(actualCountryName + " has won champion " + championTime + " times. \n");
         } else {
-            System.out.println(countryName + " won champion " + championTime + " time. \n");
+            System.out.println(actualCountryName + " has won champion " + championTime + " time. \n");
         }
         connection.commit();
         countChampionStatement.close();
