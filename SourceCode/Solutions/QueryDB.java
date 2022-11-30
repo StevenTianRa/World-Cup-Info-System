@@ -53,90 +53,90 @@ public class QueryDB {
     }
 
     public boolean start() {
-        System.out.println("\n--- Welcome to World Cup Stats ---");
-        System.out.println("Please login or sign up to continue:");
-        System.out.println(
-                "Please select an option: \n" +
-                        "  1) Log into an existing account \n" +
-                        "  2) Create a new account \n" +
-                        "  0) Quit \n");
-        int selection = input.nextInt();
-        input.nextLine();
-        switch (selection) {
-            case 1:
-                Console console = System.console();
-                System.out.println("Username:");
-                String username = input.nextLine().trim();
-                System.out.println("Password: (Press 'Enter' to confirm your input)");
-                String password = String.valueOf(console.readPassword());
-                try {
-                    this.login(username, password);
-                    System.out.println("Successfully signed into your account. \nBringing you to the main menu...");
-                } catch (Exception e) {
-                    System.out.println("Login failed.\n");
-                    return false;
-                }
-                break;
-            case 2:
-                console = System.console();
-                System.out.println("Username:");
-                username = input.nextLine().trim();
-                String password1;
-                while (true) {
-                    System.out.println(
-                            "Choose a password: (At least 12 characters, at least one lowercase letter, one uppercase letter, and one digit; press 'Enter' to confirm your input)");
-                    password1 = String.valueOf(console.readPassword());
-                    boolean lowercase = false;
-                    boolean uppercase = false;
-                    boolean digit = false;
-                    boolean whitespace = false;
-                    for (int i = 0; i < password1.length(); ++i) {
-                        if (Character.isUpperCase(password1.charAt(i))) {
-                            uppercase = true;
-                        } else if (Character.isLowerCase(password1.charAt(i))) {
-                            lowercase = true;
-                        } else if (Character.isDigit(password1.charAt(i))) {
-                            digit = true;
-                        } else if (Character.isWhitespace(password1.charAt(i))) {
-                            whitespace = true;
+        System.out.println("\n--- Welcome to World Cup Stats ---\nPlease login or sign up to continue:");
+        while (true) {
+            System.out.println(
+                    "Please select an option: \n" +
+                            "  1) Log into an existing account \n" +
+                            "  2) Create a new account \n" +
+                            "  0) Quit \n");
+            int selection = input.nextInt();
+            input.nextLine();
+            switch (selection) {
+                case 1:
+                    Console console = System.console();
+                    System.out.println("Username:");
+                    String username = input.nextLine().trim();
+                    System.out.println("Password: (Press 'Enter' to confirm your input)");
+                    String password = String.valueOf(console.readPassword());
+                    try {
+                        this.login(username, password);
+                        System.out.println("Successfully signed into your account. \nBringing you to the main menu...");
+                        return true;
+                    } catch (Exception e) {
+                        System.out.println("Login failed.\n");
+                        continue;
+                    }
+                case 2:
+                    console = System.console();
+                    System.out.println("Username:");
+                    username = input.nextLine().trim();
+                    String password1;
+                    while (true) {
+                        System.out.println(
+                                "Choose a password: (At least 12 characters, at least one lowercase letter, one uppercase letter, and one digit; press 'Enter' to confirm your input)");
+                        password1 = String.valueOf(console.readPassword());
+                        boolean lowercase = false;
+                        boolean uppercase = false;
+                        boolean digit = false;
+                        boolean whitespace = false;
+                        for (int i = 0; i < password1.length(); ++i) {
+                            if (Character.isUpperCase(password1.charAt(i))) {
+                                uppercase = true;
+                            } else if (Character.isLowerCase(password1.charAt(i))) {
+                                lowercase = true;
+                            } else if (Character.isDigit(password1.charAt(i))) {
+                                digit = true;
+                            } else if (Character.isWhitespace(password1.charAt(i))) {
+                                whitespace = true;
+                            }
+
                         }
-
+                        System.out.println("Confirm password: (Press 'Enter' to confirm your input)");
+                        String password2 = String.valueOf(console.readPassword());
+                        if (!password1.equals(password2)) {
+                            System.out.println("Passwords do not match.\n");
+                            continue;
+                        } else if (password1.length() < 12) {
+                            System.out.println("Password needs to be at least 12 characters long.\n");
+                            continue;
+                        } else if (!lowercase || !uppercase || !digit) {
+                            System.out.println(
+                                    "Password needs to have at least one lowercase letter, one uppercase letter, and a digit.\n");
+                            continue;
+                        } else if (whitespace) {
+                            System.out.println(
+                                    "Password cannot contain whitespaces.\n");
+                            continue;
+                        } else {
+                            break;
+                        }
                     }
-                    System.out.println("Confirm password: (Press 'Enter' to confirm your input)");
-                    String password2 = String.valueOf(console.readPassword());
-                    if (!password1.equals(password2)) {
-                        System.out.println("Passwords do not match.\n");
+                    try {
+                        this.signup(username, password1);
+                        System.out.println("Successfully created a new account. \nBringing you to the main menu...");
+                        return true;
+                    } catch (Exception e) {
+                        System.out.println("Registration failed.\n");
                         continue;
-                    } else if (password1.length() < 12) {
-                        System.out.println("Password needs to be at least 12 characters long.\n");
-                        continue;
-                    } else if (!lowercase || !uppercase || !digit) {
-                        System.out.println(
-                                "Password needs to have at least one lowercase letter, one uppercase letter, and a digit.\n");
-                        continue;
-                    } else if (whitespace) {
-                        System.out.println(
-                                "Password cannot contain whitespaces.\n");
-                        continue;
-                    } else {
-                        break;
                     }
-                }
-
-                try {
-                    this.signup(username, password1);
-                    System.out.println("Successfully created a new account. \nBringing you to the main menu...");
-                } catch (Exception e) {
-                    System.out.println("Registration failed.\n");
+                case 0:
                     return false;
-                }
-                break;
-            case 0:
-                return false;
-            default:
-                return false;
+                default:
+                    System.out.println("Invalid selection. \n");
+                    continue;
+            }
         }
-        return true;
     }
 
     private void login(String username, String password) throws Exception {
