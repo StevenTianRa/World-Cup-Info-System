@@ -1,8 +1,12 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Base64;
 import java.util.Scanner;
 import java.sql.*;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class QueryDB {
 
@@ -35,7 +39,9 @@ public class QueryDB {
 
     public static void main(String[] args) throws Exception {
         QueryDB menu = new QueryDB(args);
-        menu.mainMenu();
+        if (menu.start()) {
+            menu.mainMenu();
+        }
         menu.exit();
     }
 
@@ -47,6 +53,106 @@ public class QueryDB {
             System.out.println("Database connection closed.");
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public boolean start() {
+        System.out.println("\n--- Welcome to World Cup Stats  ---");
+        System.out.println("Please login or sign up to continue:");
+        System.out.println(
+                "Please select an option: \n" +
+                        "  1) Log into an existing account \n" +
+                        "  2) Create a new account \n" +
+                        "  0) Quit \n");
+        int selection = input.nextInt();
+        input.nextLine();
+        switch (selection) {
+            case 1:
+                System.out.println("Username:");
+                String username = input.nextLine().trim();
+                System.out.println("Password:");
+                String password = input.nextLine().trim();
+                try {
+                    this.login(username, password);
+                } catch (Exception e) {
+                    System.out.println("Login failed.\n");
+                    return false;
+                }
+                break;
+            case 2:
+                System.out.println("Username:");
+                username = input.nextLine().trim();
+                System.out.println("Password:");
+                String password1 = input.nextLine().trim();
+                System.out.println("Confirm password:");
+                String password2 = input.nextLine().trim();
+                if (!password1.equals(password2)) {
+                    System.out.println("Passwords do not match.\n");
+                    return false;
+                }
+                try {
+                    this.signup(username, password1);
+                } catch (Exception e) {
+                    System.out.println("Registration failed.\n");
+                    return false;
+                }
+                break;
+            case 0:
+                return false;
+            default:
+                return false;
+        }
+        return true;
+    }
+
+    private void login(String username, String password) throws Exception {
+        String passwordHash = SHA256(password);
+        String cmd = "SELECT * FROM user WHERE username = ? AND passwordHash = ?";
+        PreparedStatement statement = connection.prepareStatement(cmd);
+        statement.setString(1, username);
+        statement.setString(2, passwordHash);
+        try {
+            ResultSet RS = statement.executeQuery();
+            RS.next();
+            connection.commit();
+            statement.close();
+        } catch (SQLException e) {
+            connection.commit();
+            statement.close();
+            throw new Exception("Incorrect username or password.\n");
+        }
+    }
+
+    private void signup(String username, String password) throws NoSuchAlgorithmException, SQLException {
+        String passwordHash;
+        try {
+            passwordHash = SHA256(password);
+        } catch (NoSuchAlgorithmException e) {
+            throw e;
+        }
+        String cmd = "INSERT INTO user VALUES(?, ?)";
+        PreparedStatement statement = connection.prepareStatement(cmd);
+        statement.setString(1, username);
+        statement.setString(2, passwordHash);
+        try {
+            statement.executeUpdate();
+            connection.commit();
+            statement.close();
+        } catch (SQLException e) {
+            connection.commit();
+            statement.close();
+            throw e;
+        }
+    }
+
+    private static String SHA256(String message) throws NoSuchAlgorithmException {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] bytes = md.digest(message.getBytes());
+            String hash = Base64.getEncoder().encodeToString(bytes);
+            return hash;
+        } catch (NoSuchAlgorithmException e) {
+            throw e;
         }
     }
 
