@@ -4,13 +4,15 @@ CREATE TABLE country
       country_initial     VARCHAR(6) NOT NULL PRIMARY KEY
    );
 
+CREATE INDEX CountryNameIndex ON country(country_name);
+
 CREATE TABLE worldCup
    ( 
       year             INTEGER NOT NULL PRIMARY KEY, 
       host_country     VARCHAR(30) NOT NULL,
-      champion         VARCHAR(30) NOT NULL, 
-      runner_up        VARCHAR(30) NOT NULL, 
-      third_place      VARCHAR(30) NOT NULL, 
+      champion         VARCHAR(30) NOT NULL,
+      runner_up        VARCHAR(30) NOT NULL,
+      third_place      VARCHAR(30) NOT NULL,
       fourth_place     VARCHAR(30) NOT NULL,
       attendance       INTEGER NOT NULL,
       FOREIGN KEY (host_country) REFERENCES country(country_initial),
@@ -18,10 +20,12 @@ CREATE TABLE worldCup
       FOREIGN KEY (runner_up) REFERENCES country(country_initial),
       FOREIGN KEY (third_place) REFERENCES country(country_initial),
       FOREIGN KEY (fourth_place) REFERENCES country(country_initial)
-   ); 
+   );
+
+CREATE INDEX ChampionIndex ON worldCup(champion);
 
 CREATE TABLE matchDetails
-   (  
+   (
       year                INTEGER NOT NULL,
       match_date          VARCHAR(30) NOT NULL,
       stage               VARCHAR(30) NOT NULL,
@@ -39,6 +43,9 @@ CREATE TABLE matchDetails
       FOREIGN KEY (year) REFERENCES worldCup 
    );
 
+CREATE INDEX HomeWinIndex ON matchDetails(home_initial, home_final_score, away_final_score);
+CREATE INDEX AwayWinIndex ON matchDetails(away_initial, home_final_score, away_final_score); 
+
 CREATE TABLE player 
    (
       player_nationality  VARCHAR(20) NOT NULL,
@@ -55,7 +62,6 @@ CREATE TABLE enrolled
       player_name         VARCHAR(40) NOT NULL,
       PRIMARY KEY (player_name, player_nationality, match_id),
       FOREIGN KEY (player_nationality, player_name) REFERENCES player(player_nationality, player_name) ON DELETE CASCADE,
-      FOREIGN KEY (match_id) REFERENCES matchDetails
-      
+      FOREIGN KEY (match_id) REFERENCES matchDetails 
    );
    
