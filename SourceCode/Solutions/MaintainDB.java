@@ -65,7 +65,7 @@ public class MaintainDB {
         }
     }
 
-    public boolean start() {
+    public boolean start() throws NoSuchAlgorithmException {
         System.out.println("\n--- Welcome to World Cup Stats ---");
         System.out.println("Please login in or sign up to continue:");
         System.out.println(
@@ -83,7 +83,7 @@ public class MaintainDB {
                 String password = String.valueOf(console.readPassword());
                 try {
                     this.login(username, password);
-                    System.out.println("Successfully signed into your account. \n Bringing you to the main menu...");
+                    System.out.println("Successfully signed into your account. \nBringing you to the main menu...");
                 } catch (Exception e) {
                     System.out.println("Login failed.\n");
                     return false;

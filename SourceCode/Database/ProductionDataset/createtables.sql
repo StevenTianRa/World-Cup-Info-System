@@ -68,11 +68,11 @@ CREATE TABLE enrolled
 CREATE TABLE user
    (
       userName            VARCHAR(30) NOT NULL PRIMARY KEY,
-      passwordHash        VARCHAR(100) NOT NULL
+      passwordHash        NCHAR(45) NOT NULL
    );
 
 CREATE TABLE administrator
    (
       userName            VARCHAR(30) NOT NULL PRIMARY KEY,
-      passwordHash        VARCHAR(100) NOT NULL
+      passwordHash        NCHAR(45) NOT NULL
    );
