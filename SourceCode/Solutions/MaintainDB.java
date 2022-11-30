@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.*;
+import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -66,7 +67,7 @@ public class MaintainDB {
 
     public boolean start() {
         System.out.println("\n--- Welcome to World Cup Stats ---");
-        System.out.println("Please login or sign up to continue:");
+        System.out.println("Please login in or sign up to continue:");
         System.out.println(
                 "Please select an option: \n" +
                         "  1) Log into an administrator account \n" +
@@ -75,12 +76,14 @@ public class MaintainDB {
         input.nextLine();
         switch (selection) {
             case 1:
+                Console console = System.console();
                 System.out.println("Username:");
                 String username = input.nextLine().trim();
-                System.out.println("Password:");
-                String password = input.nextLine().trim();
+                System.out.println("Password: (Press 'Enter' to confirm your input)");
+                String password = String.valueOf(console.readPassword());
                 try {
                     this.login(username, password);
+                    System.out.println("Successfully signed into your account. \n Bringing you to the main menu...");
                 } catch (Exception e) {
                     System.out.println("Login failed.\n");
                     return false;

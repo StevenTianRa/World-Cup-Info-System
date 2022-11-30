@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.*;
+import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -63,30 +64,34 @@ public class QueryDB {
         input.nextLine();
         switch (selection) {
             case 1:
+                Console console = System.console();
                 System.out.println("Username:");
                 String username = input.nextLine().trim();
-                System.out.println("Password:");
-                String password = input.nextLine().trim();
+                System.out.println("Password: (Press 'Enter' to confirm your input)");
+                String password = String.valueOf(console.readPassword());
                 try {
                     this.login(username, password);
+                    System.out.println("Successfully signed into your account. \nBringing you to the main menu...");
                 } catch (Exception e) {
                     System.out.println("Login failed.\n");
                     return false;
                 }
                 break;
             case 2:
+                console = System.console();
                 System.out.println("Username:");
                 username = input.nextLine().trim();
-                System.out.println("Password:");
-                String password1 = input.nextLine().trim();
-                System.out.println("Confirm password:");
-                String password2 = input.nextLine().trim();
+                System.out.println("Password: (Press 'Enter' to confirm your input)");
+                String password1 = String.valueOf(console.readPassword());
+                System.out.println("Confirm password: (Press 'Enter' to confirm your input)");
+                String password2 = String.valueOf(console.readPassword());
                 if (!password1.equals(password2)) {
                     System.out.println("Passwords do not match.\n");
                     return false;
                 }
                 try {
                     this.signup(username, password1);
+                    System.out.println("Successfully created a new account. \nBringing you to the main menu...");
                 } catch (Exception e) {
                     System.out.println("Registration failed.\n");
                     return false;
