@@ -84,8 +84,8 @@ public class QueryDB {
                     String password1;
                     while (true) {
                         System.out.println(
-                                "Choose a password: (At least 12 characters, at least one lowercase letter, one uppercase letter, and one digit; press 'Enter' to confirm your input)");
-                        password1 = String.valueOf(console.readPassword());
+                                "Choose a password: (At least 12 characters, at least one lowercase letter, one uppercase letter, and one digit; Press 'Enter' to confirm your input)");
+                        password1 = input.nextLine().trim();
                         boolean lowercase = false;
                         boolean uppercase = false;
                         boolean digit = false;
