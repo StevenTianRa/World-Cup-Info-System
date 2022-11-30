@@ -138,9 +138,9 @@ public class QueryDB {
 
     // find corresponding country initial of country name
     private String findInitial(String countryName) throws SQLException {
-        String cmd = "SELECT country_initial FROM country WHERE LOWER(country_name) = '" + countryName.toLowerCase()
-                + "'";
+        String cmd = "SELECT country_initial FROM country WHERE LOWER(country_name) = ?";
         PreparedStatement findInitialStatement = connection.prepareStatement(cmd);
+        findInitialStatement.setString(1, countryName.toLowerCase());
         ResultSet findInitialRS = findInitialStatement.executeQuery();
         if (findInitialRS.next()) {
             String country_initial = findInitialRS.getString(1);
@@ -156,8 +156,9 @@ public class QueryDB {
 
     // find corresponding country name of country initial
     private String findName(String countryInitial) throws SQLException {
-        String cmd = "SELECT country_name FROM country WHERE country_initial = '" + countryInitial + "'";
+        String cmd = "SELECT country_name FROM country WHERE country_initial = ?";
         PreparedStatement findNameStatement = connection.prepareStatement(cmd);
+        findNameStatement.setString(1, countryInitial);
         ResultSet findNameRS = findNameStatement.executeQuery();
         if (findNameRS.next()) {
             String country_name = findNameRS.getString(1);
@@ -178,11 +179,11 @@ public class QueryDB {
             return;
         }
         String cmd = "SELECT count(*) FROM" +
-                "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = '" + countryInitial +
-                "' AND m1.home_final_score > m1.away_final_score)" +
-                "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = '" + countryInitial +
-                "' AND m2.home_final_score < m2.away_final_score))";
+                "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = ? AND m1.home_final_score > m1.away_final_score)" +
+                "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = ? AND m2.home_final_score < m2.away_final_score))";
         PreparedStatement countWinStatement = connection.prepareStatement(cmd);
+        countWinStatement.setString(1, countryInitial);
+        countWinStatement.setString(2, countryInitial);
         ResultSet countWinRS = countWinStatement.executeQuery();
         countWinRS.next();
         int times = Integer.parseInt(countWinRS.getString(1));
@@ -208,13 +209,15 @@ public class QueryDB {
     }
 
     private void countChampion(String countryName) throws SQLException {
+        
         String countryInitial = findInitial(countryName);
         if (countryInitial == "") {
             System.out.println("Country does not exist or never participated World Cup");
             return;
         }
-        String cmd = "SELECT count(*) FROM worldCup WHERE champion = '" + countryInitial + "'";
+        String cmd = "SELECT count(*) FROM worldCup WHERE champion = ?";
         PreparedStatement countChampionStatement = connection.prepareStatement(cmd);
+        countChampionStatement.setString(1, countryInitial);
         ResultSet countChampionRS = countChampionStatement.executeQuery();
         countChampionRS.next();
         int championTime = Integer.parseInt(countChampionRS.getString(1));
