@@ -1,5 +1,8 @@
 import java.sql.*;
 import java.util.*;
+
+import javax.naming.spi.StateFactory;
+
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -165,18 +168,11 @@ public class MaintainDB {
 
     private void addWorldCup(String worldCupInfo) throws SQLException {
         List<String> worldCupInfoFields = Arrays.asList(worldCupInfo.split(" "));
-        String cmd = "INSERT INTO worldCup VALUES (";
-        for (int i = 0; i < 7; ++i) {
-            String field = worldCupInfoFields.get(i);
-            if (i == 0) {
-                cmd += field + ",";
-            } else if (i == 6) {
-                cmd += field + ")";
-            } else {
-                cmd += "'" + field + "'" + ",";
-            }
-        }
+        String cmd = "INSERT INTO worldCup VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(cmd);
+        for (int i = 1; i <= 7; i++) {
+            statement.setString(i, worldCupInfoFields.get(i - 1));
+        }
         try {
             int numRowsAffected = statement.executeUpdate();
             connection.commit();
@@ -190,8 +186,10 @@ public class MaintainDB {
     }
 
     private void updateCountryName(String initial, String name) throws SQLException {
-        String cmd = "UPDATE country SET country_name = '" + name + "' WHERE country_initial = '" + initial + "'";
+        String cmd = "UPDATE country SET country_name = ? WHERE country_initial = ?";
         PreparedStatement statement = connection.prepareStatement(cmd);
+        statement.setString(1, name);
+        statement.setString(2, initial);
         int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
@@ -204,9 +202,10 @@ public class MaintainDB {
 
     private void deletePlayer(String country, String name) throws SQLException {
         System.out.println("Deleting player " + name + " from " + country);
-        String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE LOWER(country_name) = '"
-                + country.toLowerCase() + "') AND LOWER(player_name) = '" + name.toLowerCase() + "'";
+        String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE LOWER(country_name) = ?) AND LOWER(player_name) = ?";
         PreparedStatement statement = connection.prepareStatement(cmd);
+        statement.setString(1, country.toLowerCase());
+        statement.setString(2, name.toLowerCase());
         int numRowsAffected = statement.executeUpdate();
         connection.commit();
         statement.close();
