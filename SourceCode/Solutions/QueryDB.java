@@ -81,14 +81,48 @@ public class QueryDB {
                 console = System.console();
                 System.out.println("Username:");
                 username = input.nextLine().trim();
-                System.out.println("Password: (Press 'Enter' to confirm your input)");
-                String password1 = String.valueOf(console.readPassword());
-                System.out.println("Confirm password: (Press 'Enter' to confirm your input)");
-                String password2 = String.valueOf(console.readPassword());
-                if (!password1.equals(password2)) {
-                    System.out.println("Passwords do not match.\n");
-                    return false;
+                String password1;
+                while (true) {
+                    System.out.println(
+                            "Choose a password: (At least 12 characters, at least one lowercase letter, one uppercase letter, and one digit; press 'Enter' to confirm your input)");
+                    password1 = String.valueOf(console.readPassword());
+                    boolean lowercase = false;
+                    boolean uppercase = false;
+                    boolean digit = false;
+                    boolean whitespace = false;
+                    for (int i = 0; i < password1.length(); ++i) {
+                        if (Character.isUpperCase(password1.charAt(i))) {
+                            uppercase = true;
+                        } else if (Character.isLowerCase(password1.charAt(i))) {
+                            lowercase = true;
+                        } else if (Character.isDigit(password1.charAt(i))) {
+                            digit = true;
+                        } else if (Character.isWhitespace(password1.charAt(i))) {
+                            whitespace = true;
+                        }
+
+                    }
+                    System.out.println("Confirm password: (Press 'Enter' to confirm your input)");
+                    String password2 = String.valueOf(console.readPassword());
+                    if (!password1.equals(password2)) {
+                        System.out.println("Passwords do not match.\n");
+                        continue;
+                    } else if (password1.length() < 12) {
+                        System.out.println("Password needs to be at least 12 characters long.\n");
+                        continue;
+                    } else if (!lowercase || !uppercase || !digit) {
+                        System.out.println(
+                                "Password needs to have at least one lowercase letter, one uppercase letter, and a digit.\n");
+                        continue;
+                    } else if (whitespace) {
+                        System.out.println(
+                                "Password cannot contain whitespaces.\n");
+                        continue;
+                    } else {
+                        break;
+                    }
                 }
+
                 try {
                     this.signup(username, password1);
                     System.out.println("Successfully created a new account. \nBringing you to the main menu...");
@@ -286,7 +320,8 @@ public class QueryDB {
             return;
         }
         String cmd = "SELECT count(*) FROM" +
-                "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = ? AND m1.home_final_score > m1.away_final_score)" +
+                "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = ? AND m1.home_final_score > m1.away_final_score)"
+                +
                 "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = ? AND m2.home_final_score < m2.away_final_score))";
         PreparedStatement countWinStatement = connection.prepareStatement(cmd);
         countWinStatement.setString(1, countryInitial);
@@ -316,7 +351,7 @@ public class QueryDB {
     }
 
     private void countChampion(String countryName) throws SQLException {
-        
+
         String countryInitial = findInitial(countryName);
         if (countryInitial == "") {
             System.out.println("Country does not exist or never participated World Cup");
