@@ -1,10 +1,5 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Base64;
-import java.util.Scanner;
 import java.sql.*;
-import java.nio.charset.StandardCharsets;
+import java.util.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -57,7 +52,7 @@ public class QueryDB {
     }
 
     public boolean start() {
-        System.out.println("\n--- Welcome to World Cup Stats  ---");
+        System.out.println("\n--- Welcome to World Cup Stats ---");
         System.out.println("Please login or sign up to continue:");
         System.out.println(
                 "Please select an option: \n" +
@@ -114,6 +109,7 @@ public class QueryDB {
         try {
             ResultSet RS = statement.executeQuery();
             RS.next();
+            RS.getString(1);
             connection.commit();
             statement.close();
         } catch (SQLException e) {
