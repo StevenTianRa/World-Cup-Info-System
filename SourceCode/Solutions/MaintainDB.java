@@ -68,33 +68,35 @@ public class MaintainDB {
     public boolean start() throws NoSuchAlgorithmException {
         System.out.println("\n--- Welcome to World Cup Stats ---");
         System.out.println("Please login in or sign up to continue:");
-        System.out.println(
-                "Please select an option: \n" +
-                        "  1) Log into an administrator account \n" +
-                        "  0) Quit \n");
-        int selection = input.nextInt();
-        input.nextLine();
-        switch (selection) {
-            case 1:
-                Console console = System.console();
-                System.out.println("Username:");
-                String username = input.nextLine().trim();
-                System.out.println("Password: (Press 'Enter' to confirm your input)");
-                String password = String.valueOf(console.readPassword());
-                try {
-                    this.login(username, password);
-                    System.out.println("Successfully signed into your account. \nBringing you to the main menu...");
-                } catch (Exception e) {
-                    System.out.println("Login failed.\n");
+        while (true) {
+            System.out.println(
+                    "Please select an option: \n" +
+                            "  1) Log into an administrator account \n" +
+                            "  0) Quit \n");
+            int selection = input.nextInt();
+            input.nextLine();
+            switch (selection) {
+                case 1:
+                    Console console = System.console();
+                    System.out.println("Username:");
+                    String username = input.nextLine().trim();
+                    System.out.println("Password: (Press 'Enter' to confirm your input)");
+                    String password = String.valueOf(console.readPassword());
+                    try {
+                        this.login(username, password);
+                        System.out.println("Successfully signed into your account. \nBringing you to the main menu...");
+                        return true;
+                    } catch (Exception e) {
+                        System.out.println("Login failed.\n");
+                        continue;
+                    }
+                case 0:
                     return false;
-                }
-                break;
-            case 0:
-                return false;
-            default:
-                return false;
+                default:
+                    System.out.println("Invalid selection. \n");
+                    continue;
+            }
         }
-        return true;
     }
 
     private void login(String username, String password) throws Exception {
