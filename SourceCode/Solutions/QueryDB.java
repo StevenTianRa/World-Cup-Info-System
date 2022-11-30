@@ -1,8 +1,8 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Scanner;
 import java.sql.*;
+import java.util.*;
+import java.io.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class QueryDB {
 
@@ -35,7 +35,9 @@ public class QueryDB {
 
     public static void main(String[] args) throws Exception {
         QueryDB menu = new QueryDB(args);
-        menu.mainMenu();
+        if (menu.start()) {
+            menu.mainMenu();
+        }
         menu.exit();
     }
 
@@ -47,6 +49,145 @@ public class QueryDB {
             System.out.println("Database connection closed.");
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public boolean start() {
+        System.out.println("\n--- Welcome to World Cup Stats ---");
+        System.out.println("Please login or sign up to continue:");
+        System.out.println(
+                "Please select an option: \n" +
+                        "  1) Log into an existing account \n" +
+                        "  2) Create a new account \n" +
+                        "  0) Quit \n");
+        int selection = input.nextInt();
+        input.nextLine();
+        switch (selection) {
+            case 1:
+                Console console = System.console();
+                System.out.println("Username:");
+                String username = input.nextLine().trim();
+                System.out.println("Password: (Press 'Enter' to confirm your input)");
+                String password = String.valueOf(console.readPassword());
+                try {
+                    this.login(username, password);
+                    System.out.println("Successfully signed into your account. \nBringing you to the main menu...");
+                } catch (Exception e) {
+                    System.out.println("Login failed.\n");
+                    return false;
+                }
+                break;
+            case 2:
+                console = System.console();
+                System.out.println("Username:");
+                username = input.nextLine().trim();
+                String password1;
+                while (true) {
+                    System.out.println(
+                            "Choose a password: (At least 12 characters, at least one lowercase letter, one uppercase letter, and one digit; press 'Enter' to confirm your input)");
+                    password1 = String.valueOf(console.readPassword());
+                    boolean lowercase = false;
+                    boolean uppercase = false;
+                    boolean digit = false;
+                    boolean whitespace = false;
+                    for (int i = 0; i < password1.length(); ++i) {
+                        if (Character.isUpperCase(password1.charAt(i))) {
+                            uppercase = true;
+                        } else if (Character.isLowerCase(password1.charAt(i))) {
+                            lowercase = true;
+                        } else if (Character.isDigit(password1.charAt(i))) {
+                            digit = true;
+                        } else if (Character.isWhitespace(password1.charAt(i))) {
+                            whitespace = true;
+                        }
+
+                    }
+                    System.out.println("Confirm password: (Press 'Enter' to confirm your input)");
+                    String password2 = String.valueOf(console.readPassword());
+                    if (!password1.equals(password2)) {
+                        System.out.println("Passwords do not match.\n");
+                        continue;
+                    } else if (password1.length() < 12) {
+                        System.out.println("Password needs to be at least 12 characters long.\n");
+                        continue;
+                    } else if (!lowercase || !uppercase || !digit) {
+                        System.out.println(
+                                "Password needs to have at least one lowercase letter, one uppercase letter, and a digit.\n");
+                        continue;
+                    } else if (whitespace) {
+                        System.out.println(
+                                "Password cannot contain whitespaces.\n");
+                        continue;
+                    } else {
+                        break;
+                    }
+                }
+
+                try {
+                    this.signup(username, password1);
+                    System.out.println("Successfully created a new account. \nBringing you to the main menu...");
+                } catch (Exception e) {
+                    System.out.println("Registration failed.\n");
+                    return false;
+                }
+                break;
+            case 0:
+                return false;
+            default:
+                return false;
+        }
+        return true;
+    }
+
+    private void login(String username, String password) throws Exception {
+        String passwordHash = SHA256(password);
+        String cmd = "SELECT * FROM user WHERE username = ? AND passwordHash = ?";
+        PreparedStatement statement = connection.prepareStatement(cmd);
+        statement.setString(1, username);
+        statement.setString(2, passwordHash);
+        try {
+            ResultSet RS = statement.executeQuery();
+            RS.next();
+            RS.getString(1);
+            connection.commit();
+            statement.close();
+        } catch (SQLException e) {
+            connection.commit();
+            statement.close();
+            throw new Exception("Incorrect username or password.\n");
+        }
+    }
+
+    private void signup(String username, String password) throws NoSuchAlgorithmException, SQLException {
+        String passwordHash;
+        try {
+            passwordHash = SHA256(password);
+        } catch (NoSuchAlgorithmException e) {
+            throw e;
+        }
+        String cmd = "INSERT INTO user VALUES(?, ?)";
+        PreparedStatement statement = connection.prepareStatement(cmd);
+        statement.setString(1, username);
+        statement.setString(2, passwordHash);
+        try {
+            statement.executeUpdate();
+            connection.commit();
+            statement.close();
+        } catch (SQLException e) {
+            connection.commit();
+            statement.close();
+            throw e;
+        }
+    }
+
+    private static String SHA256(String message) throws NoSuchAlgorithmException {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] bytes = md.digest(message.getBytes());
+            String hash = Base64.getEncoder().encodeToString(bytes);
+            return hash;
+        } catch (NoSuchAlgorithmException e) {
+            throw e;
         }
     }
 
@@ -179,7 +320,8 @@ public class QueryDB {
             return;
         }
         String cmd = "SELECT count(*) FROM" +
-                "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = ? AND m1.home_final_score > m1.away_final_score)" +
+                "((SELECT * FROM matchDetails AS m1 WHERE m1.home_initial = ? AND m1.home_final_score > m1.away_final_score)"
+                +
                 "UNION (SELECT * FROM matchDetails AS m2 WHERE m2.away_initial = ? AND m2.home_final_score < m2.away_final_score))";
         PreparedStatement countWinStatement = connection.prepareStatement(cmd);
         countWinStatement.setString(1, countryInitial);
@@ -209,7 +351,7 @@ public class QueryDB {
     }
 
     private void countChampion(String countryName) throws SQLException {
-        
+
         String countryInitial = findInitial(countryName);
         if (countryInitial == "") {
             System.out.println("Country does not exist or never participated World Cup");

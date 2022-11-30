@@ -64,4 +64,15 @@ CREATE TABLE enrolled
       FOREIGN KEY (player_nationality, player_name) REFERENCES player(player_nationality, player_name) ON DELETE CASCADE,
       FOREIGN KEY (match_id) REFERENCES matchDetails 
    );
-   
+
+CREATE TABLE user
+   (
+      userName            VARCHAR(30) NOT NULL PRIMARY KEY,
+      passwordHash        VARCHAR(100) NOT NULL
+   );
+
+CREATE TABLE administrator
+   (
+      userName            VARCHAR(30) NOT NULL PRIMARY KEY,
+      passwordHash        VARCHAR(100) NOT NULL
+   );

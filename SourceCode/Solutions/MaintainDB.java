@@ -1,5 +1,8 @@
 import java.sql.*;
 import java.util.*;
+import java.io.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 // sample input: localhost 5432 database_name username password
 public class MaintainDB {
@@ -33,7 +36,9 @@ public class MaintainDB {
 
     public static void main(String[] args) throws Exception {
         MaintainDB menu = new MaintainDB(args);
-        menu.mainMenu(args);
+        if (menu.start()) {
+            menu.mainMenu(args);
+        }
         menu.exit();
     }
 
@@ -49,37 +54,65 @@ public class MaintainDB {
         }
     }
 
-    private String findInitial(String countryName) throws SQLException {
-        String cmd = "SELECT country_initial FROM country WHERE LOWER(country_name) = '" + countryName.toLowerCase()
-                + "'";
-        PreparedStatement findInitialStatement = connection.prepareStatement(cmd);
-        ResultSet findInitialRS = findInitialStatement.executeQuery();
-        if (findInitialRS.next()) {
-            String country_initial = findInitialRS.getString(1);
-            connection.commit();
-            findInitialStatement.close();
-            return country_initial;
-        } else {
-            connection.commit();
-            findInitialStatement.close();
-            return "";
+    private static String SHA256(String message) throws NoSuchAlgorithmException {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] bytes = md.digest(message.getBytes());
+            String hash = Base64.getEncoder().encodeToString(bytes);
+            return hash;
+        } catch (NoSuchAlgorithmException e) {
+            throw e;
         }
     }
 
-    // find corresponding country name of country initial
-    private String findName(String countryInitial) throws SQLException {
-        String cmd = "SELECT country_name FROM country WHERE country_initial = '" + countryInitial + "'";
-        PreparedStatement findNameStatement = connection.prepareStatement(cmd);
-        ResultSet findNameRS = findNameStatement.executeQuery();
-        if (findNameRS.next()) {
-            String country_name = findNameRS.getString(1);
+    public boolean start() {
+        System.out.println("\n--- Welcome to World Cup Stats ---");
+        System.out.println("Please login in or sign up to continue:");
+        System.out.println(
+                "Please select an option: \n" +
+                        "  1) Log into an administrator account \n" +
+                        "  0) Quit \n");
+        int selection = input.nextInt();
+        input.nextLine();
+        switch (selection) {
+            case 1:
+                Console console = System.console();
+                System.out.println("Username:");
+                String username = input.nextLine().trim();
+                System.out.println("Password: (Press 'Enter' to confirm your input)");
+                String password = String.valueOf(console.readPassword());
+                try {
+                    this.login(username, password);
+                    System.out.println("Successfully signed into your account. \n Bringing you to the main menu...");
+                } catch (Exception e) {
+                    System.out.println("Login failed.\n");
+                    return false;
+                }
+                break;
+            case 0:
+                return false;
+            default:
+                return false;
+        }
+        return true;
+    }
+
+    private void login(String username, String password) throws Exception {
+        String passwordHash = SHA256(password);
+        String cmd = "SELECT * FROM administrator WHERE username = ? AND passwordHash = ?";
+        PreparedStatement statement = connection.prepareStatement(cmd);
+        statement.setString(1, username);
+        statement.setString(2, passwordHash);
+        try {
+            ResultSet RS = statement.executeQuery();
+            RS.next();
+            RS.getString(1);
             connection.commit();
-            findNameStatement.close();
-            return country_name;
-        } else {
+            statement.close();
+        } catch (SQLException e) {
             connection.commit();
-            findNameStatement.close();
-            return "";
+            statement.close();
+            throw new Exception("Incorrect username or password.\n");
         }
     }
 
