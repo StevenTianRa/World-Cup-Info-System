@@ -191,6 +191,18 @@ public class QueryDB {
         }
     }
 
+    private static boolean checkValidYear(Integer year) {
+        if (year < 1930 || year > 2014) {
+            return false;
+        } else {
+            if (year == 1942 || year == 1946) {
+                return false;
+            } else {
+                return (year % 4) == 2;
+            }
+        }
+    }
+
     public void mainMenu() throws SQLException {
 
         mainMenu: while (true) {
@@ -213,6 +225,17 @@ public class QueryDB {
                 case 1:
                     System.out.println("Please provide the year of the World Cup: ");
                     year = input.nextLine().trim();
+                    Integer yearInt;
+                    try {
+                        yearInt = Integer.parseInt(year);
+                    } catch (Exception e) {
+                        System.out.println("Input should be a year! This is an invalid input!");
+                        break;
+                    }
+                    if (!checkValidYear(yearInt)) {
+                        System.out.println("There is no World Cup in year " + yearInt + "!");
+                        break;
+                    }
                     System.out.println(
                             "Please select the information you want to look up: \n" +
                                     "  1) Host country \n" +
@@ -229,6 +252,16 @@ public class QueryDB {
                 case 2:
                     System.out.println("Please provide the year of the World Cup: ");
                     year = input.nextLine().trim();
+                    try {
+                        yearInt = Integer.parseInt(year);
+                    } catch (Exception e) {
+                        System.out.println("Input should be a year! This is an invalid input!");
+                        break;
+                    }
+                    if (!checkValidYear(yearInt)) {
+                        System.out.println("There is no World Cup in year " + yearInt + "!");
+                        break;
+                    }
                     System.out.println(
                             "Please select the result you want to look up: \n" +
                                     "  1) Champion \n" +
