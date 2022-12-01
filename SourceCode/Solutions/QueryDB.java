@@ -191,18 +191,6 @@ public class QueryDB {
         }
     }
 
-    private static boolean checkValidYear(Integer year) {
-        if (year < 1930 || year > 2014) {
-            return false;
-        } else {
-            if (year == 1942 || year == 1946) {
-                return false;
-            } else {
-                return (year % 4) == 2;
-            }
-        }
-    }
-
     public void mainMenu() throws SQLException {
 
         mainMenu: while (true) {
@@ -225,17 +213,6 @@ public class QueryDB {
                 case 1:
                     System.out.println("Please provide the year of the World Cup: ");
                     year = input.nextLine().trim();
-                    Integer yearInt;
-                    try {
-                        yearInt = Integer.parseInt(year);
-                    } catch (Exception e) {
-                        System.out.println("Input should be a year! This is an invalid input!");
-                        break;
-                    }
-                    if (!checkValidYear(yearInt)) {
-                        System.out.println("There is no World Cup in year " + yearInt + "!");
-                        break;
-                    }
                     System.out.println(
                             "Please select the information you want to look up: \n" +
                                     "  1) Host country \n" +
@@ -252,16 +229,6 @@ public class QueryDB {
                 case 2:
                     System.out.println("Please provide the year of the World Cup: ");
                     year = input.nextLine().trim();
-                    try {
-                        yearInt = Integer.parseInt(year);
-                    } catch (Exception e) {
-                        System.out.println("Input should be a year! This is an invalid input!");
-                        break;
-                    }
-                    if (!checkValidYear(yearInt)) {
-                        System.out.println("There is no World Cup in year " + yearInt + "!");
-                        break;
-                    }
                     System.out.println(
                             "Please select the result you want to look up: \n" +
                                     "  1) Champion \n" +
@@ -500,9 +467,24 @@ public class QueryDB {
             int count = 0;
             System.out.println("**Start of Answer**");
             while (resultsRS.next()) {
+                String selection;
                 if (count == 20) {
-                    System.out.println("Showing maximum of 20 results");
-                    break;
+                    System.out.println("Showing maximum of 20 results in a page, show next page? [Y/N]");
+                    boolean terminate = false;
+                    while (true) {
+                        selection = input.nextLine();
+                        if (selection.equals("Y") || selection.equals("y")) {
+                            count = 0;
+                            break;
+                        } else if (selection.equals("N") || selection.equals("n")) {
+                            terminate = true;
+                            break;
+                        } else {
+                            System.out.println("Invalid input! Please input Y/N");
+                            continue;
+                        }
+                    }
+                    if (terminate) break;
                 }
                 String countryInitial = resultsRS.getString(2);
                 String countryName = findName(countryInitial);
