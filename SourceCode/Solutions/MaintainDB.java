@@ -170,7 +170,7 @@ public class MaintainDB {
         List<String> worldCupInfoFields = Arrays.asList(worldCupInfo.split(" "));
         String cmd = "INSERT INTO worldCup VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(cmd);
-        for (int i = 1; i <= 7; i++) {
+        for (int i = 1; i <= worldCupInfoFields.size(); i++) {
             statement.setString(i, worldCupInfoFields.get(i - 1));
         }
         try {
@@ -201,7 +201,6 @@ public class MaintainDB {
     }
 
     private void deletePlayer(String country, String name) throws SQLException {
-        System.out.println("Deleting player " + name + " from " + country);
         String cmd = "DELETE FROM player WHERE player_nationality = (SELECT country_initial FROM country WHERE LOWER(country_name) = ?) AND LOWER(player_name) = ?";
         PreparedStatement statement = connection.prepareStatement(cmd);
         statement.setString(1, country.toLowerCase());
