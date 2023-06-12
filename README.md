@@ -1,4 +1,4 @@
-# CS348Group18
+# World-Cup-Info
 
 Firstly, set up environment by running:
 source ~cs348/public/db2profile and source ~db2inst2/sqllib/db2profile
@@ -29,6 +29,3 @@ Current features:
 6. Allows database administrators who wish to add data for a new World Cup.
 7. Allows database administrators who wish to update the name of country when a country’s name is incorrect or contains unreadable characters due to the database’s incompatibility with foreign language characters.
 8. Allows database administrators to delete a player from the database.
-
-Fancy features:
-1. Makes input case insensitive, giving better user experiences.
